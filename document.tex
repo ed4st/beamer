@@ -1,4 +1,5 @@
 \documentclass{beamer}
+\usepackage[utf8]{inputenc}
 \usetheme[background=dark,titleformat = smallcaps , block = fill,numbering = fraction, progressbar = head, titleformat title= smallcaps]{metropolis}           % Use metropolis theme
 
 \usepackage {extarrows}
@@ -29,7 +30,6 @@
 \usepackage{xcolor}
 \usepackage{subcaption}
 \usepackage{epigraph}
-\usepackage{docmute}
 
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
@@ -79,6 +79,7 @@
 %\newtheorem{corollary}[theorem]{Corolario}
 \newtheorem{criterion}[theorem]{Criterion}
 \theoremstyle{definition}
+%\newtheorem*{df}{Definición}
 %\newtheorem{definition}[theorem]{Definición}
 %\newtheorem{example}[theorem]{Ejemplo}
 \newtheorem{exercise}[theorem]{Exercise}
@@ -91,13 +92,35 @@
 \newtheorem{summary}[theorem]{Summary}
 \numberwithin{equation}{section}
 
-%\newtheorem{definition}{Definition}[section]
+\definecolor{defColor}{HTML}{3ED597}
+\newcommand{\marine}[1]{\textcolor{defColor}{#1}}
 
+
+\definecolor{thColor}{HTML}{FA7E0A}
+\newcommand{\orangee}[1]{\textcolor{thColor}{#1}}
+
+\definecolor{rkColor}{HTML}{F72121}
+\newcommand{\redd}[1]{\textcolor{rkColor}{#1}}
+
+
+
+
+\newtheorem{df}{\marine{Definición}}
+\newtheorem{thh}{\orangee{Teorema}}
+\newtheorem{pr}{\orangee{Proposición}}
+\newtheorem{lm}{\orangee{Lema}}
+\newtheorem{rr}{\redd{Observación}}
+
+
+%\newtheorem{defn}[]{Definición}
+%\newenvironment{definition}{\begin{defn}}{\end{defn}}
+%\newtheorem{definition}{Definition}[section]
+%\newtheorem*{remark}{Remark}
 %%%%%%%%
 \newcommand{\tit}[1]{\textit{#1}}
 \newcommand{\bsym}{\mathbf}
 \newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
-\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+%\newcommand{\blue}[1]{\textcolor{blue}{#1}}
 \newcommand{\red}[1]{\textcolor{red}{#1}}
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
@@ -141,7 +164,8 @@
 
 
 \title{Una introducción a los números $p$-ádicos, su aritmética y algunas simulaciones en \textit{Python}}
-\subtitle{Trabajo de grado presentado para optar por el título deMatemático}
+\subtitle{Trabajo de grado presentado para optar por el título de
+Matemático}
 \date{\today}
 
 
@@ -152,7 +176,230 @@
 Facultad de Ciencias\\
 Departamento de Matemáticas}
 \begin{document}
-	\input{chapters/Capitulo01.tex}
-  	%\include{chapters/Capitulo02.tex}
-  	%\include{chapters/Capitulo03.tex}
+  \maketitle
+  \section{Notación}
+  \begin{frame}{Notación}
+    En la escuela nos enseñaron a separar los números por unidades, decenas y centenas. Por ejemplo el número $437$ tiene $7$ unidades, $3$ decenas y $4$ centenas. Es decir que podemos representar $437$ como:
+    $$437 = 7\cdot10^0+ 3\cdot 10^1 + 4\cdot 10^2,$$
+    El número $543.89$ como:
+    $$543.89 = 9\cdot10^{-2}+8\cdot10^{-1}+3\cdot10^0+4\cdot10^1+5\cdot10^2.$$
+    Que también se puede denotar como $543.89_{10}$.
+  \end{frame}
+
+  \begin{frame}{Notación}
+  	Así:
+  	\begin{itemize}
+  		\item Se puede expandir un número por cualquier base $q$.
+ 		\item Ejemplos conocidos de sistemas de numeración son el \tit{octal, hexadecimal y binario}, entre otros.
+  	\end{itemize}
+  \begin{exampleblock}{Ejemplo}
+	Podemos representar el siguiente número:
+	$$2\cdot8^{-2}+2\cdot8^{-1}+3\cdot8^0+4\cdot8^1+7\cdot8^2,$$
+	por $743.22$ ($q=8$), o también $743.22_8$.
+  \end{exampleblock}
+	 
+  \end{frame}
+
+%3------------------
+\begin{frame}{Notación}
+	\begin{itemize}
+		\item Particularmente, estamos interesados en expansiones sobre bases primas.
+		\item Por ejemplo con $p=2$, el ¡Sistema binario!
+		\item En general, una expansión de la forma.	$$x=\sum_{k=-\gamma}^{l}a_kp^k,\text{ con $\gamma\in\Z$, $a_k\in \{0,\dots,p-1\}$ },$$
+		será
+		\begin{equation}\label{notacion}
+		{a_{l} \ldots a_{2} a_{1} a_{0},a_{-1}a_{-2}\cdots a_{-\gamma}}_p.
+		\end{equation}
+		\item Siendo así, ahora sí empecemos.
+	\end{itemize}
+
+\end{frame}
+%4-------------------
+\section{El campo de los números $p$-ádicos}
+\begin{frame}{El campo de los números $p$-ádicos}
+\begin{df}\label{pnorm}
+	Sea $K$ un cuerpo. Una \textit{norma} en $K$ es una función
+	$\abs{\cdot}\colon K \to \R_{\geq 0}$ tal que para todo $x,y\in$ $K$
+	satisface las siguientes propiedades:
+	
+	\begin{enumerate}
+		\item[$\diamond$] $\abs{x} \geq0$, $\abs{x}
+		=0\Longleftrightarrow x=0,$
+		
+		\item[$\diamond$] $\abs{xy}  =\abs{x} \left\vert 
+		y\right\vert ,$
+		
+		\item[$\diamond$] $\left\vert x+y\right\vert \leq\abs{x} +\left\vert y\right\vert$.
+	\end{enumerate}
+\end{df}
+	Además, una norma $\abs{\cdot}$ en $K$ define una métrica natural dada por\linebreak ${d (x,y)=\abs{x-y}}$.
+\end{frame}
+%5-----------------------------------------
+\begin{frame}{El campo de los números $p$-ádicos}
+\begin{df}
+	Dos normas $\abs{\cdot}_1$, $\abs{\cdot}_2$ sobre un cuerpo $K$ se dicen \tit{equivalentes }si inducen la misma topología sobre $K$, i.e., todo abierto con respecto a una  topología también  lo es con respecto a la otra. Por notación decimos que $\abs{\cdot}_1\sim\abs{\cdot}_2$.
+\end{df}
+
+\begin{pr}\label{quiv_power}
+	Sea $K$ un cuerpo con dos normas $\abs{\cdot}_1$, $\abs{\cdot}_2$. Entonces \linebreak$\abs{\cdot}_1\sim\abs{\cdot}_2$ si, y sólo si, existe $c\in\bb{R}_{>0}$ tal que $\abs{\cdot}_1=\abs{\cdot}_2^c$.
+\end{pr}
+\end{frame}
+%6----------------------
+\begin{frame}{El campo de los números $p$-ádicos}
+\begin{pr}
+	[Equivalencia Lipschitz ]\label{lipeq}
+	Sea $K$ un cuerpo con dos normas $\abs{\cdot}_1$, $\abs{\cdot}_2$. Entonces $\abs{\cdot}_1\sim\abs{\cdot}_2$ si, y sólo si existen constantes $k_1,k_2$ positivas tales que:
+	$$k_1\abs{x}_1<\abs{x}_2< k_2\abs{x}_1,$$
+	para todo $x\in K$.
+\end{pr}
+\begin{pr}
+	\label{equiv_cauchy}
+	Sea $K$ un cuerpo con dos normas $\abs{\cdot}_1$, $\abs{\cdot}_2$ tales que ${\abs{\cdot}_1\sim\abs{\cdot}_2}$, entonces una sucesión $ (x_n)$ es de Cauchy respecto a $\abs{\cdot}_1$ si, y sólo si es de Cauchy respecto a $\abs{\cdot}_2$.
+\end{pr}
+\end{frame}
+
+%7----------------------
+\begin{frame}{El campo de los números $p$-ádicos}
+\begin{df}
+	Una norma $\norm{\cdot}$ sobre un cuerpo $K$ se dice \textit{no-arquimediana o ultramétrica}, si la condición $ (3)$  (en la definición \ref{pnorm})  es reemplazada por
+	\begin{equation}\label{condiultra}
+	\|x+y\| \le \maxx\{\|x\|, \|y\|\}, \forall x,y\in K.
+	\end{equation} 
+\end{df}
+\begin{rr}
+	Dado que
+	$$\|x+y\| \le \maxx\{\|x\|, \|y\|\} \leq \|x\| + \|y\|, \forall x,y\in \mathbb{Q},$$ 
+	la condición \ref{condiultra} es también llamada \tit{desigualdad triangular  fuerte}.
+\end{rr}
+\end{frame}
+
+%8----------------------
+\begin{frame}{El campo de los números $p$-ádicos}
+\begin{df} \label{ord_def_1}
+	Fijemos un primo $p$, sea $x\in\mathbb{Q\smallsetminus}\left\{  0\right\}  $ expresado de forma única como $x=p^{v}\frac{a}{b}$, donde $v$ es un entero y
+	$a$, $b$ son  primos relativos con $p$.
+	Definimos la función $\pnorm{\cdot}$ de la siguiente manera:
+	\[
+	\| x\| _{p}=p^{-v},
+	\]
+	donde el entero $v=v\left (  x\right)  $ se denomina el orden $p$\textit{-ádico de} $x$ y
+	será denotado por $\ord\left (  x\right)  $. Por definición $\|0\|_p=0$, y  $\ord (0)=+\infty $.
+\end{df}
+\end{frame}
+%9----------------------
+\begin{frame}{El campo de los números $p$-ádicos}
+	\begin{exampleblock}{Ejemplo}
+		Cálculo de la función $\pnorm{\cdot}$ para distintos $p$'s.
+		\[
+		\left| -\frac{66}{500}\right| _{p}=\left| -\frac{33}{250}\right| _{p}=\left| -\frac{3\cdot11}{2\cdot5^3}\right| _{p}=\begin{cases}
+		\frac{33}{250}       &\,\,\, \text{ si } \,\,\,p=\infty;\\ 
+		2                    &\,\,\, \text{ si }\,\,\, p=2;\\
+		\frac{1}{3}          &\,\,\, \text{ si } \,\,\,p=3;\\  
+		5^3                  &\,\,\, \text{ si }\,\,\, p=5;\\   
+		1                    &\,\,\, \text{ si }\,\,\, p=7;\\    
+		\frac{1}{11}         & \,\,\,\text{ si }\,\,\, p=11;\\     
+		& \vdots\\
+		1                   &\,\,\,\text{ otro caso}.
+		\end{cases}
+		\]
+	\end{exampleblock}
+\end{frame}
+%10-----------------------------------------------
+\begin{frame}{El campo de los números $p$-ádicos}
+	Nuestros 3 mosqueteros:
+	\begin{thh}
+		[\tit{Fórmula Adélica del producto}]
+		Sea $x\in \bb{Q}$ tal que $x\neq0$, entonces:
+		$$\displaystyle\prod_{p}^\infty \norm{x}_p=1, \text{ con } \norm{x}_\infty=\abs{x} \text{ y $p$ primo}.$$
+	\end{thh}
+\begin{thh}
+		$\| \cdot \|_p$ es una norma no arquimediana.	
+\end{thh}
+\begin{thh}
+	[Ostrowski]	\label{ostrowsky} Cualquier norma no trivial sobre $\mathbb{Q}$ es equivalente al
+	valor absoluto usual, o a una norma p-ádica $\| \cdot\| _{p}%
+	$, para algún primo $p$.
+\end{thh}
+\end{frame}
+%11-----------------------------------------------
+\begin{frame}{El campo de los números $p$-ádicos}
+	\begin{rr}
+			Las normas $\norm{\cdot}_p$ y $\norm{\cdot}_q$ no son quivalentes si $p$ y $q$ son primos distintos. Por ejemplo, sea $p=5$ y $q=7$, la sucesión 
+		$x_n=\big (\frac{5}{7}\big)^n$ se tiene que 
+		$$\norm{x_n}_5=5^{-n}\rightarrow 0 \text{ y } \norm{x_n}_7=7^{n}\rightarrow \infty ,$$
+		cuando $n \rightarrow \infty$.
+		
+		El valor absoluto usual sobre $\Q$ tampoco es equivalente a una norma $p$-ádica. Por ejemplo, considérese la sucesión $x_n= (\frac{1}{p})^n$, entonces
+		$$\abs{x_n}=p^{-n}\to 0 \text{ y } \norm{x_n}_p = p^n \to \infty,$$
+		cuando $n\to\infty$. Lo cual contradice la proposición \ref{equiv_cauchy}.
+	\end{rr}
+\end{frame}
+%12-----------------------------------------------
+\begin{frame}{El campo de los números $p$-ádicos}
+	\begin{rr}
+		Las normas $\norm{\cdot}_p$ y $\norm{\cdot}_q$ no son quivalentes si $p$ y $q$ son primos distintos. Por ejemplo, sea $p=5$ y $q=7$, la sucesión 
+		$x_n=\big (\frac{5}{7}\big)^n$ se tiene que 
+		$$\norm{x_n}_5=5^{-n}\rightarrow 0 \text{ y } \norm{x_n}_7=7^{n}\rightarrow \infty ,$$
+		cuando $n \rightarrow \infty$.
+		
+		El valor absoluto usual sobre $\Q$ tampoco es equivalente a una norma $p$-ádica. Por ejemplo, considérese la sucesión $x_n= (\frac{1}{p})^n$, entonces
+		$$\abs{x_n}=p^{-n}\to 0 \text{ y } \norm{x_n}_p = p^n \to \infty,$$
+		cuando $n\to\infty$. Lo cual contradice la proposición \ref{equiv_cauchy}.
+	\end{rr}
+\end{frame}
+%13-----------------------------------------------
+\begin{frame}{El campo de los números $p$-ádicos}
+\begin{thh}
+	[Caracterización de sucesiones de Cauchy]\label{car}
+	Una sucesión $ (x_n)_{n\in\N}$ en $\Q$ es de Cauchy, si, y sólo si:
+	\begin{equation}\label{car_cau}
+	\lim_{n\to\infty}\pnorm{x_{n+1}-x_n}=0.
+	\end{equation}
+\end{thh}
+\begin{df}
+	Sea $ (\bb{K}, \norm{\cdot})$ un cuerpo métrico. Sea ${\bb{K}^\N}$ el anillo de todas las sucesiones en $\bb{K}$. Definimos $\mathcal C,\mathcal N $ como el subanillo de todas las sucesiones de Cauchy y el subanillo de todas las sucesiones finalmente nulas, respectivamente.
+\end{df}
+\end{frame}
+%14-----------------------------------------------
+\begin{frame}{El campo de los números $p$-ádicos}
+\begin{df}
+	[Completación de un cuerpo métrico]Sea $ (\bb{K}, \norm{\cdot})$ un cuerpo métrico. Sean $\mathcal C,\mathcal N $ los subanillos de todas las sucesiones de Cauchy y de todas las sucesiones finalmente nulas, respectivamente.  Definimos el cociente de anillos $\hat{\bb{K}}\coloneqq \mathcal C/\mathcal N  $ como la completación de $\bb{K}$.
+\end{df}
+\begin{rr}
+	La norma $\norm{\cdot}\colon{\hat{\bb{K}}}\to\R_+,$ sobre la completación de $\bb{K}$ está definida tal que para todo $ (x_n)+\mathcal{N} \in \hat{\bb{K}}$:
+	$$\norm{ (x_n)+\mathcal{N}}=\lim_{n\to\infty}\norm{x_n}.$$
+\end{rr}
+\end{frame}
+%15-----------------------------------------------
+\begin{frame}{El campo de los números $p$-ádicos}
+	El siguiente teorema es importante, pues caracteriza a $\Q$ como un cuerpo no completo.
+	\begin{thh}
+		$ (\Q, d (x,y)=\pnorm{x-y})$ y $ (\Q, d (x,y)=|x-y|)$ no son espacios completos.
+	\end{thh}
+\begin{exampleblock}{Ejemplo}
+	Un procedimiento para construir una sucesión de Cauchy en $ (\Q, d (x,y)=\pnorm{x-y})$ podría hacerse, tomando $a\in\Q$ tal que:
+	\begin{itemize}
+		\item[$\diamond$] $a$ no es cuadrado en $\Q$
+		\item[$\diamond$] $p \nmid a$
+		\item[$\diamond$] $a$ es residuo cuadrático módulo $p$. i.e., $x^2 \equiv a \Mod{p^n}$ tiene solución.
+	\end{itemize}
+\end{exampleblock}
+\end{frame}
+%16-----------------------------------------------
+\begin{frame}{El campo de los números $p$-ádicos}
+	\begin{exampleblock}{Continuación$\dots$}
+		Podemos hallar $a$ tal que sea cuadrado en $\Z$ y sumarle un múltplo de $p$; para así construir la sucesión como sigue:
+		\begin{itemize}
+			\item[$\diamond$] Tomamos $x_0$ solución de $x^2\equiv a \Mod{p}$
+			\item[$\diamond$] Construimos a $x_1$ tal que $x_1 \equiv x_0 \Mod{p}$ y además ${x_1^2\equiv a \Mod{p^2}}$ 
+			\item[$\diamond$] Recursivamente, construimos $x_n$ tal que:
+			$$x_n \equiv x_{n-1} \Mod{p^n} \text{ y } {x_n^2\equiv a \Mod{p^{n+1}}}$$
+		\end{itemize}
+	Es de cauchy: $  \pnorm{x_{n+1}-x_n} = \pnorm{kp^n} \leq \pnorm{p^n}=p^{-n}\rightarrow0.$\linebreak
+	No converge: $\pnorm{x_n^2-a}=\pnorm{sp^{n+1}}\leq \pnorm{p^{n+1}}\leq p^{- (n+1)}\to 0,$
+	luego $x_n\to \sqrt{a}\notin\Q$.
+	\end{exampleblock}
+\end{frame}
+
+
 \end{document}
