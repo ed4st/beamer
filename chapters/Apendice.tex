@@ -1,0 +1,79 @@
+\chapter{Apéndice: Sobre el uso del paquete}
+\label{apendice}
+Dado que uno de los objetivos de este trabajo estuvo enfocado hacia el uso de algoritmos para el cómputo de números $p$-ádicos, así como la representación visual de los mismos para modelar ecuaciones de difusión, nos permitimos escribir este apéndice con el fin de que usted, como lector, pueda usar los algoritmos aquí presentados.
+\section{Configuración de ambiente}
+Como mencionamos al comienzo del Capítulo \ref{chapter2}, el uso de varios algoritmos presentes en este trabajo, tienen dependencias de paquetes, las cuales comentaremos antes de introducir la instalación del paquete.
+
+Suponemos que el lector cuenta con un ambiente de \texttt{Python} ya configurado. Si no, en el caso de \texttt{Windows} es necesario instalar una distribución de paquetes científicos que son requisitos para nuestro paquete; esta puede ser \texttt{Anaconda}\footnote{\url{https://www.anaconda.com/}}, \texttt{Python(x,y)}\footnote{\url{https://python-xy.github.io/}} o \texttt{WinPython}\footnote{\url{https://winpython.github.io/}}, entre otras opciones.
+
+En \texttt{Linux} sólo será necesario tener \texttt{pip} instalado (pues la mayoría de distribuciones cuentan con Python previamente instalado), donde la instalación varía según la distribución\footnote{\url{https://www.tecmint.com/install-pip-in-linux/}}.
+\newpage
+
+\subsection*{Paquetes requeridos}
+Los siguientes paquetes son usados por la implementación realizada en este trabajo, nos permitimos nombrar algunas características:
+\begin{itemize}
+	\item\texttt{PyGraphviz} Principalmente usado para dibujar grafos. Paquete basado en \texttt{GraphViz}.
+	
+	\item\texttt{NumPy} Posee representación de matrices en grafos; además, es usado para hacer cómputo de alto rendimiento con grafos;
+	
+	\item\texttt{SciPy} Representa matrices dispersas y posee métodos numéricos.
+	
+	\item\texttt{pandas} Contiene dataFrames para la manipulación de datos.
+	
+	\item\texttt{Matplotlib} Usado para dibujar datos en forma de arreglos.	
+\end{itemize}
+Una vez instalado \texttt{pip}, podemos ejecutar el siguiente comando en la terminal, o en su defecto, en el símbolo del sistema según sea el caso para instalar los paquetes dependientes:
+
+\texttt{\$ pip install numpy scipy pandas matplotlib pygraphviz pydot}
+\subsection*{Instalación de nuestro paquete (padics)}
+Con el fin de usar las funcionalidades mostradas en el Capítulo \ref{chapter2}, hemos configurado un paquete distribuible con el fin de que usted como lector, lo pueda probar si lo desea. La instalación simple requiere del uso del sistema de control de vesiones, \texttt{Git}\footnote{\url{https://git-scm.com/downloads}}.
+
+\begin{itemize}
+	\item Abrir la terminal o el símbolo del sistema según el sistema operativo.
+	\item Ejecutar \texttt{\$ pip install git+https://github.com/ed4st/padics-package}
+\end{itemize}
+\subsubsection{Testeando}
+Para ver si se instaló, cree un script de \texttt{Python}, importe el paquete \texttt{padics} y alguna clase (Number, GpnN) y pruebe instanciando alguna función presentada en el Capítulo \ref{chapter2}. Por ejemplo, calculemos el orden y la norma del número $321.34_7$:
+\begin{lstlisting}[language = Python, caption = test del paquete]
+from padics.Number import Number
+
+x = Number(7,-3,2,[3,2,1,3,4])
+print(x.order(),x.norm())
+>> -2 49
+\end{lstlisting}
+\subsection*{Notas sobre el paquete}
+Dado que el paquete está en sus primeras versiones y además el tiempo es un gran limitante, la documentación existente es sólo la presentada en este trabajo. Por ejemplo, los algoritmos que se usaron en el Capítulo \ref{chapter_3} les falta instructivo de cómo usarlos. Sin embargo, el código\footnote{\url{https://github.com/ed4st/padics-package}} está comentado con el fin de que futuros desrrolladores puedan acceder y puedan tener un primer acercamiento de lo que se establece allí. En resumidas cuentas, listaremos las tareas que faltan por hacer para que el paquete sea estable:
+\begin{itemize}
+	\item Hacer \texttt{unit testing} sobre los algoritmos allí presentados, pues algunos pueden ejecutarse con parámetros no deseados.
+	\item Mejorar el control de excepciones.
+	\item Mejorar documentación de uso.
+	\item Crear más modulos para poder modificar el código de manera estructural.
+	\item Implementar más algoritmos, como los de expansiones $p$-ádicas, o los asociados al estudio de álgebra (como el \textit{Lema de Hensel}), para hacer criptografía.
+	\item Implementar la versión del \textit{algoritmo de Karatsuba} en números $p$-ádicos para mejorar la complejidad algorítmica de la función de multiplicación (p\_mul()) de la clase GpnN.
+	\item Para las personas que no tienen suficiente dominio de linux, sería muy bueno crear una interfaz gráfica del paquete.
+	
+\end{itemize}
+
+
+\iffalse
+
+
+
+
+La construcción de un modelo de movimiento aleatorio sobre $\mathbb{Q}^n_p$ análogo al movimiento Browniano hace uso de la maquinaria clásica de procesos de Markov sobre espacios métricos, ver por ejemplo \cite{Dyn}.
+
+Definamos
+\[ p\left(  t,x,y\right)  =Z\left(  x-y,t\right),\, \, t>0,  \] 
+y
+\[
+P(t,x,B)=%
+\begin{cases}
+\int_{B}p(t,y,x)d^{n}y &  t>0,\quad x\in\mathbb{Q}_{p}^{n}\\
+\boldsymbol{1}_{B}(x) &  t=0, 
+\end{cases}
+\]
+donde $B$ es un subconjunto de Borel de $\mathbb{Q}_{p}^{n}$.
+$P(t,x,B)$ representa la probabilidad de que una partícula salte al conjunto $B$, después de $t$ segundos, siendo que estaba en la posición $x$. De manera más técnica, podemos decir que  $Z\left(  x,t\right)  $ es la función de densidad de transición de un proceso
+estocástico de Markov $X(t,\omega)$, el  cual es homogéneo en el espacio y en el tiempo, y cuyas trayectorias $X_{\omega}(t)$, curvas en $\mathbb{Q}_{p}^{n}$, son continuas por derecha con   discontinuidades  solamente de  salto, ver \cite[Teorema 5.3]{Ch-Z}.
+\fi
+

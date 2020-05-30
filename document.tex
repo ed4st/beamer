@@ -1,0 +1,158 @@
+\documentclass{beamer}
+\usetheme[background=dark,titleformat = smallcaps , block = fill,numbering = fraction, progressbar = head, titleformat title= smallcaps]{metropolis}           % Use metropolis theme
+
+\usepackage {extarrows}
+\usepackage {tikz}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{amssymb}
+%\usepackage{amsfonts}
+
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{xcolor}
+%\usepackage{amsfonts,amssymb,amsthm}
+
+\usepackage{url}
+\usepackage{enumerate}
+\usepackage{commath}
+\usepackage{multicol}
+\usepackage{mathtools}
+\usepackage{scrextend}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{longtable}
+\usepackage{bbm}
+\usepackage{siunitx}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{subcaption}
+\usepackage{epigraph}
+\usepackage{docmute}
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{blue},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{red},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+\lstset{language=Python}
+\lstset{frame=lines}
+\lstset{caption={Insert code directly in your document}}
+\lstset{label={lst:code_direct}}
+\lstset{basicstyle=\footnotesize}
+
+
+\newcommand{\bb}[1]{\mathbb{#1}}
+
+%\newtheorem{theorem}{Teorema}[section]
+%\theoremstyle{plain}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}{Claim}
+\newtheorem{conclution}[theorem]{Conclusión}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+%\newtheorem{corollary}[theorem]{Corolario}
+\newtheorem{criterion}[theorem]{Criterion}
+\theoremstyle{definition}
+%\newtheorem{definition}[theorem]{Definición}
+%\newtheorem{example}[theorem]{Ejemplo}
+\newtheorem{exercise}[theorem]{Exercise}
+%\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{notation}[theorem]{Notation}
+%\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposición}
+\newtheorem{remark}[theorem]{Nota}
+%\newtheorem{solution}[theorem]{Solución}
+\newtheorem{summary}[theorem]{Summary}
+\numberwithin{equation}{section}
+
+%\newtheorem{definition}{Definition}[section]
+
+%%%%%%%%
+\newcommand{\tit}[1]{\textit{#1}}
+\newcommand{\bsym}{\mathbf}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+\newcommand{\Rplus}{\mathds{R}_{^{+}}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\ssi}{\longleftrightarrow}
+\newcommand{\ent}{\longrightarrow}
+\newcommand{\Qp}{\mathbb{Q}_p}  
+\newcommand{\Qpn}{\mathbb{Q}_p^n}
+\newcommand{\Zpn}{\mathbb{Z}_p^n}
+\newcommand{\Zp}{\mathbb{Z}_p}
+\newcommand{\Zd}{\mathbb{Z}_2}
+%\newcommand{\abs}[1]{\left\vert #1 \right\vert}
+%\newcommand{\norm}[1]{\|#1\|}
+\newcommand{\pnorm}[1]{\|#1\|_p}
+\newcommand{\maxx}[1]{\text{m\'ax} #1}
+\newcommand{\xbar}[1]{\hskip 1.4pt\overline{\hskip-1.2pt #1\hskip -.6pt}\hskip 1.2pt}
+\newcommand{\rb}{\raisebox{-.35ex}}
+
+\DeclareMathOperator{\s}{\mathbf{S}}
+\DeclareMathOperator{\f}{\mathcal{F}}
+\DeclareMathOperator{\A}{\mathbb{A}}
+\DeclareMathOperator{\dist}{dist} % The distance.
+\DeclareMathOperator{\d^n}{\dif^{\,n}}
+%\DeclareMathOperator{\d}{\dif}
+\DeclareMathOperator{\Real}{Re}
+\DeclareMathOperator{\ord}{Ord}
+\DeclareMathOperator{\Dom}{Dom}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\gpn}{\mathit{{GpnN}}}
+%%%%%%%%%
+%%%%%%%%%%%%%%%%% dashed integrals %%%%%%%%%%%%%%%%%%%%%
+\DeclareSymbolFont{eulargesymbols}{U}{zeuex}{m}{n}
+\DeclareMathSymbol{\intop}{\mathop}{eulargesymbols}{"52}
+\usepackage[toc,page]{appendix}
+\renewcommand{\labelitemi}{$\circ$}
+
+
+\title{Una introducción a los números $p$-ádicos, su aritmética y algunas simulaciones en \textit{Python}}
+\subtitle{Trabajo de grado presentado para optar por el título deMatemático}
+\date{\today}
+
+
+\author{\bf{Autor: }Edgar Baquero 
+	\\ \bf{Supervisor: }Leonardo Chacón. PhD.}
+
+\institute{Pontificia Universidad Javeriana,
+Facultad de Ciencias\\
+Departamento de Matemáticas}
+\begin{document}
+	\input{chapters/Capitulo01.tex}
+  	%\include{chapters/Capitulo02.tex}
+  	%\include{chapters/Capitulo03.tex}
+\end{document}
