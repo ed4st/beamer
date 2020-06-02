@@ -1,6 +1,10 @@
 \documentclass{beamer}
 \usepackage[utf8]{inputenc}
-\usetheme[background=dark,titleformat = smallcaps , block = fill,numbering = fraction, progressbar = head, titleformat title= smallcaps]{metropolis}           % Use metropolis theme
+\usetheme[background=dark,titleformat = smallcaps , block = fill,numbering = fraction, progressbar = frametitle , titleformat title= smallcaps]{metropolis}           % Use metropolis theme
+
+
+\definecolor{orangeBar}{HTML}{FF3600}
+\setbeamercolor{progress bar}{fg=orangeBar}
 
 \usepackage {extarrows}
 \usepackage {tikz}
@@ -109,6 +113,7 @@
 \newtheorem{thh}{\orangee{Teorema}}
 \newtheorem{pr}{\orangee{Proposición}}
 \newtheorem{lm}{\orangee{Lema}}
+\newtheorem{crr}{\orangee{Corolario}}
 \newtheorem{rr}{\redd{Observación}}
 
 
@@ -178,7 +183,7 @@ Departamento de Matemáticas}
 \begin{document}
   \maketitle
   \section{Notación}
-  \begin{frame}{Notación}
+  \begin{frame}{Unidades, decenas y centenas...}
     En la escuela nos enseñaron a separar los números por unidades, decenas y centenas. Por ejemplo el número $437$ tiene $7$ unidades, $3$ decenas y $4$ centenas. Es decir que podemos representar $437$ como:
     $$437 = 7\cdot10^0+ 3\cdot 10^1 + 4\cdot 10^2,$$
     El número $543.89$ como:
@@ -186,7 +191,7 @@ Departamento de Matemáticas}
     Que también se puede denotar como $543.89_{10}$.
   \end{frame}
 
-  \begin{frame}{Notación}
+  \begin{frame}{Sistemas numéricos}
   	Así:
   	\begin{itemize}
   		\item Se puede expandir un número por cualquier base $q$.
@@ -201,7 +206,7 @@ Departamento de Matemáticas}
   \end{frame}
 
 %3------------------
-\begin{frame}{Notación}
+\begin{frame}{Representación que usamos}
 	\begin{itemize}
 		\item Particularmente, estamos interesados en expansiones sobre bases primas.
 		\item Por ejemplo con $p=2$, el ¡Sistema binario!
@@ -216,13 +221,13 @@ Departamento de Matemáticas}
 \end{frame}
 %4-------------------
 \section{El campo de los números $p$-ádicos}
-\begin{frame}{El campo de los números $p$-ádicos}
+\begin{frame}{Norma}
 \begin{df}\label{pnorm}
 	Sea $K$ un cuerpo. Una \textit{norma} en $K$ es una función
 	$\abs{\cdot}\colon K \to \R_{\geq 0}$ tal que para todo $x,y\in$ $K$
 	satisface las siguientes propiedades:
 	
-	\begin{enumerate}
+	\begin{itemize}[<+- | alert@+>]
 		\item[$\diamond$] $\abs{x} \geq0$, $\abs{x}
 		=0\Longleftrightarrow x=0,$
 		
@@ -230,12 +235,12 @@ Departamento de Matemáticas}
 		y\right\vert ,$
 		
 		\item[$\diamond$] $\left\vert x+y\right\vert \leq\abs{x} +\left\vert y\right\vert$.
-	\end{enumerate}
+	\end{itemize}
 \end{df}
 	Además, una norma $\abs{\cdot}$ en $K$ define una métrica natural dada por\linebreak ${d (x,y)=\abs{x-y}}$.
 \end{frame}
 %5-----------------------------------------
-\begin{frame}{El campo de los números $p$-ádicos}
+\begin{frame}{Equivalencia entre normas}
 \begin{df}
 	Dos normas $\abs{\cdot}_1$, $\abs{\cdot}_2$ sobre un cuerpo $K$ se dicen \tit{equivalentes }si inducen la misma topología sobre $K$, i.e., todo abierto con respecto a una  topología también  lo es con respecto a la otra. Por notación decimos que $\abs{\cdot}_1\sim\abs{\cdot}_2$.
 \end{df}
@@ -245,7 +250,7 @@ Departamento de Matemáticas}
 \end{pr}
 \end{frame}
 %6----------------------
-\begin{frame}{El campo de los números $p$-ádicos}
+\begin{frame}{Equivalencia entre normas}
 \begin{pr}
 	[Equivalencia Lipschitz ]\label{lipeq}
 	Sea $K$ un cuerpo con dos normas $\abs{\cdot}_1$, $\abs{\cdot}_2$. Entonces $\abs{\cdot}_1\sim\abs{\cdot}_2$ si, y sólo si existen constantes $k_1,k_2$ positivas tales que:
@@ -259,7 +264,7 @@ Departamento de Matemáticas}
 \end{frame}
 
 %7----------------------
-\begin{frame}{El campo de los números $p$-ádicos}
+\begin{frame}{Norma no-arquimediana}
 \begin{df}
 	Una norma $\norm{\cdot}$ sobre un cuerpo $K$ se dice \textit{no-arquimediana o ultramétrica}, si la condición $ (3)$  (en la definición \ref{pnorm})  es reemplazada por
 	\begin{equation}\label{condiultra}
@@ -274,7 +279,7 @@ Departamento de Matemáticas}
 \end{frame}
 
 %8----------------------
-\begin{frame}{El campo de los números $p$-ádicos}
+\begin{frame}{Orden y Norma en $\Q$}
 \begin{df} \label{ord_def_1}
 	Fijemos un primo $p$, sea $x\in\mathbb{Q\smallsetminus}\left\{  0\right\}  $ expresado de forma única como $x=p^{v}\frac{a}{b}$, donde $v$ es un entero y
 	$a$, $b$ son  primos relativos con $p$.
@@ -287,7 +292,7 @@ Departamento de Matemáticas}
 \end{df}
 \end{frame}
 %9----------------------
-\begin{frame}{El campo de los números $p$-ádicos}
+\begin{frame}{Orden y Norma en $\Q$}
 	\begin{exampleblock}{Ejemplo}
 		Cálculo de la función $\pnorm{\cdot}$ para distintos $p$'s.
 		\[
@@ -305,8 +310,8 @@ Departamento de Matemáticas}
 	\end{exampleblock}
 \end{frame}
 %10-----------------------------------------------
-\begin{frame}{El campo de los números $p$-ádicos}
-	Nuestros 3 mosqueteros:
+\begin{frame}{Los 3 mosqueteros}
+	
 	\begin{thh}
 		[\tit{Fórmula Adélica del producto}]
 		Sea $x\in \bb{Q}$ tal que $x\neq0$, entonces:
@@ -322,7 +327,7 @@ Departamento de Matemáticas}
 \end{thh}
 \end{frame}
 %11-----------------------------------------------
-\begin{frame}{El campo de los números $p$-ádicos}
+\begin{frame}{No equivalencia de normas en $\Q$}
 	\begin{rr}
 			Las normas $\norm{\cdot}_p$ y $\norm{\cdot}_q$ no son quivalentes si $p$ y $q$ son primos distintos. Por ejemplo, sea $p=5$ y $q=7$, la sucesión 
 		$x_n=\big (\frac{5}{7}\big)^n$ se tiene que 
@@ -335,20 +340,7 @@ Departamento de Matemáticas}
 	\end{rr}
 \end{frame}
 %12-----------------------------------------------
-\begin{frame}{El campo de los números $p$-ádicos}
-	\begin{rr}
-		Las normas $\norm{\cdot}_p$ y $\norm{\cdot}_q$ no son quivalentes si $p$ y $q$ son primos distintos. Por ejemplo, sea $p=5$ y $q=7$, la sucesión 
-		$x_n=\big (\frac{5}{7}\big)^n$ se tiene que 
-		$$\norm{x_n}_5=5^{-n}\rightarrow 0 \text{ y } \norm{x_n}_7=7^{n}\rightarrow \infty ,$$
-		cuando $n \rightarrow \infty$.
-		
-		El valor absoluto usual sobre $\Q$ tampoco es equivalente a una norma $p$-ádica. Por ejemplo, considérese la sucesión $x_n= (\frac{1}{p})^n$, entonces
-		$$\abs{x_n}=p^{-n}\to 0 \text{ y } \norm{x_n}_p = p^n \to \infty,$$
-		cuando $n\to\infty$. Lo cual contradice la proposición \ref{equiv_cauchy}.
-	\end{rr}
-\end{frame}
-%13-----------------------------------------------
-\begin{frame}{El campo de los números $p$-ádicos}
+\begin{frame}{Sucesiones de Cauchy}
 \begin{thh}
 	[Caracterización de sucesiones de Cauchy]\label{car}
 	Una sucesión $ (x_n)_{n\in\N}$ en $\Q$ es de Cauchy, si, y sólo si:
@@ -361,7 +353,7 @@ Departamento de Matemáticas}
 \end{df}
 \end{frame}
 %14-----------------------------------------------
-\begin{frame}{El campo de los números $p$-ádicos}
+\begin{frame}{Completación de un cuerpo métrico}
 \begin{df}
 	[Completación de un cuerpo métrico]Sea $ (\bb{K}, \norm{\cdot})$ un cuerpo métrico. Sean $\mathcal C,\mathcal N $ los subanillos de todas las sucesiones de Cauchy y de todas las sucesiones finalmente nulas, respectivamente.  Definimos el cociente de anillos $\hat{\bb{K}}\coloneqq \mathcal C/\mathcal N  $ como la completación de $\bb{K}$.
 \end{df}
@@ -370,26 +362,34 @@ Departamento de Matemáticas}
 	$$\norm{ (x_n)+\mathcal{N}}=\lim_{n\to\infty}\norm{x_n}.$$
 \end{rr}
 \end{frame}
+
+\begin{frame}{Completaciones de $\Qp$}
+	\begin{figure}
+		\includegraphics[scale=0.35]{img/relojBeamer.jpg}\caption{Completaciones respecto a las distintas normas en $\Q$}
+	\end{figure}
+\end{frame}
 %15-----------------------------------------------
-\begin{frame}{El campo de los números $p$-ádicos}
+\begin{frame}{$\Q$ no es completo :c}
 	El siguiente teorema es importante, pues caracteriza a $\Q$ como un cuerpo no completo.
 	\begin{thh}
 		$ (\Q, d (x,y)=\pnorm{x-y})$ y $ (\Q, d (x,y)=|x-y|)$ no son espacios completos.
 	\end{thh}
 \begin{exampleblock}{Ejemplo}
 	Un procedimiento para construir una sucesión de Cauchy en $ (\Q, d (x,y)=\pnorm{x-y})$ podría hacerse, tomando $a\in\Q$ tal que:
-	\begin{itemize}
+	\begin{itemize}[<+- | alert@+>]
 		\item[$\diamond$] $a$ no es cuadrado en $\Q$
 		\item[$\diamond$] $p \nmid a$
 		\item[$\diamond$] $a$ es residuo cuadrático módulo $p$. i.e., $x^2 \equiv a \Mod{p^n}$ tiene solución.
 	\end{itemize}
 \end{exampleblock}
 \end{frame}
+
+
 %16-----------------------------------------------
-\begin{frame}{El campo de los números $p$-ádicos}
+\begin{frame}{$\Q$ no es completo :c}
 	\begin{exampleblock}{Continuación$\dots$}
 		Podemos hallar $a$ tal que sea cuadrado en $\Z$ y sumarle un múltplo de $p$; para así construir la sucesión como sigue:
-		\begin{itemize}
+		\begin{itemize}[<+- | alert@+>]
 			\item[$\diamond$] Tomamos $x_0$ solución de $x^2\equiv a \Mod{p}$
 			\item[$\diamond$] Construimos a $x_1$ tal que $x_1 \equiv x_0 \Mod{p}$ y además ${x_1^2\equiv a \Mod{p^2}}$ 
 			\item[$\diamond$] Recursivamente, construimos $x_n$ tal que:
@@ -399,6 +399,348 @@ Departamento de Matemáticas}
 	No converge: $\pnorm{x_n^2-a}=\pnorm{sp^{n+1}}\leq \pnorm{p^{n+1}}\leq p^{- (n+1)}\to 0,$
 	luego $x_n\to \sqrt{a}\notin\Q$.
 	\end{exampleblock}
+\end{frame}
+%-------------Topology----------------------
+\section{Topología en $\Qp$}
+%17-----------------------------------------
+\begin{frame}{El espacio $\Qpn$}
+	Podemos definir en $\Qpn$ una norma como:\[
+	\pnorm{x}:=\max_{1\leq i\leq n}\pnorm{x_i},\qquad\text{para }x= (x_{1},\dots,x_{n})\in\Qpn.
+	\]
+	Así, $(\Qpn, d=\pnorm{x-y})$ es un espacio métrico, donde las distancias están en el conjunto \{$p^\gamma$$\colon$ $\gamma\in\Z$\}$\cup$\{$0$\}. Luego, tiene sentido definir los abiertos básicos por:
+	 \[
+	 B^n_{\gamma} (a)=\{x\in\Qp:\pnorm{x-a}< p^{\gamma}\},\ \gamma\in \mathbb{Z}.
+	 \]
+	 \begin{rr}
+	 	$B_\gamma^n (a)$ es un grupo aditivo.
+	 \end{rr}
+\end{frame}
+%18-----------------------------------------
+\begin{frame}{Algunas propiedades topológicas de $\Qpn$}
+	Análogamente pordemos definir la esfera $n$-dimensional con centro en $a$:
+	\[
+	S^n_{r} (a)=\{x\in\Qpn:\pnorm{x-a}=p^{r}\},\ r\in \mathbb{Z}.
+	\]
+	Además
+	\begin{itemize}[<+- | alert@+>]
+		\item $S_{\gamma}^n (a)=\left\{x:\pnorm{x-a}=p^{\gamma}\right\}=B_{\gamma}^n (a) \backslash B_{\gamma-1}^n (a).$
+		\item${B_{\gamma}^n (a) \subset B_{\gamma^{\prime}}^n (a)}$ siempre que $\gamma<\gamma^{\prime}.$
+		\item $B_{\gamma-1}^n (a)=\left\{x:\pnorm{x-a}<p^{\gamma}\right\}.$ 
+		\item $B_{\gamma}^n (a)=\bigcup_{\gamma^{\prime} \leq \gamma} S_{\gamma^{\prime}}^n (a).$
+		\item $\bigcup_{\gamma} B_{\gamma}^n (a)=\bigcup_{\gamma} S_{\gamma}^n (a)=\mathbb{Q}_{p}^n-\{0\}.$
+		\item $\bigcap_{\gamma} B_{\gamma}^n (a)=\{a\}.$
+	\end{itemize}
+\end{frame}
+%18-----------------------------------------
+\begin{frame}{Propiedades bonitas de $\Qp$ :o}
+	\begin{thh}
+	\begin{itemize}[<+- | alert@+>]
+		\item \label{clopen1} Si $b\in B_{r} (a)$, entonces $B_{r} (a)=B_{r} (b)$. En otras palabras: ¡Todo  punto de una bola abierta es centro de la misma!
+		\item Toda bola es a su vez, un conjunto cerrado y abierto.
+		\item Dos bolas en $\Qp$ son disyuntas o una contiene a la otra; es decir, si $a,b \in \bb{Q}_p$, y $r,s\in \Z$, se tiene que $B_{r} (a)\cap B_{s} (b)\neq\emptyset$ si, y sólo si, $B_{r} (a)\subseteq B_{s} (b)$ o $B_{s} (b)\subseteq B_{r} (a)$.
+	\end{itemize}	
+	\end{thh}
+	
+	
+\end{frame}
+
+%19-----------------------------------------
+\begin{frame}{Más propiedades de $\Qp$ }
+\begin{thh}
+	$\Qp$ es un espacio de \tit{Hausdorff}
+\end{thh}
+\begin{thh}
+	$\{B_\gamma (a)\colon r\in\Z, a\in\Qp\}$ es contable.
+\end{thh}
+\begin{thh}
+	$\Qp$ es un espacio localmente compacto.
+\end{thh}
+	
+	
+\end{frame}
+%20-----------------------------------------
+\begin{frame}{Algunas definiciones de Topología}
+\begin{df}
+		Decimos que un espacio topológico es \tit{conexo} si no puede ser escrito como la unión de dos abiertos disyuntos no vacíos. Por otro lado, decimos que un espacio es \tit{disconexo} si es la unión de dos abiertos disyuntos no vacíos.
+\end{df}
+
+\begin{df}
+Los subconjuntos conexos maximales de un espacio topológico son llamados \tit{componentes conexos}.
+\end{df}
+
+\begin{df}
+	Decimos que un espacio topológico es \tit{totalmente disconexo} si todas sus componentes conexos son singletons.
+\end{df}
+	
+\end{frame}
+
+%21-----------------------------------------
+\begin{frame}{Un corolario simple y bonito}
+	\begin{thh}
+		$\Qp$ es totalmente disconexo.
+	\end{thh}
+	\begin{thh}
+		$\N$ es denso en $\Zp$.
+	\end{thh}
+	\begin{lm}
+		Sean $x, y \in \bb{Q}_p$ tales que $\norm{x}_p \neq \norm{y}_p.$ Entonces:
+		$$\norm{x+y}_p=\maxx\{\norm{x}_p,\norm{y}_p\}$$
+	\end{lm}
+	\begin{crr}
+		Todos los triángulos en $\Qp$ son isósceles.  
+	\end{crr}
+\end{frame}
+%22-----------------------------------------
+\begin{frame}{Un corolario simple y bonito}
+
+\begin{figure}
+	\centering
+	\begin{tikzpicture}
+	
+	%   \draw [black!20]  (0,0) grid  (3,4);
+	\draw[black]  (0,0)-- (3,0)--  (1.5,4)--cycle;
+	
+	
+	\draw  (0,0) circle  (0pt) node[anchor=north] {$y$};
+	\draw  (3,0) circle  (0pt) node[anchor=north] {$z$};
+	\draw  (1.5,4.5) circle  (0pt) node[anchor=north] {$x$};
+	\draw  (3.5,2) circle  (0pt) node[anchor=north] {$\pnorm{x-z}$};
+	\draw  (-0.5,2) circle  (0pt) node[anchor=north] {$\pnorm{x-y}$};
+	\draw  (1.5,-0.2) circle  (0pt) node[anchor=north] {$\pnorm{z-y}$};  
+	\end{tikzpicture}
+	\caption{Todos los triángulos en $\bb{Q}_p$ son isósceles}
+	\label{fig:1}
+\end{figure}
+\end{frame}
+%24-----------------------------------------
+\begin{frame}{Relación de $\Qp$ con $\R$}
+\begin{itemize}
+	\item Existe una correspondencia con los \textit{Conjuntos de Cantor}.
+	\item También podemos relacionarlos mediante una función $\rho\colon\Qp\to\R_{+}$ conocida como \textit{Monna map}, definida por
+	\begin{equation}\label{Monna}
+	\rho: \sum_{j=\gamma}^{\infty} x_{j} p^{j} \mapsto \sum_{j=\gamma}^{\infty} x_{j} p^{-j-1}, \quad x_{j}=0,1, \ldots, p-1, \quad \gamma \in \mathbb{Z},
+	\end{equation}
+\end{itemize}
+\end{frame}
+%25-----------------------------------------
+\begin{frame}{Propiedades de $\rho$}
+	\begin{itemize}[<+- | alert@+>]
+		\item {$\rho$ es una función continua, sobreyectiva, pero no inyectiva.}
+		\item $|\rho (x)-\rho (y)| \leq\pnorm{x-y}, \text{ para todo } x, y \in \mathbb{Q}_{p}$.
+		Es decir, $\rho$ satisface la desigualdad de Hölder,
+		\item $\rho\left (p^{\gamma} x\right)=p^{-\gamma} \rho (x), \text{ para todo }x \in \mathbb{Q}_{p}.$
+	\end{itemize}
+\end{frame}
+%------------------------Arithmetic------------------------
+\section{Aritmética $p$-ádica}
+
+\begin{frame}{Expansiones $p$-ádicas de enteros}
+	\begin{itemize}[<+- | alert@+>]
+		\item Podemos expandir por cualquier base $p$ un número $n\in\Z$
+		\item El procedimiento es algorítmico:
+		$$a_0 =n\bmod p\hspace{5mm} \Longrightarrow \hspace{5mm} n_1 = \frac{n-a_0}{p},$$ $$a_1 =n_1\bmod p \hspace{5mm} \Longrightarrow \hspace{5mm} n_2 = \frac{n_1-a_1}{p},$$ $$a_2 =n_2\bmod p \hspace{5mm} \Longrightarrow \hspace{5mm} n_3 = \frac{n_2-a_2}{p},$$
+		$$\vdots$$
+		\item Así, la representación de un entero $p$-ádico por dígitos está dada por \ref{notacion}
+		$$n={ a_{l} \ldots a_{3} a_{2} a_{1} a_{0}}_p,$$
+		\item La representación es conocida como el \textit{Código de Hensel} de $n$.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Expansiones $p$-ádicas de enteros}
+\begin{exampleblock}{Ejemplo}
+	Sea $n=5353$ y sea $p=5$, entonces la representación $p$-ádica de 5353 en base 5 está dada por:
+	\begin{align*}
+	%\centering
+	a_0 =5353\bmod5 = 3 \hspace{3mm} \Longrightarrow \hspace{3mm} n_1 = \frac{5353-3}{5}=1070,\\
+	a_1 =1070\bmod 5=0 \hspace{3mm} \Longrightarrow \hspace{5mm}n_2 = \frac{1070-0}{5}=214,\\
+	a_2 =214\bmod 5=4 \hspace{5mm} \Longrightarrow \hspace{9mm}n_3 = \frac{214-4}{5}=42,\\
+	a_3 =42 \bmod 5=2 \hspace{7mm} \Longrightarrow \hspace{13mm}n_4 = \frac{42-2}{5}=8,\\
+	a_4 =8 \bmod 5=3 \hspace{9mm} \Longrightarrow \hspace{15mm}n_5 = \frac{8-3}{5}=1,\\
+	a_5 =1 \bmod 5=1 \hspace{9mm} \Longrightarrow \hspace{15mm}n_6 = \frac{1-1}{5}=0.
+	\end{align*}
+	En otras palabras, el código de Hensel de $5353$ es $132403_5$.
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Expansiones $p$-ádicas de racionales}
+Consideremos $x$ tal que su serie de expansión es
+$$
+\begin{aligned}
+x &=2+3 p+p^{2}+3 p^{3}+p^{4}+3 p^{5}+p^{6}+\cdots \\
+&=2+3 p\left (1+p^{2}+p^{4}+\cdots\right)+p^{2}\left (1+p^{2}+p^{4}+\cdots\right) \\
+&=2+\left (3 p+p^{2}\right)\left (1+p^{2}+p^{4}+\cdots\right).
+\end{aligned}
+$$
+Como $1+p^{2}+p^{4}+\cdots$ converge a $\left (1-p^{2}\right)^{-1},$ tenemos
+$$
+x=2+\frac{3 p+p^{2}}{1-p^{2}}.
+$$ 
+Como caso particular, tomando $p=5$, tenemos que 
+$$
+x=2+\frac{3\cdot5+5^{2}}{1-5^{2}}=\frac{1}{3},
+$$ 
+por lo tanto, la expansión $5$-ádica de $\frac{1}{3}$ es $\cdots1313132_5$.
+\end{frame}
+
+\begin{frame}{Ejemplos de expansiones $p$-ádicas sobre racionales}
+\begin{exampleblock}{Ejemplo}
+		\begin{align*}
+	&14.31_5=1 \cdot 5^{-2}+3 \cdot 5^{-1}+4 \cdot 5^{0}+1 \cdot 5^{1}=241 / 25 \\
+	&1413_5=1 \cdot 5^{0}+3 \cdot 5^{1}+4 \cdot 5^{2}+1 \cdot 5^{3} =241 \\
+	&14310_5=0 \cdot 5^{0}+1 \cdot 5^{1}+3 \cdot 5^{2}+4 \cdot 5^{3}+1 \cdot 5^{4}=1205
+	\end{align*}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Suma}
+Sean $\alpha= (a_i)$ y $\beta = (b_i)$ dos enteros $p$-ádicos. Definimos la suma como una sucesión $ (c_i)$ de dígitos $p$-ádicos apoyados de una sucesión $ (\epsilon_i)$ en $\{ 0 , 1\}$  (\tit{carries}), tales que:
+\begin{itemize}[<+- | alert@+>]
+	\item $\epsilon_0=0,$
+	\item $c_i=a_i + b_i + \epsilon_i $ ó $c_i=a_i + b_i + \epsilon_i - p$, donde alguno de los dos es un dígito $p$-ádico; es decir, $c_i\in \{0, \dots , p-1\}$. Dado el caso de $c_i$ se tendrá que $\epsilon_{i+1}=0$ o  $\epsilon_{i+1}=1.$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Suma}
+
+\begin{exampleblock}{Ejemplo}
+	\begin{itemize}
+	\item Tomando $p=7$, se tiene: 
+	$$
+	\vbox{
+		\openup2pt
+		\def\trule{\noalign{\smallskip\hrule\smallskip}}
+		\halign{&\tabskip1em$\mathstrut####$\cr
+			& \cdots  & 2 & 5 & 1 & 4 & 1 & 3\cr
+			+     & \cdots  & 1 & 2 & 1 & 1 & 0 & 2 \cr
+			\trule
+			& \cdots  & 4 & 0 & 2 & 5 & 1 & 5 \cr
+		}
+	}
+	%\bye
+	$$
+	
+	\item $0-1$ en los $7$-ádicos: 
+	$$
+	\vbox{
+		\openup2pt
+		\def\trule{\noalign{\smallskip\hrule\smallskip}}
+		\halign{&\tabskip1em$\mathstrut####$\cr
+			& \cdots  & 0 & 0 & 0 & 0 & 0 & 0\cr
+			-     & \cdots  & 0 & 0 & 0 & 0 & 0 & 1 \cr
+			\trule
+			& \cdots  & 6 & 6 & 6 & 6 & 6 & 6 \cr
+		}
+	}
+	%\bye
+	$$
+	Esto quiere decir que $-1= \cdots 666_7$.
+		
+	\end{itemize}
+	
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}{Representación de números negativos}
+	Si $x=\sum_{i=\gamma}^{\infty}a_ip^i$, entonces $-x=\sum_{i=\gamma}^{\infty}b_ip^i$, donde $b_\gamma = p-a_\gamma$ y\linebreak	 $b_i =  (p-1)-a_i$ con $i>\gamma$.
+	
+	
+	
+	\begin{exampleblock}{Ejemplo} Con $p=5$
+		\begin{align*}
+		&\frac{1}{3}=\cdots1313132_5 \Rightarrow -\frac{1}{3}=\cdots3131313_5,\\
+		&\frac{5}{3}=\cdots13131320_5 \Rightarrow -\frac{5}{3}=\cdots31313130_5.
+		\end{align*}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Numeros unidades}
+	\begin{df}
+		Un número $p$-ádico es llamado \textit{unidad} si no es múltiplo de una potencia negativa de $p$ y su primer dígito no es $0$.	
+	\end{df}
+	\begin{exampleblock}{Ejemplo}
+		Los números $\cdots314_5$ y $\cdots24_5$ son unidades, mientras que $\cdots310_5$ y $\cdots1321.24_5$ no lo son.	
+	\end{exampleblock}
+	Así, un número $p$-ádico no-unidad $x=\sum_{j=-N}^{\infty} a_{j} p^{j}$ es un número que puede escribirse de la forma ${x=u\cdot p^{-N}}$ donde $u$ es un número unidad. Por ejemplo
+	\begin{align*}
+	&\cdots 410_5 = \cdots 41_5\cdot5^1\\
+	&\cdots 1321.24_5 = \cdots 132124_5\cdot 5^{-2}.
+	\end{align*}
+\end{frame}
+
+\begin{frame}{Multiplicación $p$-ádica}
+	Sean $x=u\cdot p^{-N_1}$ y $y=v\cdot p^{-N_2}$ con $u,v$ unidades. Definimos la multiplicación $x\cdot y = u\cdot v\cdot p^{- (N_1+N_2)}$
+	\begin{exampleblock}{Ejemplo}%\textcolor{red}{corregir este ejemplo, mejor usar la notacion del koblitz y que tengan potencias  negativas}
+		\label{mult_ex}
+		%Con $p=7$, sea $u = \cdots251413_7$ y $v=\cdots 121102_7$ números unidades. Luego
+		$$
+		\vbox{
+			\openup2pt
+			\def\trule{\noalign{\smallskip\hrule\smallskip}}
+			\halign{&\tabskip1em$\mathstrut####$\cr
+				& \cdots   & 5 & 1 & 4 & 1 & 3\cr
+				\times     & \cdots   & 2 & 1 & 1 & 0 & 2\cr
+				\trule
+				& \cdots   & 3 & 3 & 1 & 2 & 6\cr
+				& \cdots   & 0 & 0 & 0 & 0\cr
+				& \cdots   & 4 & 1 & 3\cr
+				& \cdots   & 1 & 3\cr
+				%+ \cdots   & 6\cr
+				+          & \cdots  & 6\cr 
+				\trule
+				& \cdots   & 1 & 0 & 4 & 2 & 6\cr
+			}
+		}
+		%\bye
+		$$
+		
+		Así, con $p=7$, $u\cdot v =\cdots251413_7\times\cdots 123102_7=\cdots 310426_7$.
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{División $p$-ádica}
+	Los cálculos de divisiones en los enteros $p$-ádicos no difieren de los métodos tradicionales de división.
+	\begin{exampleblock}{Ejemplo}
+		%Tomando $p=7$, calculemos $\frac{\cdots421_7}{\cdots153_7}:$
+		
+		\begin{align*}
+		\renewcommand\arraystretch{.75}\renewcommand\arraycolsep{3pt}
+		\begin{array}{r@{\hskip\arraycolsep}c@{\hskip\arraycolsep}l*5r} % n=8=3+5
+		&&5&1&6\cdots\\
+		\cline{2-6} %n=8
+		3\hspace{2mm} 5\hspace{2mm} 1&\Big)&1&2&4\cdots \\
+		&&1&6&1\cdots \\
+		\cline{3-6}\\
+		&&&3&2\cdots\\
+		&&&3&5\cdots\\
+		\cline{4-6}\\
+		&&&&4\cdots\\
+		&&&&4\cdots\\
+		\cline{5-6}\\
+		&&&&&\cdots\\
+		\end{array}
+		\end{align*}
+		Así, con $p=7$, $\frac{\cdots421_7}{\cdots153_7}=\cdots 615_7$.
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{División $p$-ádica}
+\begin{rr}
+	Los anteriores procedimientos de multiplicación y división, hechos sobre $\Zp$ pueden ser extendidos de manera natural a $\Qp$, pues el problema se reduce a operar números unidades.
+\end{rr}
+\newpage
+\begin{exampleblock}{Ejemplo}
+	Al momento de multiplicar los números no-unidades, sean 
+	\begin{align*}
+	&x = \cdots2514.13_7= \cdots251413_7\cdot 7^{-2}=u\cdot 7^{-2},\\
+	&y=\cdots 121.102_7=\cdots 121102_7\cdot 7^{-3}=v\cdot 7^{-3},
+	\end{align*}
+	Luego $$x\cdot y = u\cdot v \cdot 7^{- (2+3)}.$$
+	Por el ejemplo \ref{mult_ex}, tenemos que $u\cdot v = \cdots 310426_7$, entonces:
+	$$x\cdot y = \cdots 310426_7\cdot 7^{-5}=3.10426_7.$$
+
+	
+\end{exampleblock}
 \end{frame}
 
 

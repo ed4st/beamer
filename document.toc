@@ -1,3 +1,5 @@
 \babel@toc {spanish}{}
 \beamer@sectionintoc {1}{Notación}{2}{0}{1}
 \beamer@sectionintoc {2}{El campo de los números $p$-ádicos}{6}{0}{2}
+\beamer@sectionintoc {3}{Topología en $\mathbb {Q}_p$}{26}{0}{3}
+\beamer@sectionintoc {4}{Aritmética $p$-ádica}{45}{0}{4}
