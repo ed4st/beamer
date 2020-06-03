@@ -207,7 +207,7 @@ Departamento de Matemáticas}
 
 %3------------------
 \begin{frame}{Representación que usamos}
-	\begin{itemize}
+	\begin{itemize}[<+- | alert@+>]
 		\item Particularmente, estamos interesados en expansiones sobre bases primas.
 		\item Por ejemplo con $p=2$, el ¡Sistema binario!
 		\item En general, una expansión de la forma.	$$x=\sum_{k=-\gamma}^{l}a_kp^k,\text{ con $\gamma\in\Z$, $a_k\in \{0,\dots,p-1\}$ },$$
@@ -215,6 +215,8 @@ Departamento de Matemáticas}
 		\begin{equation}\label{notacion}
 		{a_{l} \ldots a_{2} a_{1} a_{0},a_{-1}a_{-2}\cdots a_{-\gamma}}_p.
 		\end{equation}
+		\item ¿Deberíamos llamar a las expansiones, expansiones pesimales?
+		\item Ni idea. Usaremos los términos: expansión (representación) $p$-ádica ó \tit{Código de Hensel}.
 		\item Siendo así, ahora sí empecemos.
 	\end{itemize}
 
@@ -740,6 +742,97 @@ Sean $\alpha= (a_i)$ y $\beta = (b_i)$ dos enteros $p$-ádicos. Definimos la sum
 	$$x\cdot y = \cdots 310426_7\cdot 7^{-5}=3.10426_7.$$
 
 	
+\end{exampleblock}
+\end{frame}
+\section{Sucesiones y series de  números $p$-ádicos}
+
+\begin{frame}{Estabilización de sucesiones y series}
+\begin{thh}
+	Si $$\lim_{n\to\infty}x_n=x, \text{ con } x_n,x\in\Qp\text{ y } \pnorm{x}\neq0 ,$$
+	entonces la sucesión $ (\pnorm{x_n})_{n\in\N}$ se estabiliza, es decir, existe $N\in\N$ tal que:
+	$$\pnorm{x_n}=\pnorm{x}, \text{ para todo } n\geq N.$$
+\end{thh}
+\begin{thh}
+	Una serie $\sum_{j=1}^\infty x_j, \text{   } x_j\in\Qp$ converge en $\Qp$, si, y sólo si,  $\lim_{n\to\infty}x_n=0$. En tal caso:
+	$$\pnorm{\sum_{j=1}^\infty x_j}\leq \maxx_{j}\pnorm{x_j}.$$
+\end{thh}
+\end{frame}
+
+\begin{frame}{Ejemplos de series}
+\begin{exampleblock}{Ejemplo}
+	En $\bb{Q}_p$ tenemos que: $$	\sum_{n=1}^{\infty} n^{2}  (n+1) !=2.$$ 
+\end{exampleblock}
+\begin{block}{Problema abierto}
+	Desde el año 1971 se abrió el siguiente problema:
+	¿Puede ser $\sum_{n=0}^{\infty}n!$ un número racional para algún primo $p$?
+	Por ahora, se sabe que $\sum_{n=0}^{\infty}n!$ converge en cada $\Qp$. Pero nada se sabe de su valor.
+\end{block}
+\end{frame}
+
+\begin{frame}{Unicidad de la representación}
+	\begin{pr}
+		Todo número $p$-ádico se puede escribir de manera única como la suma de una serie convergente en  $\Qp$ de la forma:
+		\begin{equation}
+		\sum_{k=-\infty}^{\infty} a_{k} p^{k}\text{, con $a_k\in\{0,\dots,p-1\}$}	\label{eq:1}
+		\end{equation}
+		y en donde $a_k=0$, para $k\leq - N$ y $a_{-N}\neq 0$\label{ord_def_2}. A $-N$ se le denomina el \textit{orden} del número.
+	\end{pr}
+\end{frame}
+
+\begin{frame}{Parte entera y parte fraccionaria}
+	\begin{itemize}[<+- | alert@+>]
+		
+		\item La \textit{\ parte fraccionaria de }$x\in\Qp$, denotada como
+		$\left\{  x\right\}  _{p}$, es el siguiente número racional:
+		\[
+		\left\{  x\right\}  _{p}:=\left\{
+		\begin{array}
+		[c]{llll}%
+		0 & \text{si} & x=0\text{,}  \text{ u}\,  \, \ord (x)\geq0\\
+		p^{v}
+		{\displaystyle\sum\limits_{j=0}^{\left\vert v\right\vert -1}}
+		
+		x_{j}p^{j} & \text{si} & \ord (x)<0. &
+		\end{array}
+		\right.
+		\]
+		\item Así, para todo $x\in\mathbb{Q}_{p}$ 
+		\begin{align*}
+		x & =\sum_{i=v}^{-1}a_{i}p^{i}+\sum_{i=0}^{\infty}a_{i}p^{i}\\
+		& =:\left\{ x\right\} _{p}+[x]_{p}.
+		\end{align*}
+	\end{itemize}
+
+\end{frame}
+
+\section{Una mirada algebraica de los números $p$-ádicos}
+
+\begin{frame}{Los enteros $p$-ádicos}
+	\begin{df}
+		El conjunto
+		\[
+		\mathbb{Z}_{p} =\{x\in\Qp:|x|_{p}\leq1\}=\{x\in\Qp:x=\sum_{i=i_{0}}^{\infty} a_{i}p^{i},i_{0}\geq0\},
+		\]
+		es llamado el conjunto de los \textit{enteros $p$-ádicos}.
+	\end{df}
+\begin{thh}
+	$\Zp$ es un subanillo de $\Qp$.
+\end{thh}
+\end{frame}
+
+\begin{frame}{Números invertibles}
+\begin{pr}
+	Un entero $p$-ádico $x=\sum_{i=i_{0}}^{\infty}a_{i}p^{i},i_{0}\geq0$ es invertible en $\Zp$ si, y sólo si, $a_0\neq 0$.
+\end{pr}
+\begin{itemize}
+	\item Así, el grupo de los números invertibles en $\Zp$ está dado por:
+	$$
+	\mathbb{Z}_{p}^{\times}=\left\{x \in \mathbb{Z}_{p}:\pnorm{x}=1\right\}=\Big\{x \in \mathbb{Z}_{p}: x=\sum_{k=0}^{\infty} x_{k} p^{k}, \quad x_{0} \neq 0\Big\},$$
+	que es un grupo multiplicativo del anillo $\Zp$.
+	\item Estos elementos son llamados \tit{unidades} de $\Qp$ ¡Tal como lo vimos en la sección de aritmética!
+\end{itemize}
+\begin{exampleblock}{Ejemplo}
+	$1-p$ es invertible en $\Zp$, pues su inverso es $\sum_{k=0}^{\infty}p^k=\frac{1}{1-p}.$
 \end{exampleblock}
 \end{frame}
 

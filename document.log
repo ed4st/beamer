@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.14)  1 JUN 2020 22:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.14)  3 JUN 2020 00:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1597,16 +1597,7 @@ LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 
 ] [5
 
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 223.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 223.
-
-[6
+] [6
 
 ] [7
 
@@ -1616,17 +1607,22 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 ] [10
 
-] [11
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 225.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 225.
+
+[11
 
 ] [12
 
 ] [13
 
-]
-Overfull \vbox (6.11055pt too high) detected at line 311
- []
-
-[14
+] [14
 
 ] [15
 
@@ -1637,77 +1633,81 @@ Overfull \vbox (6.11055pt too high) detected at line 311
 ] [18
 
 ]
-<img/relojBeamer.jpg, id=152, 722.7pt x 542.025pt>
-File: img/relojBeamer.jpg Graphic file (type jpg)
-<use img/relojBeamer.jpg>
-Package pdftex.def Info: img/relojBeamer.jpg  used on input line 370.
-(pdftex.def)             Requested size: 252.94878pt x 189.71158pt.
-
-Overfull \vbox (16.91557pt too high) detected at line 370
+Overfull \vbox (6.11055pt too high) detected at line 313
  []
 
 [19
 
- <./img/relojBeamer.jpg>]
-Overfull \vbox (11.25323pt too high) detected at line 385
- []
+] [20
 
-[20
+] [21
 
-]
-Overfull \vbox (11.25323pt too high) detected at line 385
- []
+] [22
 
-[21
+] [23
 
 ]
-Overfull \vbox (11.25323pt too high) detected at line 385
- []
+<img/relojBeamer.jpg, id=187, 722.7pt x 542.025pt>
+File: img/relojBeamer.jpg Graphic file (type jpg)
+<use img/relojBeamer.jpg>
+Package pdftex.def Info: img/relojBeamer.jpg  used on input line 372.
+(pdftex.def)             Requested size: 252.94878pt x 189.71158pt.
 
-[22
-
-]
-Overfull \vbox (25.52129pt too high) detected at line 402
- []
-
-[23
-
-]
-Overfull \vbox (25.52129pt too high) detected at line 402
+Overfull \vbox (16.91557pt too high) detected at line 372
  []
 
 [24
 
-]
-Overfull \vbox (25.52129pt too high) detected at line 402
+ <./img/relojBeamer.jpg>]
+Overfull \vbox (11.25323pt too high) detected at line 387
  []
 
 [25
 
 ]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 404.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 404.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 404.
+Overfull \vbox (11.25323pt too high) detected at line 387
+ []
 
 [26
 
-] [27
+]
+Overfull \vbox (11.25323pt too high) detected at line 387
+ []
 
-] [28
+[27
 
-] [29
+]
+Overfull \vbox (25.52129pt too high) detected at line 404
+ []
 
-] [30
+[28
 
-] [31
+]
+Overfull \vbox (25.52129pt too high) detected at line 404
+ []
+
+[29
+
+]
+Overfull \vbox (25.52129pt too high) detected at line 404
+ []
+
+[30
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 406.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 406.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 406.
+
+[31
 
 ] [32
 
@@ -1727,8 +1727,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 ] [40
 
-]
-[41
+] [41
 
 ] [42
 
@@ -1736,78 +1735,138 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 ] [44
 
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 535.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 535.
-
-[45
+] [45
 
 ]
-Overfull \vbox (2.72113pt too high) detected at line 547
- []
-
 [46
 
-]
-Overfull \vbox (2.72113pt too high) detected at line 547
- []
+] [47
 
-[47
+] [48
 
-]
-Overfull \vbox (2.72113pt too high) detected at line 547
- []
-
-[48
+] [49
 
 ]
-Overfull \vbox (2.72113pt too high) detected at line 547
- []
 
-[49
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 537.
 
-]
-Overfull \vbox (25.23352pt too high) detected at line 563
- []
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 537.
 
 [50
 
-] [51
+]
+Overfull \vbox (2.72113pt too high) detected at line 549
+ []
 
-] [52
+[51
 
-] [53
+]
+Overfull \vbox (2.72113pt too high) detected at line 549
+ []
 
-] [54
+[52
 
-] [55
+]
+Overfull \vbox (2.72113pt too high) detected at line 549
+ []
+
+[53
+
+]
+Overfull \vbox (2.72113pt too high) detected at line 549
+ []
+
+[54
+
+]
+Overfull \vbox (25.23352pt too high) detected at line 565
+ []
+
+[55
 
 ] [56
 
 ] [57
 
-]
-Overfull \vbox (30.39906pt too high) detected at line 699
- []
+] [58
 
-[58
+] [59
 
-]
-Overfull \vbox (26.56757pt too high) detected at line 725
- []
+] [60
 
-[59
+] [61
+
+] [62
 
 ]
-Overfull \vbox (41.19489pt too high) detected at line 744
+Overfull \vbox (30.39906pt too high) detected at line 701
  []
 
-[60
+[63
+
+]
+Overfull \vbox (26.56757pt too high) detected at line 727
+ []
+
+[64
+
+]
+Overfull \vbox (41.19489pt too high) detected at line 746
+ []
+
+[65
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 747.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 747.
+
+[66
+
+]
+Overfull \vbox (29.18832pt too high) detected at line 759
+ []
+
+[67
+
+] [68
+
+] [69
+
+] [70
+
+] [71
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 808.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 808.
+
+[72
+
+] [73
+
+]
+Overfull \hbox (18.82321pt too wide) detected at line 837
+\U/msb/m/n/10.95 Z[] \OT1/cmss/m/n/10.95 = [] = []\OT1/mathkerncmss/m/sl/10.95 
+x \OMS/cmss/m/n/10.95 2 \U/msb/m/n/10.95 Z[] [] \OT1/mathkerncmss/m/sl/10.95 x 
+\OT1/cmss/m/n/10.95 = [] \OT1/mathkerncmss/m/sl/10.95 x[]p[]\OML/cmm/m/it/10.95
+ ;  \OT1/mathkerncmss/m/sl/10.95 x[] \OMS/cmss/m/n/10.95 6\OT1/cmss/m/n/10.95 =
+ 0[]\OML/cmm/m/it/10.95 ;
+ []
+
+[74
 
 ]
 \tf@nav=\write6
@@ -1819,26 +1878,26 @@ Overfull \vbox (41.19489pt too high) detected at line 744
 \tf@snm=\write8
 \openout8 = `document.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 747.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 747.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 840.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 840.
  (./document.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 747.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 747.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 840.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 840.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 3523C80B26F61844C67959057D5ED259;231.
+(rerunfilecheck)             Checksum: D3C1DB05F3FA4A56270CEF2B0AB22DA9;397.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 40746 strings out of 492167
- 806091 string characters out of 6131558
- 1046084 words of memory out of 5000000
- 44356 multiletter control sequences out of 15000+600000
+ 40807 strings out of 492167
+ 806677 string characters out of 6131558
+ 1046082 words of memory out of 5000000
+ 44385 multiletter control sequences out of 15000+600000
  553173 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,20n,108p,1974b,961s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1857,10 +1916,10 @@ st/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
 /symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb>
-Output written on document.pdf (60 pages, 294133 bytes).
+Output written on document.pdf (74 pages, 317015 bytes).
 PDF statistics:
- 475 PDF objects out of 1000 (max. 8388607)
- 385 compressed objects within 4 object streams
- 139 named destinations out of 1000 (max. 500000)
- 80 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 570 PDF objects out of 1000 (max. 8388607)
+ 465 compressed objects within 5 object streams
+ 171 named destinations out of 1000 (max. 500000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
 
