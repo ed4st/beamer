@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.14)  3 JUN 2020 00:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.14)  4 JUN 2020 23:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1647,7 +1647,7 @@ Overfull \vbox (6.11055pt too high) detected at line 313
 ] [23
 
 ]
-<img/relojBeamer.jpg, id=187, 722.7pt x 542.025pt>
+<img/relojBeamer.jpg, id=191, 722.7pt x 542.025pt>
 File: img/relojBeamer.jpg Graphic file (type jpg)
 <use img/relojBeamer.jpg>
 Package pdftex.def Info: img/relojBeamer.jpg  used on input line 372.
@@ -1868,6 +1868,46 @@ x \OMS/cmss/m/n/10.95 2 \U/msb/m/n/10.95 Z[] [] \OT1/mathkerncmss/m/sl/10.95 x
 
 [74
 
+] [75
+
+] [76
+
+] [77
+
+] [78
+
+]
+Overfull \vbox (26.707pt too high) detected at line 865
+ []
+
+[79
+
+]
+Overfull \vbox (26.707pt too high) detected at line 865
+ []
+
+[80
+
+]
+Overfull \vbox (26.707pt too high) detected at line 865
+ []
+
+[81
+
+] [82
+
+] [83
+
+] [84
+
+] [85
+
+] [86
+
+] [87
+
+] [88
+
 ]
 \tf@nav=\write6
 \openout6 = `document.nav'.
@@ -1878,27 +1918,27 @@ x \OMS/cmss/m/n/10.95 2 \U/msb/m/n/10.95 Z[] [] \OT1/mathkerncmss/m/sl/10.95 x
 \tf@snm=\write8
 \openout8 = `document.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 840.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 840.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 913.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 913.
  (./document.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 840.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 840.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 913.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 913.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: D3C1DB05F3FA4A56270CEF2B0AB22DA9;397.
+(rerunfilecheck)             Checksum: 8DD8F16F8ADEE35168037B5907718B00;472.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 40807 strings out of 492167
- 806677 string characters out of 6131558
- 1046082 words of memory out of 5000000
- 44385 multiletter control sequences out of 15000+600000
- 553173 words of font info for 102 fonts, out of 8000000 for 9000
+ 40855 strings out of 492167
+ 807124 string characters out of 6131558
+ 1046084 words of memory out of 5000000
+ 44403 multiletter control sequences out of 15000+600000
+ 553351 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,20n,108p,1974b,961s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share
@@ -1914,12 +1954,13 @@ i12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/
 share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
-/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/
-msbm10.pfb>
-Output written on document.pdf (74 pages, 317015 bytes).
+/euler/euex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
+am10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+
+Output written on document.pdf (88 pages, 340788 bytes).
 PDF statistics:
- 570 PDF objects out of 1000 (max. 8388607)
- 465 compressed objects within 5 object streams
- 171 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 658 PDF objects out of 1000 (max. 8388607)
+ 537 compressed objects within 6 object streams
+ 200 named destinations out of 1000 (max. 500000)
+ 104 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -836,5 +836,78 @@ Sean $\alpha= (a_i)$ y $\beta = (b_i)$ dos enteros $p$-ádicos. Definimos la sum
 \end{exampleblock}
 \end{frame}
 
+\begin{frame}{Ideales en $\Zp$}
+	\begin{itemize}[<+- | alert@+>]
+		\item El anillo $\Zp$ es un \textit{dominio de ideales principales}.
+		\item Más exactamente, cualquier ideal de $\mathbb{Z}_{p}$ tiene la forma
+		\[
+		p^{m}\mathbb{Z}_{p}=\Big\{x\in\mathbb{Z}_{p}:x=\sum_{i\geq m}a_{i}p^{i}%
+		\Big\},\ m\in\mathbb{N}.
+		\]
+		\item $\mathbb{Z}_{p} \supset p \mathbb{Z}_{p} \cdots \supset p^{k} \mathbb{Z}_{p} \supset \cdots \supset \bigcap_{k \geq 0} p^{k} \mathbb{Z}_{p}=\{0\}$
+		\item $\bb{Z}_p$ es un \tit{anillo local}, cuyo ideal maximal es:
+		$$p\bb{Z}_p = \{x\in\bb{Z}_p : \pnorm{x}<1\}.$$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Homomorfismos}
+	\begin{itemize}[<+- | alert@+>]
+		\item Podemos definir el homomorfismo de anillos: \begin{align*}
+		\pi_n: \Zp &\hspace{2mm}\rightarrow \Z/p^n\Z \\
+		& x \mapsto  \sum_{k=0}^{n-1}a_{k}p^k\pmod{p^n},
+		\end{align*}
+		\item Y en general, definimos el homomorfismo:	\begin{align*}
+		\pi:& \Zp \rightarrow \prod_{n=0}^{\infty}\Z/p^n\Z \\
+		& x \hspace{2mm}\mapsto  (\pi_1 (x),\pi_2 (x),\dots) .
+		\end{align*}
+		\item Si nos restringimos a la imagen de este homorfismo, esta es conocida como el \tit{límite proyectivo} de los  $\Z/p^n\Z$, y se denota por $$\varprojlim_n \Z/p^n\Z$$ 
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Definición de $\Zp$ y $\Qp$ vía álgebra}
+	\begin{itemize}[<+- | alert@+>]
+		\item Se puede ver que $\pi$ restringida al rango, es isomorfismo, y así:
+		$$\Zp\cong\varprojlim_n \Z/p^n\Z.$$
+		\item $\bb{Q}_p=\operatorname{Frac} (\Zp).$
+		\item $\bb{Q}_p=\bb{Z}_p[\frac{1}{p}]$.
+	\end{itemize}
+\end{frame}
+
+\section{Sobre Diferenciación e Integración}
+
+\begin{frame}{Derivadas y primitivas}
+	
+		Si $f\colon\Qp\to\C$, estaríamos tentados a definir: \red{$$f^{\prime} (a)=\lim\limits_{h\to 0}\frac{f (a+h)-f (a)}{h}.$$}
+	\begin{df}
+		Una función $f\colon B_\gamma\subseteq\Qp\to\Qp$ se dice \tit{analítica} si:
+		$$f (x)=\sum_{n=0}^{\infty}a_nx^n,$$
+		con $x\in B_\gamma$, $a_n\in\Qp$. 
+	\end{df}
+	
+\end{frame}
+\begin{frame}{Derivadas y primitivas}
+	\begin{df} Si $f\colon B_\gamma\subseteq\Qp\to\Qp$ es analítica, definimos
+		\[
+		f^{ (m)} (x)=\sum_{n=m}^{\infty} n (n-1) \cdots (n-m+1) a_{n} x^{n-m},
+		\]
+		\[
+		\quad f^{ (-m)} (x)=\sum_{n=0}^{\infty} \frac{1}{ (n+1) (n+2) \cdots (n+m)} a_{n} x^{n+m},
+		\] 
+		como \textit{derivadas} y \textit{primitivas}, respectivamente.
+	\end{df}
+\end{frame}
+
+\begin{frame}{Integración}
+	Dado que $ (\Qp, +)$ es un grupo topológico localmente compacto, un resultado conocido en teoría de la medida establece que $ (\Qp, +)$ tiene
+	una única medida $dx$, llamada la \textit{medida de Haar}	de $\Qp$.
+	\begin{df}
+		Decimos que una función $f\colon\Qp\to\C$  es \textit{integrable} en $\Qp$ si existe 
+		$$\lim _{N \rightarrow \infty} \int_{B_{N}} f (x) dx.$$
+		Por notación, decimos que $f\in\mathcal{L}^1(\Qp)$.
+		
+		
+	\end{df}
+\end{frame}
 
 \end{document}
