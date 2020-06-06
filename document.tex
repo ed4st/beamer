@@ -1,11 +1,14 @@
 \documentclass{beamer}
 \usepackage[utf8]{inputenc}
-\usetheme[background=dark,titleformat = smallcaps , block = fill,numbering = fraction, progressbar = frametitle , titleformat title= smallcaps]{metropolis}           % Use metropolis theme
+\usetheme[background=dark,titleformat = smallcaps , block = fill,numbering = fraction, progressbar = 
+frametitle , titleformat title= smallcaps]{metropolis}           % Use metropolis theme
 
 
 \definecolor{orangeBar}{HTML}{FF3600}
 \setbeamercolor{progress bar}{fg=orangeBar}
 
+\usepackage{multimedia}
+\usepackage{animate}
 \usepackage {extarrows}
 \usepackage {tikz}
 \usepackage[spanish]{babel}
@@ -183,12 +186,17 @@ Departamento de Matemáticas}
 \begin{document}
   \maketitle
   \section{Notación}
+
   \begin{frame}{Unidades, decenas y centenas...}
-    En la escuela nos enseñaron a separar los números por unidades, decenas y centenas. Por ejemplo el número $437$ tiene $7$ unidades, $3$ decenas y $4$ centenas. Es decir que podemos representar $437$ como:
-    $$437 = 7\cdot10^0+ 3\cdot 10^1 + 4\cdot 10^2,$$
-    El número $543.89$ como:
-    $$543.89 = 9\cdot10^{-2}+8\cdot10^{-1}+3\cdot10^0+4\cdot10^1+5\cdot10^2.$$
-    Que también se puede denotar como $543.89_{10}$.
+    %En la escuela nos enseñaron a separar los números por unidades, decenas y centenas. Por ejemplo el número $437$ tiene $7$ unidades, $3$ decenas y $4$ centenas. Es decir que podemos representar $437$ como:
+    %$$437 = 7\cdot10^0+ 3\cdot 10^1 + 4\cdot 10^2,$$
+    %El número $543.89$ como:
+    %$$543.89 = %9\cdot10^{-2}+8\cdot10^{-1}+3\cdot10^0+4\cdot10^1+5\cdot10^2.$$
+    %Que también se puede denotar como $543.89_{10}$.
+    
+    \begin{center}
+    	\animategraphics[autoplay,loop, every = 2, width=1.0\linewidth]{30}{Notacion_1/notacion00}{001}{332}
+    \end{center}
   \end{frame}
 
   \begin{frame}{Sistemas numéricos}
@@ -295,21 +303,24 @@ Departamento de Matemáticas}
 \end{frame}
 %9----------------------
 \begin{frame}{Orden y Norma en $\Q$}
-	\begin{exampleblock}{Ejemplo}
-		Cálculo de la función $\pnorm{\cdot}$ para distintos $p$'s.
-		\[
-		\left| -\frac{66}{500}\right| _{p}=\left| -\frac{33}{250}\right| _{p}=\left| -\frac{3\cdot11}{2\cdot5^3}\right| _{p}=\begin{cases}
-		\frac{33}{250}       &\,\,\, \text{ si } \,\,\,p=\infty;\\ 
-		2                    &\,\,\, \text{ si }\,\,\, p=2;\\
-		\frac{1}{3}          &\,\,\, \text{ si } \,\,\,p=3;\\  
-		5^3                  &\,\,\, \text{ si }\,\,\, p=5;\\   
-		1                    &\,\,\, \text{ si }\,\,\, p=7;\\    
-		\frac{1}{11}         & \,\,\,\text{ si }\,\,\, p=11;\\     
-		& \vdots\\
-		1                   &\,\,\,\text{ otro caso}.
-		\end{cases}
-		\]
-	\end{exampleblock}
+	 \begin{center}
+		\animategraphics[autoplay,loop, every = 1, width=1.0\linewidth]{30}{Norma/norma00}{001}{164}
+	\end{center}
+	%\begin{exampleblock}{Ejemplo}
+	%	Cálculo de la función $\pnorm{\cdot}$ para distintos $p$'s.
+	%	\[
+	%	\left| -\frac{66}{500}\right| _{p}=\left| -\frac{33}{250}\right| _%{p}=\left| -\frac{3\cdot11}{2\cdot5^3}\right| _{p}=\begin{cases}
+	%	\frac{33}{250}       &\,\,\, \text{ si } \,\,\,p=\infty;\\ 
+	%	2                    &\,\,\, \text{ si }\,\,\, p=2;\\
+	%	\frac{1}{3}          &\,\,\, \text{ si } \,\,\,p=3;\\  
+	%	5^3                  &\,\,\, \text{ si }\,\,\, p=5;\\   
+	%	1                    &\,\,\, \text{ si }\,\,\, p=7;\\    
+	%	\frac{1}{11}         & \,\,\,\text{ si }\,\,\, p=11;\\     
+	%	& \vdots\\
+	%	1                   &\,\,\,\text{ otro caso}.
+	%	\end{cases}
+	%	\]
+	%\end{exampleblock}
 \end{frame}
 %10-----------------------------------------------
 \begin{frame}{Los 3 mosqueteros}
@@ -675,28 +686,32 @@ Sean $\alpha= (a_i)$ y $\beta = (b_i)$ dos enteros $p$-ádicos. Definimos la sum
 	\begin{exampleblock}{Ejemplo}%\textcolor{red}{corregir este ejemplo, mejor usar la notacion del koblitz y que tengan potencias  negativas}
 		\label{mult_ex}
 		%Con $p=7$, sea $u = \cdots251413_7$ y $v=\cdots 121102_7$ números unidades. Luego
-		$$
-		\vbox{
-			\openup2pt
-			\def\trule{\noalign{\smallskip\hrule\smallskip}}
-			\halign{&\tabskip1em$\mathstrut####$\cr
-				& \cdots   & 5 & 1 & 4 & 1 & 3\cr
-				\times     & \cdots   & 2 & 1 & 1 & 0 & 2\cr
-				\trule
-				& \cdots   & 3 & 3 & 1 & 2 & 6\cr
-				& \cdots   & 0 & 0 & 0 & 0\cr
-				& \cdots   & 4 & 1 & 3\cr
-				& \cdots   & 1 & 3\cr
+		%$$
+		%\vbox{
+		%	\openup2pt
+		%	\def\trule{\noalign{\smallskip\hrule\smallskip}}
+		%	\halign{&\tabskip1em$\mathstrut####$\cr
+		%		& \cdots   & 5 & 1 & 4 & 1 & 3\cr
+		%		\times     & \cdots   & 2 & 1 & 1 & 0 & 2\cr
+		%		\trule
+		%		& \cdots   & 3 & 3 & 1 & 2 & 6\cr
+		%		& \cdots   & 0 & 0 & 0 & 0\cr
+		%		& \cdots   & 4 & 1 & 3\cr
+		%		& \cdots   & 1 & 3\cr
 				%+ \cdots   & 6\cr
-				+          & \cdots  & 6\cr 
-				\trule
-				& \cdots   & 1 & 0 & 4 & 2 & 6\cr
-			}
-		}
+		%		+          & \cdots  & 6\cr 
+		%		\trule
+		%		& \cdots   & 1 & 0 & 4 & 2 & 6\cr
+		%	}
+		%}
 		%\bye
-		$$
+		%$$
 		
-		Así, con $p=7$, $u\cdot v =\cdots251413_7\times\cdots 123102_7=\cdots 310426_7$.
+		%Así, con $p=7$, $u\cdot v =\cdots251413_7\times\cdots 123102_7=\cdots 310426_7$.
+		
+		\begin{center}
+			\animategraphics[autoplay,loop, every = 2, width=1.0\linewidth]{30}{Multiplicacion/multiplicacion00}{001}{179}
+		\end{center}
 	\end{exampleblock}
 \end{frame}
 
