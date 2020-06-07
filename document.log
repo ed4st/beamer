@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.14)  5 JUN 2020 22:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.14)  6 JUN 2020 23:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1298,9 +1298,9 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 \c@lm=\count397
 \c@crr=\count398
 \c@rr=\count399
-LaTeX Info: Redefining \d^n on input line 159.
+LaTeX Info: Redefining \d^n on input line 163.
 \symeulargesymbols=\mathgroup6
-LaTeX Font Info:    Redeclaring math symbol \intop on input line 169.
+LaTeX Font Info:    Redeclaring math symbol \intop on input line 173.
 
 (/usr/share/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
@@ -1310,36 +1310,79 @@ Package: appendix 2009/09/02 v1.2b extra appendix facilities
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 181.
+(hyperref)                removing `\\' on input line 185.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 186.
+(hyperref)                removing `math shift' on input line 190.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 186.
+(hyperref)                removing `math shift' on input line 190.
 
 (./document.aux
 LaTeX Info: Redefining \. on input line 32.
 LaTeX Info: Redefining \% on input line 32.
+
+
+LaTeX Warning: Label `lst:code_direct' multiply defined.
+
+
+LaTeX Warning: Label `lst:code_direct@cref' multiply defined.
+
+
+LaTeX Warning: Label `lst:code_direct' multiply defined.
+
+
+LaTeX Warning: Label `lst:code_direct@cref' multiply defined.
+
+
+LaTeX Warning: Label `lst:code_direct' multiply defined.
+
+
+LaTeX Warning: Label `lst:code_direct@cref' multiply defined.
+
+
+LaTeX Warning: Label `lst:code_direct' multiply defined.
+
+
+LaTeX Warning: Label `lst:code_direct@cref' multiply defined.
+
+
+LaTeX Warning: Label `lst:code_direct' multiply defined.
+
+
+LaTeX Warning: Label `lst:code_direct@cref' multiply defined.
+
+
+LaTeX Warning: Label `lst:code_direct' multiply defined.
+
+
+LaTeX Warning: Label `lst:code_direct@cref' multiply defined.
+
+
+LaTeX Warning: Label `lst:code_direct' multiply defined.
+
+
+LaTeX Warning: Label `lst:code_direct@cref' multiply defined.
+
 )
 \openout1 = `document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 190.
+LaTeX Font Info:    ... okay on input line 190.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 190.
+LaTeX Font Info:    ... okay on input line 190.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 190.
+LaTeX Font Info:    ... okay on input line 190.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 190.
+LaTeX Font Info:    ... okay on input line 190.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 190.
+LaTeX Font Info:    ... okay on input line 190.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 190.
+LaTeX Font Info:    ... okay on input line 190.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 190.
+LaTeX Font Info:    ... okay on input line 190.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1407,7 +1450,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box123
-Package hyperref Info: Link coloring OFF on input line 186.
+Package hyperref Info: Link coloring OFF on input line 190.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1417,72 +1460,72 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count409
 )
-LaTeX Info: Redefining \ref on input line 186.
-LaTeX Info: Redefining \pageref on input line 186.
-LaTeX Info: Redefining \nameref on input line 186.
+LaTeX Info: Redefining \ref on input line 190.
+LaTeX Info: Redefining \pageref on input line 190.
+LaTeX Info: Redefining \nameref on input line 190.
 
 (./document.out) (./document.out)
 \@outlinefile=\write5
 \openout5 = `document.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 186.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 190.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 186.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 190.
 \symnumbers=\mathgroup7
 \sympureletters=\mathgroup8
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 186.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 186.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 190.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 190.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 186.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 190.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 186.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 186.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 190.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 190.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 186.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 190.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 186.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 186.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 190.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 190.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 186.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 190.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 186.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 186.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 190.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 190.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 186.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 190.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 186.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 190.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 186.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 190.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 186.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 190.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 186.
+(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 190.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 186.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 190.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 186.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 190.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 186.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 190.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 186.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 190.
 
 
 Package filehook Warning: Macro \InputIfFileExists got redefined after 'filehoo
 k' was loaded.
-Certain file hooks might now be dysfunctional! on input line 186.
+Certain file hooks might now be dysfunctional! on input line 190.
 
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 186.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 190.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
 (Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 1
-86.
+90.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/cmss/bx/it --> OT1/mathkerncmss/m/sl on input line 
-186.
+190.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 186.
+ut line 190.
 
 (/usr/share/texmf-dist/tex/latex/translator/translator-basic-dictionary-English
 .dict
@@ -1508,8 +1551,8 @@ Dictionary: translator-numbers-dictionary, Language: English
 sh.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \. on input line 186.
-LaTeX Info: Redefining \% on input line 186.
+LaTeX Info: Redefining \. on input line 190.
+LaTeX Info: Redefining \% on input line 190.
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
  (/usr/share/texmf-dist/tex/latex/base/ts1enc.dfu
@@ -1595,25 +1638,25 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
 (./document.nav)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 186
+LaTeX Font Info:    Trying to load font information for U+msa on input line 190
 .
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 186
+LaTeX Font Info:    Trying to load font information for U+msb on input line 190
 .
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+zeuex on input line 1
-86.
+90.
 
 (/usr/share/texmf-dist/tex/latex/eulervm/uzeuex.fd
 File: uzeuex.fd 2005/01/11 v4.0 (WaS)
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 186.
+ut line 190.
 
 (/usr/share/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
@@ -1621,851 +1664,39 @@ thkerncmss.
 )
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <14.4> not available
-(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 187.
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 191.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/sc' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 187.
+(Font)              using `OT1/cmss/bx/n' instead on input line 191.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 187.
+(Font)              using `OT1/cmss/bx/n' instead on input line 191.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <12> not available
-(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 187.
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 191.
 
 
-Overfull \vbox (15.63992pt too high) detected at line 187
+Overfull \vbox (15.63992pt too high) detected at line 191
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
-]
-<Notacion_1/notacion00001.jpg, id=61, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00001.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00001.jpg>
-Package pdftex.def Info: Notacion_1/notacion00001.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00001.jpg> <a0,fr0>
-<Notacion_1/notacion00003.jpg, id=71, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00003.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00003.jpg>
-Package pdftex.def Info: Notacion_1/notacion00003.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00003.jpg> <a0,fr1>
-<Notacion_1/notacion00005.jpg, id=81, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00005.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00005.jpg>
-Package pdftex.def Info: Notacion_1/notacion00005.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00005.jpg> <a0,fr2>
-<Notacion_1/notacion00007.jpg, id=91, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00007.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00007.jpg>
-Package pdftex.def Info: Notacion_1/notacion00007.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00007.jpg> <a0,fr3>
-<Notacion_1/notacion00009.jpg, id=101, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00009.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00009.jpg>
-Package pdftex.def Info: Notacion_1/notacion00009.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00009.jpg> <a0,fr4>
-<Notacion_1/notacion00011.jpg, id=111, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00011.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00011.jpg>
-Package pdftex.def Info: Notacion_1/notacion00011.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00011.jpg> <a0,fr5>
-<Notacion_1/notacion00013.jpg, id=121, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00013.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00013.jpg>
-Package pdftex.def Info: Notacion_1/notacion00013.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00013.jpg> <a0,fr6>
-<Notacion_1/notacion00015.jpg, id=131, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00015.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00015.jpg>
-Package pdftex.def Info: Notacion_1/notacion00015.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00015.jpg> <a0,fr7>
-<Notacion_1/notacion00017.jpg, id=141, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00017.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00017.jpg>
-Package pdftex.def Info: Notacion_1/notacion00017.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00017.jpg> <a0,fr8> <a0,fr9> <a0,fr10> <a0,fr11>
-<a0,fr12> <a0,fr13> <a0,fr14> <a0,fr15> <a0,fr16>
-<Notacion_1/notacion00035.jpg, id=191, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00035.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00035.jpg>
-Package pdftex.def Info: Notacion_1/notacion00035.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00035.jpg> <a0,fr17>
-<Notacion_1/notacion00037.jpg, id=201, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00037.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00037.jpg>
-Package pdftex.def Info: Notacion_1/notacion00037.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00037.jpg> <a0,fr18>
-<Notacion_1/notacion00039.jpg, id=211, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00039.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00039.jpg>
-Package pdftex.def Info: Notacion_1/notacion00039.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00039.jpg> <a0,fr19>
-<Notacion_1/notacion00041.jpg, id=221, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00041.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00041.jpg>
-Package pdftex.def Info: Notacion_1/notacion00041.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00041.jpg> <a0,fr20>
-<Notacion_1/notacion00043.jpg, id=231, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00043.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00043.jpg>
-Package pdftex.def Info: Notacion_1/notacion00043.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00043.jpg> <a0,fr21>
-<Notacion_1/notacion00045.jpg, id=241, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00045.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00045.jpg>
-Package pdftex.def Info: Notacion_1/notacion00045.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00045.jpg> <a0,fr22>
-<Notacion_1/notacion00047.jpg, id=252, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00047.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00047.jpg>
-Package pdftex.def Info: Notacion_1/notacion00047.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00047.jpg> <a0,fr23>
-<Notacion_1/notacion00049.jpg, id=262, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00049.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00049.jpg>
-Package pdftex.def Info: Notacion_1/notacion00049.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00049.jpg> <a0,fr24>
-<Notacion_1/notacion00051.jpg, id=272, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00051.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00051.jpg>
-Package pdftex.def Info: Notacion_1/notacion00051.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00051.jpg> <a0,fr25>
-<Notacion_1/notacion00053.jpg, id=282, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00053.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00053.jpg>
-Package pdftex.def Info: Notacion_1/notacion00053.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00053.jpg>
-<a0,fr26>
-<Notacion_1/notacion00055.jpg, id=292, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00055.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00055.jpg>
-Package pdftex.def Info: Notacion_1/notacion00055.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00055.jpg> <a0,fr27> <a0,fr28> <a0,fr29>
-<a0,fr30> <a0,fr31> <a0,fr32> <a0,fr33> <a0,fr34> <a0,fr35>
-<Notacion_1/notacion00073.jpg, id=342, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00073.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00073.jpg>
-Package pdftex.def Info: Notacion_1/notacion00073.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00073.jpg> <a0,fr36>
-<Notacion_1/notacion00075.jpg, id=352, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00075.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00075.jpg>
-Package pdftex.def Info: Notacion_1/notacion00075.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00075.jpg> <a0,fr37>
-<Notacion_1/notacion00077.jpg, id=362, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00077.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00077.jpg>
-Package pdftex.def Info: Notacion_1/notacion00077.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00077.jpg> <a0,fr38>
-<Notacion_1/notacion00079.jpg, id=372, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00079.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00079.jpg>
-Package pdftex.def Info: Notacion_1/notacion00079.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00079.jpg> <a0,fr39>
-<Notacion_1/notacion00081.jpg, id=382, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00081.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00081.jpg>
-Package pdftex.def Info: Notacion_1/notacion00081.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00081.jpg> <a0,fr40>
-<Notacion_1/notacion00083.jpg, id=392, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00083.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00083.jpg>
-Package pdftex.def Info: Notacion_1/notacion00083.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00083.jpg>
-<a0,fr41>
-<Notacion_1/notacion00085.jpg, id=402, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00085.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00085.jpg>
-Package pdftex.def Info: Notacion_1/notacion00085.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00085.jpg> <a0,fr42>
-<Notacion_1/notacion00087.jpg, id=412, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00087.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00087.jpg>
-Package pdftex.def Info: Notacion_1/notacion00087.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00087.jpg> <a0,fr43>
-<Notacion_1/notacion00089.jpg, id=422, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00089.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00089.jpg>
-Package pdftex.def Info: Notacion_1/notacion00089.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00089.jpg> <a0,fr44>
-<Notacion_1/notacion00091.jpg, id=432, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00091.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00091.jpg>
-Package pdftex.def Info: Notacion_1/notacion00091.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00091.jpg> <a0,fr45>
-<Notacion_1/notacion00093.jpg, id=442, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00093.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00093.jpg>
-Package pdftex.def Info: Notacion_1/notacion00093.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00093.jpg> <a0,fr46>
-<Notacion_1/notacion00095.jpg, id=452, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00095.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00095.jpg>
-Package pdftex.def Info: Notacion_1/notacion00095.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00095.jpg> <a0,fr47>
-<Notacion_1/notacion00097.jpg, id=462, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00097.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00097.jpg>
-Package pdftex.def Info: Notacion_1/notacion00097.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00097.jpg> <a0,fr48>
-<Notacion_1/notacion00099.jpg, id=472, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00099.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00099.jpg>
-Package pdftex.def Info: Notacion_1/notacion00099.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00099.jpg> <a0,fr49>
-<Notacion_1/notacion00101.jpg, id=482, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00101.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00101.jpg>
-Package pdftex.def Info: Notacion_1/notacion00101.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00101.jpg>
-<a0,fr50>
-<Notacion_1/notacion00103.jpg, id=492, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00103.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00103.jpg>
-Package pdftex.def Info: Notacion_1/notacion00103.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00103.jpg> <a0,fr51>
-<Notacion_1/notacion00105.jpg, id=503, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00105.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00105.jpg>
-Package pdftex.def Info: Notacion_1/notacion00105.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00105.jpg> <a0,fr52>
-<Notacion_1/notacion00107.jpg, id=513, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00107.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00107.jpg>
-Package pdftex.def Info: Notacion_1/notacion00107.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00107.jpg> <a0,fr53>
-<Notacion_1/notacion00109.jpg, id=523, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00109.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00109.jpg>
-Package pdftex.def Info: Notacion_1/notacion00109.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00109.jpg> <a0,fr54>
-<Notacion_1/notacion00111.jpg, id=533, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00111.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00111.jpg>
-Package pdftex.def Info: Notacion_1/notacion00111.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00111.jpg> <a0,fr55> <a0,fr56>
-<Notacion_1/notacion00115.jpg, id=548, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00115.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00115.jpg>
-Package pdftex.def Info: Notacion_1/notacion00115.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00115.jpg> <a0,fr57> <a0,fr58> <a0,fr59> <a0,fr60>
-<Notacion_1/notacion00123.jpg, id=573, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00123.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00123.jpg>
-Package pdftex.def Info: Notacion_1/notacion00123.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00123.jpg> <a0,fr61>
-<Notacion_1/notacion00125.jpg, id=583, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00125.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00125.jpg>
-Package pdftex.def Info: Notacion_1/notacion00125.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00125.jpg> <a0,fr62>
-<Notacion_1/notacion00127.jpg, id=593, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00127.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00127.jpg>
-Package pdftex.def Info: Notacion_1/notacion00127.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00127.jpg> <a0,fr63>
-<Notacion_1/notacion00129.jpg, id=603, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00129.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00129.jpg>
-Package pdftex.def Info: Notacion_1/notacion00129.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00129.jpg>
-<a0,fr64>
-<Notacion_1/notacion00131.jpg, id=613, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00131.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00131.jpg>
-Package pdftex.def Info: Notacion_1/notacion00131.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00131.jpg> <a0,fr65>
-<Notacion_1/notacion00133.jpg, id=623, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00133.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00133.jpg>
-Package pdftex.def Info: Notacion_1/notacion00133.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00133.jpg> <a0,fr66>
-<Notacion_1/notacion00135.jpg, id=633, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00135.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00135.jpg>
-Package pdftex.def Info: Notacion_1/notacion00135.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00135.jpg> <a0,fr67>
-<Notacion_1/notacion00137.jpg, id=643, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00137.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00137.jpg>
-Package pdftex.def Info: Notacion_1/notacion00137.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00137.jpg> <a0,fr68>
-<Notacion_1/notacion00139.jpg, id=653, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00139.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00139.jpg>
-Package pdftex.def Info: Notacion_1/notacion00139.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00139.jpg> <a0,fr69>
-<Notacion_1/notacion00141.jpg, id=663, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00141.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00141.jpg>
-Package pdftex.def Info: Notacion_1/notacion00141.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00141.jpg> <a0,fr70>
-<Notacion_1/notacion00143.jpg, id=673, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00143.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00143.jpg>
-Package pdftex.def Info: Notacion_1/notacion00143.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00143.jpg> <a0,fr71>
-<Notacion_1/notacion00145.jpg, id=683, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00145.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00145.jpg>
-Package pdftex.def Info: Notacion_1/notacion00145.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00145.jpg> <a0,fr72>
-<Notacion_1/notacion00147.jpg, id=693, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00147.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00147.jpg>
-Package pdftex.def Info: Notacion_1/notacion00147.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00147.jpg>
-<a0,fr73>
-<Notacion_1/notacion00149.jpg, id=703, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00149.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00149.jpg>
-Package pdftex.def Info: Notacion_1/notacion00149.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00149.jpg> <a0,fr74>
-<Notacion_1/notacion00151.jpg, id=713, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00151.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00151.jpg>
-Package pdftex.def Info: Notacion_1/notacion00151.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00151.jpg> <a0,fr75>
-<Notacion_1/notacion00153.jpg, id=723, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00153.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00153.jpg>
-Package pdftex.def Info: Notacion_1/notacion00153.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00153.jpg> <a0,fr76>
-<Notacion_1/notacion00155.jpg, id=733, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00155.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00155.jpg>
-Package pdftex.def Info: Notacion_1/notacion00155.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00155.jpg> <a0,fr77>
-<Notacion_1/notacion00157.jpg, id=743, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00157.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00157.jpg>
-Package pdftex.def Info: Notacion_1/notacion00157.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00157.jpg> <a0,fr78>
-<Notacion_1/notacion00159.jpg, id=754, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00159.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00159.jpg>
-Package pdftex.def Info: Notacion_1/notacion00159.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00159.jpg> <a0,fr79>
-<Notacion_1/notacion00161.jpg, id=764, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00161.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00161.jpg>
-Package pdftex.def Info: Notacion_1/notacion00161.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00161.jpg> <a0,fr80>
-<Notacion_1/notacion00163.jpg, id=774, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00163.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00163.jpg>
-Package pdftex.def Info: Notacion_1/notacion00163.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00163.jpg> <a0,fr81>
-<Notacion_1/notacion00165.jpg, id=784, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00165.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00165.jpg>
-Package pdftex.def Info: Notacion_1/notacion00165.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00165.jpg>
-<a0,fr82>
-<Notacion_1/notacion00167.jpg, id=794, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00167.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00167.jpg>
-Package pdftex.def Info: Notacion_1/notacion00167.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00167.jpg> <a0,fr83>
-<Notacion_1/notacion00169.jpg, id=804, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00169.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00169.jpg>
-Package pdftex.def Info: Notacion_1/notacion00169.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00169.jpg> <a0,fr84>
-<Notacion_1/notacion00171.jpg, id=814, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00171.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00171.jpg>
-Package pdftex.def Info: Notacion_1/notacion00171.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00171.jpg> <a0,fr85>
-<Notacion_1/notacion00173.jpg, id=824, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00173.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00173.jpg>
-Package pdftex.def Info: Notacion_1/notacion00173.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00173.jpg> <a0,fr86>
-<Notacion_1/notacion00175.jpg, id=834, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00175.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00175.jpg>
-Package pdftex.def Info: Notacion_1/notacion00175.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00175.jpg> <a0,fr87>
-<Notacion_1/notacion00177.jpg, id=844, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00177.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00177.jpg>
-Package pdftex.def Info: Notacion_1/notacion00177.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00177.jpg> <a0,fr88>
-<Notacion_1/notacion00179.jpg, id=854, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00179.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00179.jpg>
-Package pdftex.def Info: Notacion_1/notacion00179.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00179.jpg> <a0,fr89>
-<Notacion_1/notacion00181.jpg, id=864, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00181.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00181.jpg>
-Package pdftex.def Info: Notacion_1/notacion00181.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00181.jpg> <a0,fr90>
-<Notacion_1/notacion00183.jpg, id=874, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00183.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00183.jpg>
-Package pdftex.def Info: Notacion_1/notacion00183.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00183.jpg>
-<a0,fr91>
-<Notacion_1/notacion00185.jpg, id=884, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00185.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00185.jpg>
-Package pdftex.def Info: Notacion_1/notacion00185.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00185.jpg> <a0,fr92> <a0,fr93>
-<Notacion_1/notacion00189.jpg, id=899, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00189.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00189.jpg>
-Package pdftex.def Info: Notacion_1/notacion00189.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00189.jpg> <a0,fr94> <a0,fr95> <a0,fr96> <a0,fr97>
-<Notacion_1/notacion00197.jpg, id=924, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00197.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00197.jpg>
-Package pdftex.def Info: Notacion_1/notacion00197.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00197.jpg> <a0,fr98>
-<Notacion_1/notacion00199.jpg, id=934, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00199.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00199.jpg>
-Package pdftex.def Info: Notacion_1/notacion00199.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00199.jpg> <a0,fr99>
-<Notacion_1/notacion00201.jpg, id=944, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00201.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00201.jpg>
-Package pdftex.def Info: Notacion_1/notacion00201.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00201.jpg> <a0,fr100>
-<Notacion_1/notacion00203.jpg, id=954, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00203.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00203.jpg>
-Package pdftex.def Info: Notacion_1/notacion00203.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00203.jpg> <a0,fr101>
-<Notacion_1/notacion00205.jpg, id=964, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00205.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00205.jpg>
-Package pdftex.def Info: Notacion_1/notacion00205.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00205.jpg> <a0,fr102>
-<Notacion_1/notacion00207.jpg, id=974, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00207.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00207.jpg>
-Package pdftex.def Info: Notacion_1/notacion00207.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00207.jpg>
-<a0,fr103>
-<Notacion_1/notacion00209.jpg, id=984, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00209.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00209.jpg>
-Package pdftex.def Info: Notacion_1/notacion00209.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00209.jpg> <a0,fr104>
-<Notacion_1/notacion00211.jpg, id=994, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00211.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00211.jpg>
-Package pdftex.def Info: Notacion_1/notacion00211.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00211.jpg> <a0,fr105>
-<Notacion_1/notacion00213.jpg, id=1005, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00213.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00213.jpg>
-Package pdftex.def Info: Notacion_1/notacion00213.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00213.jpg> <a0,fr106>
-<Notacion_1/notacion00215.jpg, id=1015, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00215.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00215.jpg>
-Package pdftex.def Info: Notacion_1/notacion00215.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00215.jpg> <a0,fr107>
-<Notacion_1/notacion00217.jpg, id=1025, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00217.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00217.jpg>
-Package pdftex.def Info: Notacion_1/notacion00217.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00217.jpg> <a0,fr108>
-<Notacion_1/notacion00219.jpg, id=1035, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00219.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00219.jpg>
-Package pdftex.def Info: Notacion_1/notacion00219.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00219.jpg> <a0,fr109>
-<Notacion_1/notacion00221.jpg, id=1045, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00221.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00221.jpg>
-Package pdftex.def Info: Notacion_1/notacion00221.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00221.jpg>
-<a0,fr110>
-<Notacion_1/notacion00223.jpg, id=1055, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00223.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00223.jpg>
-Package pdftex.def Info: Notacion_1/notacion00223.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00223.jpg> <a0,fr111>
-<Notacion_1/notacion00225.jpg, id=1065, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00225.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00225.jpg>
-Package pdftex.def Info: Notacion_1/notacion00225.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00225.jpg> <a0,fr112>
-<Notacion_1/notacion00227.jpg, id=1075, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00227.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00227.jpg>
-Package pdftex.def Info: Notacion_1/notacion00227.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00227.jpg> <a0,fr113>
-<Notacion_1/notacion00229.jpg, id=1085, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00229.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00229.jpg>
-Package pdftex.def Info: Notacion_1/notacion00229.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00229.jpg> <a0,fr114>
-<Notacion_1/notacion00231.jpg, id=1095, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00231.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00231.jpg>
-Package pdftex.def Info: Notacion_1/notacion00231.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00231.jpg> <a0,fr115>
-<a0,fr116> <a0,fr117> <a0,fr118>
-<Notacion_1/notacion00239.jpg, id=1120, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00239.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00239.jpg>
-Package pdftex.def Info: Notacion_1/notacion00239.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00239.jpg> <a0,fr119>
-<Notacion_1/notacion00241.jpg, id=1130, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00241.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00241.jpg>
-Package pdftex.def Info: Notacion_1/notacion00241.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00241.jpg> <a0,fr120>
-<Notacion_1/notacion00243.jpg, id=1140, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00243.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00243.jpg>
-Package pdftex.def Info: Notacion_1/notacion00243.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00243.jpg>
-<a0,fr121>
-<Notacion_1/notacion00245.jpg, id=1150, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00245.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00245.jpg>
-Package pdftex.def Info: Notacion_1/notacion00245.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00245.jpg> <a0,fr122>
-<Notacion_1/notacion00247.jpg, id=1160, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00247.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00247.jpg>
-Package pdftex.def Info: Notacion_1/notacion00247.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00247.jpg> <a0,fr123>
-<Notacion_1/notacion00249.jpg, id=1170, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00249.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00249.jpg>
-Package pdftex.def Info: Notacion_1/notacion00249.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00249.jpg> <a0,fr124>
-<Notacion_1/notacion00251.jpg, id=1180, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00251.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00251.jpg>
-Package pdftex.def Info: Notacion_1/notacion00251.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00251.jpg> <a0,fr125>
-<Notacion_1/notacion00253.jpg, id=1190, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00253.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00253.jpg>
-Package pdftex.def Info: Notacion_1/notacion00253.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00253.jpg> <a0,fr126>
-<Notacion_1/notacion00255.jpg, id=1200, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00255.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00255.jpg>
-Package pdftex.def Info: Notacion_1/notacion00255.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00255.jpg> <a0,fr127>
-<Notacion_1/notacion00257.jpg, id=1210, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00257.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00257.jpg>
-Package pdftex.def Info: Notacion_1/notacion00257.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00257.jpg>
-<a0,fr128>
-<Notacion_1/notacion00259.jpg, id=1220, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00259.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00259.jpg>
-Package pdftex.def Info: Notacion_1/notacion00259.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00259.jpg> <a0,fr129>
-<Notacion_1/notacion00261.jpg, id=1230, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00261.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00261.jpg>
-Package pdftex.def Info: Notacion_1/notacion00261.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00261.jpg> <a0,fr130>
-<Notacion_1/notacion00263.jpg, id=1240, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00263.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00263.jpg>
-Package pdftex.def Info: Notacion_1/notacion00263.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00263.jpg> <a0,fr131>
-<Notacion_1/notacion00265.jpg, id=1251, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00265.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00265.jpg>
-Package pdftex.def Info: Notacion_1/notacion00265.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00265.jpg> <a0,fr132>
-<Notacion_1/notacion00267.jpg, id=1261, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00267.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00267.jpg>
-Package pdftex.def Info: Notacion_1/notacion00267.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00267.jpg> <a0,fr133>
-<Notacion_1/notacion00269.jpg, id=1271, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00269.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00269.jpg>
-Package pdftex.def Info: Notacion_1/notacion00269.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00269.jpg> <a0,fr134>
-<Notacion_1/notacion00271.jpg, id=1281, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00271.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00271.jpg>
-Package pdftex.def Info: Notacion_1/notacion00271.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00271.jpg>
-<a0,fr135>
-<Notacion_1/notacion00273.jpg, id=1291, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00273.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00273.jpg>
-Package pdftex.def Info: Notacion_1/notacion00273.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00273.jpg> <a0,fr136>
-<Notacion_1/notacion00275.jpg, id=1301, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00275.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00275.jpg>
-Package pdftex.def Info: Notacion_1/notacion00275.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00275.jpg> <a0,fr137>
-<Notacion_1/notacion00277.jpg, id=1311, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00277.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00277.jpg>
-Package pdftex.def Info: Notacion_1/notacion00277.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00277.jpg> <a0,fr138> <a0,fr139>
-<a0,fr140> <a0,fr141>
-<Notacion_1/notacion00285.jpg, id=1336, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00285.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00285.jpg>
-Package pdftex.def Info: Notacion_1/notacion00285.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00285.jpg> <a0,fr142>
-<Notacion_1/notacion00287.jpg, id=1346, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00287.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00287.jpg>
-Package pdftex.def Info: Notacion_1/notacion00287.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00287.jpg> <a0,fr143>
-<Notacion_1/notacion00289.jpg, id=1356, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00289.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00289.jpg>
-Package pdftex.def Info: Notacion_1/notacion00289.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00289.jpg> <a0,fr144>
-<Notacion_1/notacion00291.jpg, id=1366, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00291.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00291.jpg>
-Package pdftex.def Info: Notacion_1/notacion00291.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00291.jpg> <a0,fr145>
-<Notacion_1/notacion00293.jpg, id=1376, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00293.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00293.jpg>
-Package pdftex.def Info: Notacion_1/notacion00293.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00293.jpg>
-<a0,fr146>
-<Notacion_1/notacion00295.jpg, id=1386, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00295.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00295.jpg>
-Package pdftex.def Info: Notacion_1/notacion00295.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00295.jpg> <a0,fr147>
-<Notacion_1/notacion00297.jpg, id=1396, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00297.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00297.jpg>
-Package pdftex.def Info: Notacion_1/notacion00297.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00297.jpg> <a0,fr148>
-<Notacion_1/notacion00299.jpg, id=1406, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00299.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00299.jpg>
-Package pdftex.def Info: Notacion_1/notacion00299.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00299.jpg> <a0,fr149>
-<Notacion_1/notacion00301.jpg, id=1416, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00301.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00301.jpg>
-Package pdftex.def Info: Notacion_1/notacion00301.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00301.jpg> <a0,fr150>
-<Notacion_1/notacion00303.jpg, id=1426, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00303.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00303.jpg>
-Package pdftex.def Info: Notacion_1/notacion00303.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00303.jpg> <a0,fr151>
-<Notacion_1/notacion00305.jpg, id=1436, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00305.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00305.jpg>
-Package pdftex.def Info: Notacion_1/notacion00305.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00305.jpg> <a0,fr152>
-<Notacion_1/notacion00307.jpg, id=1446, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00307.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00307.jpg>
-Package pdftex.def Info: Notacion_1/notacion00307.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00307.jpg>
-<a0,fr153>
-<Notacion_1/notacion00309.jpg, id=1456, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00309.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00309.jpg>
-Package pdftex.def Info: Notacion_1/notacion00309.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00309.jpg> <a0,fr154>
-<Notacion_1/notacion00311.jpg, id=1466, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00311.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00311.jpg>
-Package pdftex.def Info: Notacion_1/notacion00311.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00311.jpg> <a0,fr155>
-<Notacion_1/notacion00313.jpg, id=1476, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00313.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00313.jpg>
-Package pdftex.def Info: Notacion_1/notacion00313.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00313.jpg> <a0,fr156>
-<Notacion_1/notacion00315.jpg, id=1486, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00315.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00315.jpg>
-Package pdftex.def Info: Notacion_1/notacion00315.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00315.jpg> <a0,fr157>
-<Notacion_1/notacion00317.jpg, id=1496, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00317.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00317.jpg>
-Package pdftex.def Info: Notacion_1/notacion00317.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00317.jpg> <a0,fr158>
-<Notacion_1/notacion00319.jpg, id=1507, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00319.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00319.jpg>
-Package pdftex.def Info: Notacion_1/notacion00319.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00319.jpg> <a0,fr159>
-<Notacion_1/notacion00321.jpg, id=1517, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00321.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00321.jpg>
-Package pdftex.def Info: Notacion_1/notacion00321.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00321.jpg>
-<a0,fr160> <a0,fr161> <a0,fr162>
-<Notacion_1/notacion00327.jpg, id=1537, 2569.6pt x 1447.4075pt>
-File: Notacion_1/notacion00327.jpg Graphic file (type jpg)
-<use Notacion_1/notacion00327.jpg>
-Package pdftex.def Info: Notacion_1/notacion00327.jpg  used on input line 200.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Notacion_1/notacion00327.jpg> <a0,fr163>
-<a0,fr164> <a0,fr165> [3
+] [3
 
 ]
 LaTeX Font Info:    Trying to load font information for OMS+cmss on input line 
-214.
-LaTeX Font Info:    No file OMScmss.fd. on input line 214.
+218.
+LaTeX Font Info:    No file OMScmss.fd. on input line 218.
 
 
 LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 214.
+(Font)              for symbol `textbullet' on input line 218.
 
 [4
 
@@ -2484,11 +1715,11 @@ LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 233.
+(hyperref)                removing `math shift' on input line 237.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 233.
+(hyperref)                removing `math shift' on input line 237.
 
 [11
 
@@ -2506,537 +1737,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 ] [18
 
-] <a1,fr0> <a1,fr1> <a1,fr2>
-<Norma/norma00004.jpg, id=1696, 2569.6pt x 1447.4075pt>
-File: Norma/norma00004.jpg Graphic file (type jpg)
-<use Norma/norma00004.jpg>
-Package pdftex.def Info: Norma/norma00004.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00004.jpg> <a1,fr3>
-<Norma/norma00005.jpg, id=1706, 2569.6pt x 1447.4075pt>
-File: Norma/norma00005.jpg Graphic file (type jpg)
-<use Norma/norma00005.jpg>
-Package pdftex.def Info: Norma/norma00005.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00005.jpg> <a1,fr4>
-<Norma/norma00006.jpg, id=1716, 2569.6pt x 1447.4075pt>
-File: Norma/norma00006.jpg Graphic file (type jpg)
-<use Norma/norma00006.jpg>
-Package pdftex.def Info: Norma/norma00006.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00006.jpg> <a1,fr5>
-<Norma/norma00007.jpg, id=1727, 2569.6pt x 1447.4075pt>
-File: Norma/norma00007.jpg Graphic file (type jpg)
-<use Norma/norma00007.jpg>
-Package pdftex.def Info: Norma/norma00007.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00007.jpg> <a1,fr6>
-<Norma/norma00008.jpg, id=1737, 2569.6pt x 1447.4075pt>
-File: Norma/norma00008.jpg Graphic file (type jpg)
-<use Norma/norma00008.jpg>
-Package pdftex.def Info: Norma/norma00008.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00008.jpg> <a1,fr7>
-<Norma/norma00009.jpg, id=1747, 2569.6pt x 1447.4075pt>
-File: Norma/norma00009.jpg Graphic file (type jpg)
-<use Norma/norma00009.jpg>
-Package pdftex.def Info: Norma/norma00009.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00009.jpg> <a1,fr8>
-<Norma/norma00010.jpg, id=1757, 2569.6pt x 1447.4075pt>
-File: Norma/norma00010.jpg Graphic file (type jpg)
-<use Norma/norma00010.jpg>
-Package pdftex.def Info: Norma/norma00010.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00010.jpg> <a1,fr9>
-<Norma/norma00011.jpg, id=1767, 2569.6pt x 1447.4075pt>
-File: Norma/norma00011.jpg Graphic file (type jpg)
-<use Norma/norma00011.jpg>
-Package pdftex.def Info: Norma/norma00011.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00011.jpg> <a1,fr10>
-<Norma/norma00012.jpg, id=1777, 2569.6pt x 1447.4075pt>
-File: Norma/norma00012.jpg Graphic file (type jpg)
-<use Norma/norma00012.jpg>
-Package pdftex.def Info: Norma/norma00012.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00012.jpg> <a1,fr11>
-<Norma/norma00013.jpg, id=1787, 2569.6pt x 1447.4075pt>
-File: Norma/norma00013.jpg Graphic file (type jpg)
-<use Norma/norma00013.jpg>
-Package pdftex.def Info: Norma/norma00013.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00013.jpg> <a1,fr12>
-<Norma/norma00014.jpg, id=1797, 2569.6pt x 1447.4075pt>
-File: Norma/norma00014.jpg Graphic file (type jpg)
-<use Norma/norma00014.jpg>
-Package pdftex.def Info: Norma/norma00014.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00014.jpg> <a1,fr13>
-<Norma/norma00015.jpg, id=1807, 2569.6pt x 1447.4075pt>
-File: Norma/norma00015.jpg Graphic file (type jpg)
-<use Norma/norma00015.jpg>
-Package pdftex.def Info: Norma/norma00015.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00015.jpg>
-<a1,fr14>
-<Norma/norma00016.jpg, id=1817, 2569.6pt x 1447.4075pt>
-File: Norma/norma00016.jpg Graphic file (type jpg)
-<use Norma/norma00016.jpg>
-Package pdftex.def Info: Norma/norma00016.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00016.jpg> <a1,fr15>
-<Norma/norma00017.jpg, id=1827, 2569.6pt x 1447.4075pt>
-File: Norma/norma00017.jpg Graphic file (type jpg)
-<use Norma/norma00017.jpg>
-Package pdftex.def Info: Norma/norma00017.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00017.jpg>
-<a1,fr16>
-<Norma/norma00018.jpg, id=1837, 2569.6pt x 1447.4075pt>
-File: Norma/norma00018.jpg Graphic file (type jpg)
-<use Norma/norma00018.jpg>
-Package pdftex.def Info: Norma/norma00018.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00018.jpg> <a1,fr17>
-<Norma/norma00019.jpg, id=1847, 2569.6pt x 1447.4075pt>
-File: Norma/norma00019.jpg Graphic file (type jpg)
-<use Norma/norma00019.jpg>
-Package pdftex.def Info: Norma/norma00019.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00019.jpg>
-<a1,fr18>
-<Norma/norma00020.jpg, id=1857, 2569.6pt x 1447.4075pt>
-File: Norma/norma00020.jpg Graphic file (type jpg)
-<use Norma/norma00020.jpg>
-Package pdftex.def Info: Norma/norma00020.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00020.jpg> <a1,fr19>
-<Norma/norma00021.jpg, id=1867, 2569.6pt x 1447.4075pt>
-File: Norma/norma00021.jpg Graphic file (type jpg)
-<use Norma/norma00021.jpg>
-Package pdftex.def Info: Norma/norma00021.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00021.jpg>
-<a1,fr20>
-<Norma/norma00022.jpg, id=1877, 2569.6pt x 1447.4075pt>
-File: Norma/norma00022.jpg Graphic file (type jpg)
-<use Norma/norma00022.jpg>
-Package pdftex.def Info: Norma/norma00022.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00022.jpg> <a1,fr21>
-<Norma/norma00023.jpg, id=1887, 2569.6pt x 1447.4075pt>
-File: Norma/norma00023.jpg Graphic file (type jpg)
-<use Norma/norma00023.jpg>
-Package pdftex.def Info: Norma/norma00023.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00023.jpg>
-<a1,fr22>
-<Norma/norma00024.jpg, id=1897, 2569.6pt x 1447.4075pt>
-File: Norma/norma00024.jpg Graphic file (type jpg)
-<use Norma/norma00024.jpg>
-Package pdftex.def Info: Norma/norma00024.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00024.jpg> <a1,fr23>
-<Norma/norma00025.jpg, id=1907, 2569.6pt x 1447.4075pt>
-File: Norma/norma00025.jpg Graphic file (type jpg)
-<use Norma/norma00025.jpg>
-Package pdftex.def Info: Norma/norma00025.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00025.jpg>
-<a1,fr24>
-<Norma/norma00026.jpg, id=1917, 2569.6pt x 1447.4075pt>
-File: Norma/norma00026.jpg Graphic file (type jpg)
-<use Norma/norma00026.jpg>
-Package pdftex.def Info: Norma/norma00026.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00026.jpg> <a1,fr25>
-<Norma/norma00027.jpg, id=1927, 2569.6pt x 1447.4075pt>
-File: Norma/norma00027.jpg Graphic file (type jpg)
-<use Norma/norma00027.jpg>
-Package pdftex.def Info: Norma/norma00027.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00027.jpg>
-<a1,fr26>
-<Norma/norma00028.jpg, id=1937, 2569.6pt x 1447.4075pt>
-File: Norma/norma00028.jpg Graphic file (type jpg)
-<use Norma/norma00028.jpg>
-Package pdftex.def Info: Norma/norma00028.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00028.jpg> <a1,fr27>
-<Norma/norma00029.jpg, id=1947, 2569.6pt x 1447.4075pt>
-File: Norma/norma00029.jpg Graphic file (type jpg)
-<use Norma/norma00029.jpg>
-Package pdftex.def Info: Norma/norma00029.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00029.jpg>
-<a1,fr28>
-<Norma/norma00030.jpg, id=1957, 2569.6pt x 1447.4075pt>
-File: Norma/norma00030.jpg Graphic file (type jpg)
-<use Norma/norma00030.jpg>
-Package pdftex.def Info: Norma/norma00030.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00030.jpg> <a1,fr29>
-<Norma/norma00031.jpg, id=1967, 2569.6pt x 1447.4075pt>
-File: Norma/norma00031.jpg Graphic file (type jpg)
-<use Norma/norma00031.jpg>
-Package pdftex.def Info: Norma/norma00031.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00031.jpg>
-<a1,fr30>
-<Norma/norma00032.jpg, id=1978, 2569.6pt x 1447.4075pt>
-File: Norma/norma00032.jpg Graphic file (type jpg)
-<use Norma/norma00032.jpg>
-Package pdftex.def Info: Norma/norma00032.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00032.jpg> <a1,fr31>
-<Norma/norma00033.jpg, id=1988, 2569.6pt x 1447.4075pt>
-File: Norma/norma00033.jpg Graphic file (type jpg)
-<use Norma/norma00033.jpg>
-Package pdftex.def Info: Norma/norma00033.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00033.jpg>
-<a1,fr32>
-<Norma/norma00034.jpg, id=1998, 2569.6pt x 1447.4075pt>
-File: Norma/norma00034.jpg Graphic file (type jpg)
-<use Norma/norma00034.jpg>
-Package pdftex.def Info: Norma/norma00034.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00034.jpg> <a1,fr33> <a1,fr34> <a1,fr35> <a1,fr36>
-<Norma/norma00038.jpg, id=2023, 2569.6pt x 1447.4075pt>
-File: Norma/norma00038.jpg Graphic file (type jpg)
-<use Norma/norma00038.jpg>
-Package pdftex.def Info: Norma/norma00038.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00038.jpg> <a1,fr37> <a1,fr38> <a1,fr39> <a1,fr40>
-<Norma/norma00042.jpg, id=2048, 2569.6pt x 1447.4075pt>
-File: Norma/norma00042.jpg Graphic file (type jpg)
-<use Norma/norma00042.jpg>
-Package pdftex.def Info: Norma/norma00042.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00042.jpg> <a1,fr41> <a1,fr42> <a1,fr43> <a1,fr44> <a1,fr45> <a1
-,fr46> <a1,fr47>
-<a1,fr48>
-<Norma/norma00050.jpg, id=2093, 2569.6pt x 1447.4075pt>
-File: Norma/norma00050.jpg Graphic file (type jpg)
-<use Norma/norma00050.jpg>
-Package pdftex.def Info: Norma/norma00050.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00050.jpg> <a1,fr49>
-<Norma/norma00051.jpg, id=2103, 2569.6pt x 1447.4075pt>
-File: Norma/norma00051.jpg Graphic file (type jpg)
-<use Norma/norma00051.jpg>
-Package pdftex.def Info: Norma/norma00051.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00051.jpg>
-<a1,fr50>
-<Norma/norma00052.jpg, id=2113, 2569.6pt x 1447.4075pt>
-File: Norma/norma00052.jpg Graphic file (type jpg)
-<use Norma/norma00052.jpg>
-Package pdftex.def Info: Norma/norma00052.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00052.jpg> <a1,fr51>
-<Norma/norma00053.jpg, id=2123, 2569.6pt x 1447.4075pt>
-File: Norma/norma00053.jpg Graphic file (type jpg)
-<use Norma/norma00053.jpg>
-Package pdftex.def Info: Norma/norma00053.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00053.jpg>
-<a1,fr52>
-<Norma/norma00054.jpg, id=2133, 2569.6pt x 1447.4075pt>
-File: Norma/norma00054.jpg Graphic file (type jpg)
-<use Norma/norma00054.jpg>
-Package pdftex.def Info: Norma/norma00054.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00054.jpg> <a1,fr53>
-<Norma/norma00055.jpg, id=2143, 2569.6pt x 1447.4075pt>
-File: Norma/norma00055.jpg Graphic file (type jpg)
-<use Norma/norma00055.jpg>
-Package pdftex.def Info: Norma/norma00055.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00055.jpg>
-<a1,fr54>
-<Norma/norma00056.jpg, id=2153, 2569.6pt x 1447.4075pt>
-File: Norma/norma00056.jpg Graphic file (type jpg)
-<use Norma/norma00056.jpg>
-Package pdftex.def Info: Norma/norma00056.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00056.jpg> <a1,fr55>
-<Norma/norma00057.jpg, id=2163, 2569.6pt x 1447.4075pt>
-File: Norma/norma00057.jpg Graphic file (type jpg)
-<use Norma/norma00057.jpg>
-Package pdftex.def Info: Norma/norma00057.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00057.jpg>
-<a1,fr56>
-<Norma/norma00058.jpg, id=2173, 2569.6pt x 1447.4075pt>
-File: Norma/norma00058.jpg Graphic file (type jpg)
-<use Norma/norma00058.jpg>
-Package pdftex.def Info: Norma/norma00058.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00058.jpg> <a1,fr57>
-<Norma/norma00059.jpg, id=2183, 2569.6pt x 1447.4075pt>
-File: Norma/norma00059.jpg Graphic file (type jpg)
-<use Norma/norma00059.jpg>
-Package pdftex.def Info: Norma/norma00059.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00059.jpg>
-<a1,fr58>
-<Norma/norma00060.jpg, id=2193, 2569.6pt x 1447.4075pt>
-File: Norma/norma00060.jpg Graphic file (type jpg)
-<use Norma/norma00060.jpg>
-Package pdftex.def Info: Norma/norma00060.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00060.jpg> <a1,fr59>
-<Norma/norma00061.jpg, id=2203, 2569.6pt x 1447.4075pt>
-File: Norma/norma00061.jpg Graphic file (type jpg)
-<use Norma/norma00061.jpg>
-Package pdftex.def Info: Norma/norma00061.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00061.jpg>
-<a1,fr60>
-<Norma/norma00062.jpg, id=2213, 2569.6pt x 1447.4075pt>
-File: Norma/norma00062.jpg Graphic file (type jpg)
-<use Norma/norma00062.jpg>
-Package pdftex.def Info: Norma/norma00062.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00062.jpg> <a1,fr61>
-<Norma/norma00063.jpg, id=2223, 2569.6pt x 1447.4075pt>
-File: Norma/norma00063.jpg Graphic file (type jpg)
-<use Norma/norma00063.jpg>
-Package pdftex.def Info: Norma/norma00063.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00063.jpg>
-<a1,fr62>
-<Norma/norma00064.jpg, id=2234, 2569.6pt x 1447.4075pt>
-File: Norma/norma00064.jpg Graphic file (type jpg)
-<use Norma/norma00064.jpg>
-Package pdftex.def Info: Norma/norma00064.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00064.jpg> <a1,fr63>
-<Norma/norma00065.jpg, id=2244, 2569.6pt x 1447.4075pt>
-File: Norma/norma00065.jpg Graphic file (type jpg)
-<use Norma/norma00065.jpg>
-Package pdftex.def Info: Norma/norma00065.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00065.jpg>
-<a1,fr64>
-<Norma/norma00066.jpg, id=2254, 2569.6pt x 1447.4075pt>
-File: Norma/norma00066.jpg Graphic file (type jpg)
-<use Norma/norma00066.jpg>
-Package pdftex.def Info: Norma/norma00066.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00066.jpg> <a1,fr65>
-<Norma/norma00067.jpg, id=2264, 2569.6pt x 1447.4075pt>
-File: Norma/norma00067.jpg Graphic file (type jpg)
-<use Norma/norma00067.jpg>
-Package pdftex.def Info: Norma/norma00067.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00067.jpg>
-<a1,fr66>
-<Norma/norma00068.jpg, id=2274, 2569.6pt x 1447.4075pt>
-File: Norma/norma00068.jpg Graphic file (type jpg)
-<use Norma/norma00068.jpg>
-Package pdftex.def Info: Norma/norma00068.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00068.jpg> <a1,fr67>
-<Norma/norma00069.jpg, id=2284, 2569.6pt x 1447.4075pt>
-File: Norma/norma00069.jpg Graphic file (type jpg)
-<use Norma/norma00069.jpg>
-Package pdftex.def Info: Norma/norma00069.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00069.jpg>
-<a1,fr68>
-<Norma/norma00070.jpg, id=2294, 2569.6pt x 1447.4075pt>
-File: Norma/norma00070.jpg Graphic file (type jpg)
-<use Norma/norma00070.jpg>
-Package pdftex.def Info: Norma/norma00070.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00070.jpg> <a1,fr69>
-<Norma/norma00071.jpg, id=2304, 2569.6pt x 1447.4075pt>
-File: Norma/norma00071.jpg Graphic file (type jpg)
-<use Norma/norma00071.jpg>
-Package pdftex.def Info: Norma/norma00071.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00071.jpg>
-<a1,fr70>
-<Norma/norma00072.jpg, id=2314, 2569.6pt x 1447.4075pt>
-File: Norma/norma00072.jpg Graphic file (type jpg)
-<use Norma/norma00072.jpg>
-Package pdftex.def Info: Norma/norma00072.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00072.jpg> <a1,fr71>
-<Norma/norma00073.jpg, id=2324, 2569.6pt x 1447.4075pt>
-File: Norma/norma00073.jpg Graphic file (type jpg)
-<use Norma/norma00073.jpg>
-Package pdftex.def Info: Norma/norma00073.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00073.jpg>
-<a1,fr72>
-<Norma/norma00074.jpg, id=2334, 2569.6pt x 1447.4075pt>
-File: Norma/norma00074.jpg Graphic file (type jpg)
-<use Norma/norma00074.jpg>
-Package pdftex.def Info: Norma/norma00074.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00074.jpg> <a1,fr73>
-<Norma/norma00075.jpg, id=2344, 2569.6pt x 1447.4075pt>
-File: Norma/norma00075.jpg Graphic file (type jpg)
-<use Norma/norma00075.jpg>
-Package pdftex.def Info: Norma/norma00075.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00075.jpg>
-<a1,fr74>
-<Norma/norma00076.jpg, id=2354, 2569.6pt x 1447.4075pt>
-File: Norma/norma00076.jpg Graphic file (type jpg)
-<use Norma/norma00076.jpg>
-Package pdftex.def Info: Norma/norma00076.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00076.jpg> <a1,fr75>
-<Norma/norma00077.jpg, id=2364, 2569.6pt x 1447.4075pt>
-File: Norma/norma00077.jpg Graphic file (type jpg)
-<use Norma/norma00077.jpg>
-Package pdftex.def Info: Norma/norma00077.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00077.jpg>
-<a1,fr76>
-<Norma/norma00078.jpg, id=2374, 2569.6pt x 1447.4075pt>
-File: Norma/norma00078.jpg Graphic file (type jpg)
-<use Norma/norma00078.jpg>
-Package pdftex.def Info: Norma/norma00078.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00078.jpg> <a1,fr77>
-<Norma/norma00079.jpg, id=2384, 2569.6pt x 1447.4075pt>
-File: Norma/norma00079.jpg Graphic file (type jpg)
-<use Norma/norma00079.jpg>
-Package pdftex.def Info: Norma/norma00079.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00079.jpg>
-<a1,fr78>
-<Norma/norma00080.jpg, id=2394, 2569.6pt x 1447.4075pt>
-File: Norma/norma00080.jpg Graphic file (type jpg)
-<use Norma/norma00080.jpg>
-Package pdftex.def Info: Norma/norma00080.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00080.jpg> <a1,fr79>
-<Norma/norma00081.jpg, id=2404, 2569.6pt x 1447.4075pt>
-File: Norma/norma00081.jpg Graphic file (type jpg)
-<use Norma/norma00081.jpg>
-Package pdftex.def Info: Norma/norma00081.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00081.jpg>
-<a1,fr80>
-<Norma/norma00082.jpg, id=2414, 2569.6pt x 1447.4075pt>
-File: Norma/norma00082.jpg Graphic file (type jpg)
-<use Norma/norma00082.jpg>
-Package pdftex.def Info: Norma/norma00082.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00082.jpg> <a1,fr81>
-<Norma/norma00083.jpg, id=2424, 2569.6pt x 1447.4075pt>
-File: Norma/norma00083.jpg Graphic file (type jpg)
-<use Norma/norma00083.jpg>
-Package pdftex.def Info: Norma/norma00083.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00083.jpg>
-<a1,fr82>
-<Norma/norma00084.jpg, id=2434, 2569.6pt x 1447.4075pt>
-File: Norma/norma00084.jpg Graphic file (type jpg)
-<use Norma/norma00084.jpg>
-Package pdftex.def Info: Norma/norma00084.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00084.jpg> <a1,fr83>
-<Norma/norma00085.jpg, id=2444, 2569.6pt x 1447.4075pt>
-File: Norma/norma00085.jpg Graphic file (type jpg)
-<use Norma/norma00085.jpg>
-Package pdftex.def Info: Norma/norma00085.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00085.jpg>
-<a1,fr84> <a1,fr85> <a1,fr86> <a1,fr87> <a1,fr88>
-<Norma/norma00090.jpg, id=2474, 2569.6pt x 1447.4075pt>
-File: Norma/norma00090.jpg Graphic file (type jpg)
-<use Norma/norma00090.jpg>
-Package pdftex.def Info: Norma/norma00090.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00090.jpg>
-<a1,fr89> <a1,fr90> <a1,fr91> <a1,fr92> <a1,fr93> <a1,fr94> <a1,fr95>
-<a1,fr96> <a1,fr97> <a1,fr98>
-<Norma/norma00100.jpg, id=2530, 2569.6pt x 1447.4075pt>
-File: Norma/norma00100.jpg Graphic file (type jpg)
-<use Norma/norma00100.jpg>
-Package pdftex.def Info: Norma/norma00100.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00100.jpg> <a1,fr99> <a1,fr100>
-<a1,fr101> <a1,fr102> <a1,fr103> <a1,fr104> <a1,fr105> <a1,fr106> <a1,fr107>
-<a1,fr108> <a1,fr109> <a1,fr110> <a1,fr111> <a1,fr112> <a1,fr113> <a1,fr114>
-<a1,fr115> <a1,fr116> <a1,fr117> <a1,fr118> <a1,fr119> <a1,fr120> <a1,fr121>
-<a1,fr122> <a1,fr123> <a1,fr124> <a1,fr125> <a1,fr126> <a1,fr127> <a1,fr128>
-<a1,fr129> <a1,fr130> <a1,fr131> <a1,fr132>
-<Norma/norma00134.jpg, id=2705, 2569.6pt x 1447.4075pt>
-File: Norma/norma00134.jpg Graphic file (type jpg)
-<use Norma/norma00134.jpg>
-Package pdftex.def Info: Norma/norma00134.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00134.jpg>
-<a1,fr133>
-<Norma/norma00135.jpg, id=2715, 2569.6pt x 1447.4075pt>
-File: Norma/norma00135.jpg Graphic file (type jpg)
-<use Norma/norma00135.jpg>
-Package pdftex.def Info: Norma/norma00135.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00135.jpg> <a1,fr134>
-<Norma/norma00136.jpg, id=2725, 2569.6pt x 1447.4075pt>
-File: Norma/norma00136.jpg Graphic file (type jpg)
-<use Norma/norma00136.jpg>
-Package pdftex.def Info: Norma/norma00136.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00136.jpg>
-<a1,fr135>
-<Norma/norma00137.jpg, id=2736, 2569.6pt x 1447.4075pt>
-File: Norma/norma00137.jpg Graphic file (type jpg)
-<use Norma/norma00137.jpg>
-Package pdftex.def Info: Norma/norma00137.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00137.jpg> <a1,fr136>
-<Norma/norma00138.jpg, id=2746, 2569.6pt x 1447.4075pt>
-File: Norma/norma00138.jpg Graphic file (type jpg)
-<use Norma/norma00138.jpg>
-Package pdftex.def Info: Norma/norma00138.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00138.jpg>
-<a1,fr137>
-<Norma/norma00139.jpg, id=2756, 2569.6pt x 1447.4075pt>
-File: Norma/norma00139.jpg Graphic file (type jpg)
-<use Norma/norma00139.jpg>
-Package pdftex.def Info: Norma/norma00139.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00139.jpg> <a1,fr138>
-<Norma/norma00140.jpg, id=2766, 2569.6pt x 1447.4075pt>
-File: Norma/norma00140.jpg Graphic file (type jpg)
-<use Norma/norma00140.jpg>
-Package pdftex.def Info: Norma/norma00140.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00140.jpg>
-<a1,fr139>
-<Norma/norma00141.jpg, id=2776, 2569.6pt x 1447.4075pt>
-File: Norma/norma00141.jpg Graphic file (type jpg)
-<use Norma/norma00141.jpg>
-Package pdftex.def Info: Norma/norma00141.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00141.jpg> <a1,fr140> <a1,fr141> <a1,fr142>
-<a1,fr143> <a1,fr144> <a1,fr145> <a1,fr146> <a1,fr147> <a1,fr148> <a1,fr149>
-<a1,fr150> <a1,fr151> <a1,fr152> <a1,fr153> <a1,fr154> <a1,fr155> <a1,fr156>
-<a1,fr157> <a1,fr158>
-<Norma/norma00160.jpg, id=2876, 2569.6pt x 1447.4075pt>
-File: Norma/norma00160.jpg Graphic file (type jpg)
-<use Norma/norma00160.jpg>
-Package pdftex.def Info: Norma/norma00160.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00160.jpg> <a1,fr159>
-<Norma/norma00161.jpg, id=2886, 2569.6pt x 1447.4075pt>
-File: Norma/norma00161.jpg Graphic file (type jpg)
-<use Norma/norma00161.jpg>
-Package pdftex.def Info: Norma/norma00161.jpg  used on input line 324.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Norma/norma00161.jpg> <a1,fr160> <a1,fr161> <a1,fr162> <a1,fr163> [19
+] [19
 
 ] [20
 
@@ -3047,49 +1748,49 @@ Package pdftex.def Info: Norma/norma00161.jpg  used on input line 324.
 ] [23
 
 ]
-<img/relojBeamer.jpg, id=2952, 722.7pt x 542.025pt>
+<img/relojBeamer.jpg, id=219, 722.7pt x 542.025pt>
 File: img/relojBeamer.jpg Graphic file (type jpg)
 <use img/relojBeamer.jpg>
-Package pdftex.def Info: img/relojBeamer.jpg  used on input line 383.
+Package pdftex.def Info: img/relojBeamer.jpg  used on input line 387.
 (pdftex.def)             Requested size: 252.94878pt x 189.71158pt.
 
-Overfull \vbox (16.91557pt too high) detected at line 383
+Overfull \vbox (16.91557pt too high) detected at line 387
  []
 
 [24
 
  <./img/relojBeamer.jpg>]
-Overfull \vbox (11.25323pt too high) detected at line 398
+Overfull \vbox (11.25323pt too high) detected at line 402
  []
 
 [25
 
 ]
-Overfull \vbox (11.25323pt too high) detected at line 398
+Overfull \vbox (11.25323pt too high) detected at line 402
  []
 
 [26
 
 ]
-Overfull \vbox (11.25323pt too high) detected at line 398
+Overfull \vbox (11.25323pt too high) detected at line 402
  []
 
 [27
 
 ]
-Overfull \vbox (25.52129pt too high) detected at line 415
+Overfull \vbox (25.52129pt too high) detected at line 419
  []
 
 [28
 
 ]
-Overfull \vbox (25.52129pt too high) detected at line 415
+Overfull \vbox (25.52129pt too high) detected at line 419
  []
 
 [29
 
 ]
-Overfull \vbox (25.52129pt too high) detected at line 415
+Overfull \vbox (25.52129pt too high) detected at line 419
  []
 
 [30
@@ -3097,15 +1798,15 @@ Overfull \vbox (25.52129pt too high) detected at line 415
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 417.
+(hyperref)                removing `math shift' on input line 421.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 417.
+(hyperref)                removing `subscript' on input line 421.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 417.
+(hyperref)                removing `math shift' on input line 421.
 
 [31
 
@@ -3149,40 +1850,40 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 548.
+(hyperref)                removing `math shift' on input line 552.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 548.
+(hyperref)                removing `math shift' on input line 552.
 
 [50
 
 ]
-Overfull \vbox (2.72113pt too high) detected at line 560
+Overfull \vbox (2.72113pt too high) detected at line 564
  []
 
 [51
 
 ]
-Overfull \vbox (2.72113pt too high) detected at line 560
+Overfull \vbox (2.72113pt too high) detected at line 564
  []
 
 [52
 
 ]
-Overfull \vbox (2.72113pt too high) detected at line 560
+Overfull \vbox (2.72113pt too high) detected at line 564
  []
 
 [53
 
 ]
-Overfull \vbox (2.72113pt too high) detected at line 560
+Overfull \vbox (2.72113pt too high) detected at line 564
  []
 
 [54
 
 ]
-Overfull \vbox (25.23352pt too high) detected at line 576
+Overfull \vbox (25.23352pt too high) detected at line 580
  []
 
 [55
@@ -3201,380 +1902,16 @@ Overfull \vbox (25.23352pt too high) detected at line 576
 
 ] [62
 
-] <a2,fr0>
-<Multiplicacion/multiplicacion00003.jpg, id=3213, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00003.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00003.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00003.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00003.jpg> <a2,fr1>
-<Multiplicacion/multiplicacion00005.jpg, id=3223, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00005.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00005.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00005.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00005.jpg> <a2,fr2>
-<Multiplicacion/multiplicacion00007.jpg, id=3233, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00007.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00007.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00007.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00007.jpg> <a2,fr3>
-<Multiplicacion/multiplicacion00009.jpg, id=3243, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00009.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00009.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00009.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00009.jpg> <a2,fr4>
-<Multiplicacion/multiplicacion00011.jpg, id=3253, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00011.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00011.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00011.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00011.jpg> <a2,fr5>
-<Multiplicacion/multiplicacion00013.jpg, id=3263, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00013.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00013.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00013.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00013.jpg> <a2,fr6>
-<Multiplicacion/multiplicacion00015.jpg, id=3273, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00015.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00015.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00015.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00015.jpg> <a2,fr7>
-<Multiplicacion/multiplicacion00017.jpg, id=3284, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00017.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00017.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00017.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00017.jpg> <a2,fr8>
-<Multiplicacion/multiplicacion00019.jpg, id=3294, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00019.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00019.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00019.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00019.jpg> <a2,fr9>
-<Multiplicacion/multiplicacion00021.jpg, id=3304, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00021.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00021.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00021.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00021.jpg> <a2,fr10>
-<Multiplicacion/multiplicacion00023.jpg, id=3314, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00023.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00023.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00023.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00023.jpg> <a2,fr11>
-<Multiplicacion/multiplicacion00025.jpg, id=3324, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00025.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00025.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00025.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00025.jpg> <a2,fr12>
-<Multiplicacion/multiplicacion00027.jpg, id=3334, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00027.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00027.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00027.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00027.jpg> <a2,fr13>
-<Multiplicacion/multiplicacion00029.jpg, id=3344, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00029.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00029.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00029.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00029.jpg> <a2,fr14>
-<Multiplicacion/multiplicacion00031.jpg, id=3354, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00031.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00031.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00031.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00031.jpg> <a2,fr15>
-<Multiplicacion/multiplicacion00033.jpg, id=3364, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00033.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00033.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00033.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00033.jpg> <a2,fr16>
-<Multiplicacion/multiplicacion00035.jpg, id=3374, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00035.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00035.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00035.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00035.jpg> <a2,fr17>
-<Multiplicacion/multiplicacion00037.jpg, id=3384, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00037.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00037.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00037.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00037.jpg> <a2,fr18>
-<Multiplicacion/multiplicacion00039.jpg, id=3394, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00039.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00039.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00039.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00039.jpg> <a2,fr19>
-<Multiplicacion/multiplicacion00041.jpg, id=3404, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00041.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00041.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00041.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00041.jpg> <a2,fr20>
-<Multiplicacion/multiplicacion00043.jpg, id=3414, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00043.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00043.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00043.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00043.jpg> <a2,fr21> <a2,fr22> <a2,fr23> <a2,f
-r24>
-<Multiplicacion/multiplicacion00051.jpg, id=3439, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00051.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00051.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00051.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00051.jpg> <a2,fr25>
-<Multiplicacion/multiplicacion00053.jpg, id=3449, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00053.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00053.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00053.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00053.jpg> <a2,fr26>
-<Multiplicacion/multiplicacion00055.jpg, id=3459, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00055.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00055.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00055.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00055.jpg> <a2,fr27>
-<Multiplicacion/multiplicacion00057.jpg, id=3469, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00057.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00057.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00057.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00057.jpg> <a2,fr28>
-<Multiplicacion/multiplicacion00059.jpg, id=3479, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00059.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00059.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00059.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00059.jpg> <a2,fr29>
-<Multiplicacion/multiplicacion00061.jpg, id=3489, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00061.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00061.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00061.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00061.jpg> <a2,fr30>
-<Multiplicacion/multiplicacion00063.jpg, id=3499, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00063.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00063.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00063.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00063.jpg> <a2,fr31>
-<Multiplicacion/multiplicacion00065.jpg, id=3509, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00065.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00065.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00065.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00065.jpg> <a2,fr32>
-<Multiplicacion/multiplicacion00067.jpg, id=3519, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00067.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00067.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00067.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00067.jpg>
-<a2,fr33>
-<Multiplicacion/multiplicacion00069.jpg, id=3530, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00069.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00069.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00069.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00069.jpg> <a2,fr34>
-<Multiplicacion/multiplicacion00071.jpg, id=3540, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00071.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00071.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00071.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00071.jpg> <a2,fr35>
-<Multiplicacion/multiplicacion00073.jpg, id=3550, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00073.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00073.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00073.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00073.jpg> <a2,fr36>
-<Multiplicacion/multiplicacion00075.jpg, id=3560, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00075.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00075.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00075.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00075.jpg> <a2,fr37>
-<Multiplicacion/multiplicacion00077.jpg, id=3570, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00077.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00077.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00077.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00077.jpg> <a2,fr38>
-<Multiplicacion/multiplicacion00079.jpg, id=3580, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00079.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00079.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00079.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00079.jpg> <a2,fr39>
-<Multiplicacion/multiplicacion00081.jpg, id=3590, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00081.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00081.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00081.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00081.jpg> <a2,fr40>
-<Multiplicacion/multiplicacion00083.jpg, id=3600, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00083.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00083.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00083.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00083.jpg> <a2,fr41>
-<Multiplicacion/multiplicacion00085.jpg, id=3610, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00085.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00085.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00085.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00085.jpg> <a2,fr42>
-<Multiplicacion/multiplicacion00087.jpg, id=3620, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00087.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00087.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00087.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00087.jpg> <a2,fr43>
-<Multiplicacion/multiplicacion00089.jpg, id=3630, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00089.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00089.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00089.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00089.jpg> <a2,fr44>
-<Multiplicacion/multiplicacion00091.jpg, id=3640, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00091.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00091.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00091.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00091.jpg> <a2,fr45>
-<Multiplicacion/multiplicacion00093.jpg, id=3650, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00093.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00093.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00093.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00093.jpg> <a2,fr46>
-<Multiplicacion/multiplicacion00095.jpg, id=3660, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00095.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00095.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00095.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00095.jpg> <a2,fr47>
-<Multiplicacion/multiplicacion00097.jpg, id=3670, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00097.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00097.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00097.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00097.jpg> <a2,fr48> <a2,fr49>
-<Multiplicacion/multiplicacion00101.jpg, id=3685, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00101.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00101.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00101.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00101.jpg> <a2,fr50>
-<a2,fr51> <a2,fr52> <a2,fr53> <a2,fr54> <a2,fr55> <a2,fr56> <a2,fr57>
-<a2,fr58> <a2,fr59> <a2,fr60> <a2,fr61> <a2,fr62> <a2,fr63> <a2,fr64>
-<a2,fr65> <a2,fr66> <a2,fr67> <a2,fr68> <a2,fr69> <a2,fr70> <a2,fr71>
-<a2,fr72> <a2,fr73> <a2,fr74>
-<Multiplicacion/multiplicacion00151.jpg, id=3816, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00151.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00151.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00151.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00151.jpg>
-<a2,fr75>
-<Multiplicacion/multiplicacion00153.jpg, id=3826, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00153.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00153.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00153.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00153.jpg> <a2,fr76>
-<Multiplicacion/multiplicacion00155.jpg, id=3836, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00155.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00155.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00155.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00155.jpg> <a2,fr77> <a2,fr78> <a2,fr79> <a2,f
-r80> <a2,fr81>
-<a2,fr82> <a2,fr83> <a2,fr84> <a2,fr85>
-<Multiplicacion/multiplicacion00173.jpg, id=3886, 2569.6pt x 1447.4075pt>
-File: Multiplicacion/multiplicacion00173.jpg Graphic file (type jpg)
-<use Multiplicacion/multiplicacion00173.jpg>
-Package pdftex.def Info: Multiplicacion/multiplicacion00173.jpg  used on input 
-line 716.
-(pdftex.def)             Requested size: 2569.59377pt x 1447.40399pt.
- <./Multiplicacion/multiplicacion00173.jpg> <a2,fr86> <a2,fr87> <a2,fr88> <a2,f
-r89>
-Overfull \vbox (44.98808pt too high) detected at line 716
- []
-
-[63
+] [63
 
 ]
-Overfull \vbox (26.56757pt too high) detected at line 742
+Overfull \vbox (26.56757pt too high) detected at line 746
  []
 
 [64
 
 ]
-Overfull \vbox (41.19489pt too high) detected at line 761
+Overfull \vbox (41.19489pt too high) detected at line 765
  []
 
 [65
@@ -3582,16 +1919,16 @@ Overfull \vbox (41.19489pt too high) detected at line 761
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 762.
+(hyperref)                removing `math shift' on input line 766.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 762.
+(hyperref)                removing `math shift' on input line 766.
 
 [66
 
 ]
-Overfull \vbox (29.18832pt too high) detected at line 774
+Overfull \vbox (29.18832pt too high) detected at line 778
  []
 
 [67
@@ -3607,18 +1944,18 @@ Overfull \vbox (29.18832pt too high) detected at line 774
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 823.
+(hyperref)                removing `math shift' on input line 827.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 823.
+(hyperref)                removing `math shift' on input line 827.
 
 [72
 
 ] [73
 
 ]
-Overfull \hbox (18.82321pt too wide) detected at line 852
+Overfull \hbox (18.82321pt too wide) detected at line 856
 \U/msb/m/n/10.95 Z[] \OT1/cmss/m/n/10.95 = [] = []\OT1/mathkerncmss/m/sl/10.95 
 x \OMS/cmss/m/n/10.95 2 \U/msb/m/n/10.95 Z[] [] \OT1/mathkerncmss/m/sl/10.95 x 
 \OT1/cmss/m/n/10.95 = [] \OT1/mathkerncmss/m/sl/10.95 x[]p[]\OML/cmm/m/it/10.95
@@ -3637,19 +1974,19 @@ x \OMS/cmss/m/n/10.95 2 \U/msb/m/n/10.95 Z[] [] \OT1/mathkerncmss/m/sl/10.95 x
 ] [78
 
 ]
-Overfull \vbox (26.707pt too high) detected at line 880
+Overfull \vbox (26.707pt too high) detected at line 884
  []
 
 [79
 
 ]
-Overfull \vbox (26.707pt too high) detected at line 880
+Overfull \vbox (26.707pt too high) detected at line 884
  []
 
 [80
 
 ]
-Overfull \vbox (26.707pt too high) detected at line 880
+Overfull \vbox (26.707pt too high) detected at line 884
  []
 
 [81
@@ -3669,6 +2006,173 @@ Overfull \vbox (26.707pt too high) detected at line 880
 ] [88
 
 ]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 932.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 932.
+
+[89
+
+] [90
+
+] [91
+
+] [92
+
+]
+Overfull \hbox (8.9882pt too wide) in alignment at lines 972--972
+ [] [] [] 
+ []
+
+
+Overfull \vbox (12.51581pt too high) detected at line 972
+ []
+
+[93
+
+]
+\openout4 = `document.vrb'.
+
+ (./document.vrb
+LaTeX Font Info:    Trying to load font information for OML+cmss on input line 
+9.
+LaTeX Font Info:    No file OMLcmss.fd. on input line 9.
+
+
+LaTeX Font Warning: Font shape `OML/cmss/m/n' undefined
+(Font)              using `OML/cmm/m/it' instead
+(Font)              for symbol `textgreater' on input line 9.
+
+) [94
+
+] [95
+
+] [96
+
+] [97
+
+] [98
+
+] [99
+
+] [100
+
+] [101
+
+] [102
+
+]
+Underfull \hbox (badness 4001) in paragraph at lines 1042--1042
+[]|\OT1/cmss/m/n/10.95 N^^Sume-ro en-te-ro ne-ga-ti-vo tal que
+ []
+
+
+Underfull \hbox (badness 5637) in paragraph at lines 1042--1042
+[]|\OT1/cmss/m/n/10.95 N^^Sume-ro en-te-ro po-si-ti-vo tal que
+ []
+
+
+Overfull \hbox (0.48944pt too wide) in alignment at lines 1042--1042
+ [] [] [] 
+ []
+
+[103
+
+]
+Overfull \hbox (24.1957pt too wide) in alignment at lines 1068--1068
+ [] [] [] 
+ []
+
+
+Overfull \vbox (33.24783pt too high) detected at line 1068
+ []
+
+[104
+
+]
+\openout4 = `document.vrb'.
+
+ (./document.vrbpdfTeX warning (ext4): destination with the same identifier (na
+me{lst:code_direct}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.7 ...a clase $\mathit{G7\_33}$,basicstyle=\tiny]
+                                                  ) [105
+
+]
+\openout4 = `document.vrb'.
+
+ (./document.vrbpdfTeX warning (ext4): destination with the same identifier (na
+me{lst:code_direct}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3 ...eros en $\mathit{G7\_33}$,basicstyle=\tiny]
+                                                  ) [106
+
+]
+\openout4 = `document.vrb'.
+
+ (./document.vrbpdfTeX warning (ext4): destination with the same identifier (na
+me{lst:code_direct}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.4 ...ros en $\mathit{G5\_34}$, basicstyle=\tiny]
+                                                  ) [107
+
+]
+\openout4 = `document.vrb'.
+
+ (./document.vrbpdfTeX warning (ext4): destination with the same identifier (na
+me{lst:code_direct}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3 ...eros en $\mathit{G5\_34}$,basicstyle=\tiny]
+                                                  ) [108
+
+]
+\openout4 = `document.vrb'.
+
+ (./document.vrb)
+[109
+
+]
+\openout4 = `document.vrb'.
+
+ (./document.vrbpdfTeX warning (ext4): destination with the same identifier (na
+me{lst:code_direct}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.7 ...eros en $\mathit{G7\_46}$,basicstyle=\tiny]
+                                                  )
+Overfull \vbox (23.61618pt too high) detected at line 1173
+ []
+
+[110
+
+]
+\openout4 = `document.vrb'.
+
+ (./document.vrbpdfTeX warning (ext4): destination with the same identifier (na
+me{lst:code_direct}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.4 ...eros en $\mathit{G7\_46}$,basicstyle=\tiny]
+                                                  ) [111
+
+]
+\openout4 = `document.vrb'.
+
+ (./document.vrbpdfTeX warning (ext4): destination with the same identifier (na
+me{lst:code_direct}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.6 ...ros en $\mathit{G11\_75}$,basicstyle=\tiny]
+                                                  ) [112
+
+]
 \tf@nav=\write6
 \openout6 = `document.nav'.
 
@@ -3678,49 +2182,54 @@ Overfull \vbox (26.707pt too high) detected at line 880
 \tf@snm=\write8
 \openout8 = `document.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 928.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 928.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1217.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1217.
  (./document.aux
 LaTeX Info: Redefining \. on input line 32.
 LaTeX Info: Redefining \% on input line 32.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 928.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 928.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1217.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1217.
+
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 8DD8F16F8ADEE35168037B5907718B00;472.
+(rerunfilecheck)             Checksum: F4D6D1526C93FC7130B06E76EEEA278D;539.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 46662 strings out of 492167
- 956885 string characters out of 6131558
- 1090408 words of memory out of 5000000
- 49749 multiletter control sequences out of 15000+600000
- 553351 words of font info for 103 fonts, out of 8000000 for 9000
+ 42691 strings out of 492167
+ 834827 string characters out of 6131558
+ 1147732 words of memory out of 5000000
+ 46126 multiletter control sequences out of 15000+600000
+ 555470 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,20n,115p,1873b,1035s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,20n,115p,1873b,1583s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmssi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss
-i12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/
-share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
-/euler/euex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
-am10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-
-Output written on document.pdf (88 pages, 39880645 bytes).
+/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi1
+0.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/euex10.pfb></usr/share
+/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-di
+st/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on document.pdf (112 pages, 403319 bytes).
 PDF statistics:
- 4194 PDF objects out of 4296 (max. 8388607)
- 2418 compressed objects within 25 object streams
- 200 named destinations out of 1000 (max. 500000)
- 9647 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 943 PDF objects out of 1000 (max. 8388607)
+ 793 compressed objects within 8 object streams
+ 257 named destinations out of 1000 (max. 500000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 

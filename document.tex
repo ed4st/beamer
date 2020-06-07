@@ -43,13 +43,17 @@ frametitle , titleformat title= smallcaps]{metropolis}           % Use metropoli
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{darkBlue}{HTML}{00000F}
+\definecolor{lightBlue}{HTML}{00B7D4}
+\definecolor{lightRed}{HTML}{E42525}
+\definecolor{lightGreen}{HTML}{9CE425}
 
 \lstdefinestyle{mystyle}{
-	backgroundcolor=\color{backcolour},   
-	commentstyle=\color{codegreen},
-	keywordstyle=\color{blue},
+    backgroundcolor=\color{darkBlue},   
+	commentstyle=\color{lightGreen},
+	keywordstyle=\color{lightBlue},
 	numberstyle=\tiny\color{codegray},
-	stringstyle=\color{red},
+	stringstyle=\color{lightRed},
 	basicstyle=\ttfamily\footnotesize,
 	breakatwhitespace=false,         
 	breaklines=true,                 
@@ -60,7 +64,7 @@ frametitle , titleformat title= smallcaps]{metropolis}           % Use metropoli
 	showspaces=false,                
 	showstringspaces=false,
 	showtabs=false,                  
-	tabsize=2
+	tabsize=1
 }
 
 \lstset{style=mystyle}
@@ -195,7 +199,7 @@ Departamento de Matemáticas}
     %Que también se puede denotar como $543.89_{10}$.
     
     \begin{center}
-    	\animategraphics[autoplay,loop, every = 2, width=1.0\linewidth]{30}{Notacion_1/notacion00}{001}{332}
+    	%\animategraphics[autoplay,loop, every = 2, width=1.0\linewidth]{30}{Notacion_1/notacion00}{001}{332}
     \end{center}
   \end{frame}
 
@@ -304,7 +308,7 @@ Departamento de Matemáticas}
 %9----------------------
 \begin{frame}{Orden y Norma en $\Q$}
 	 \begin{center}
-		\animategraphics[autoplay,loop, every = 1, width=1.0\linewidth]{30}{Norma/norma00}{001}{164}
+		%\animategraphics[autoplay,loop, every = 1, width=1.0\linewidth]{30}{Norma/norma00}{001}{164}
 	\end{center}
 	%\begin{exampleblock}{Ejemplo}
 	%	Cálculo de la función $\pnorm{\cdot}$ para distintos $p$'s.
@@ -710,7 +714,7 @@ Sean $\alpha= (a_i)$ y $\beta = (b_i)$ dos enteros $p$-ádicos. Definimos la sum
 		%Así, con $p=7$, $u\cdot v =\cdots251413_7\times\cdots 123102_7=\cdots 310426_7$.
 		
 		\begin{center}
-			\animategraphics[autoplay,loop, every = 2, width=1.0\linewidth]{30}{Multiplicacion/multiplicacion00}{001}{179}
+			%\animategraphics[autoplay,loop, every = 2, width=1.0\linewidth]{30}{Multiplicacion/multiplicacion00}{001}{179}
 		\end{center}
 	\end{exampleblock}
 \end{frame}
@@ -924,5 +928,290 @@ Sean $\alpha= (a_i)$ y $\beta = (b_i)$ dos enteros $p$-ádicos. Definimos la sum
 		
 	\end{df}
 \end{frame}
+
+\section{Modelando números $p$-ádicos}
+
+\begin{frame}{La clase Número}
+	\begin{itemize}[<+- | alert@+>]
+		\item La representación estándar de un número en $\Qp$ está dada por:
+		\begin{equation}
+		\sum_{k=-\infty}^{\infty} a_{k} p^{k}\text{, con $a_k\in\{0,\dots,p-1\}$ y $a_k=0$, para $k\leq - N$. 
+		}	\label{num_rep}
+		\end{equation}
+		\item Para modelar estas representaciones, se hace necesario restringirnos al caso de sumas finitas.
+		\item Las principales características del número las representamos por medio de \tit{atributos} y \tit{métodos}.
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Diseño}
+
+\begin{longtable}[c]{| c | c | c |}
+	\caption{clase Número    (\textit{Number}).\label{number_class}}\\
+	
+	\hline
+	\multicolumn{3}{| c |}{Number}\\
+	\hline
+	\textbf{Atributo} & \textbf{Tipo} & \textbf{Descripción}\\
+	$p$ & integer & Número primo\\
+	$n$ & integer & Número entero negativo tal que ${p^n\leq \pnorm{x}}$\\
+	$N$ & integer & Número entero positivo tal que ${\pnorm{x}\leq p^N}$\\
+	%$m    (privado)$ & integer & Índice positivo donde la suma empezará\\
+	%$M    (privado)$ & integer & Índice positivo donde la suma terminará\\
+	\hline
+	\textbf{Método} & \textbf{Retorno} & \textbf{Función}\\
+	show   ()& void & Muestra los dígitos del número\\
+	order   () & integer & Retorna el orden del número. Ver \ref{ord_def_1} y \ref{ord_def_2}.\\
+	
+	len   () & integer & Retorna la cantidad de dígitos del número\\
+	norm   () & float & Calcula la norma del número. Ver  \ref{ord_def_1}\\
+	
+	\hline
+\end{longtable}
+Representación: $x  = {a_{-n} \cdots a_0 \cdots. a_{-N}}_p$\label{rep_num}
+\end{frame}
+
+\begin{frame}[fragile]{Ejemplos de uso en \textit{Python}}
+	Sea $x=342.536_7=6\cdot7^{-3}+3\cdot7^{-2}+5\cdot7^{-1}+2\cdot7^0+4\cdot7+3\cdot7^2$
+
+\begin{lstlisting}[language=Python, caption = Instancia de la clase Número   (Number), basicstyle=\tiny]
+digits = [3,4,2,5,3,6]
+x = Number(7,-3,2,digits) #initialization of x
+
+x.show()
+>> [3,4,2,5,3,6]
+
+x.order()
+>> -2
+
+x.norm()
+>> 49
+
+x.len()
+>>6
+\end{lstlisting}
+En este caso $p=7$, $n=-3$ y  $N=2$. Además satisface que $p^{-3}\leq\pnorm{x}\leq p^2$.
+\end{frame}
+
+\begin{frame}{El conjunto $\gpn$}
+	\begin{itemize}[<+- | alert@+>]
+		\item \red{Problema}: $\Qp$ es infinito, y tiene elementos con posibles infinitos dígitos.
+		\item \textcolor{green}{Alternativa}: Consideramos un subconjunto finito, el cual modelaremos.
+		\item Lo modelamos bajo el \tit{paradigma orientado a objetos}
+		\item Definimos a $\gpn$ como un subconjunto de $\Qp$ tal que:
+		
+		
+		
+		\begin{equation}\label{GpnN}
+		\gpn := \Big\{x\in \Qp : x = \sum_{k=-N}^{-n} a_{k} p^{k} \text{ y } p^{n}\leq \pnorm{x}\leq p^N\Big \},
+		\end{equation}
+		
+		donde $a_k\in \{0,\cdots,p-1\}$, $n\leq0$ y $N\geq 0$. La representación por dígitos está dada por \ref{rep_num}.
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Observaciones de $\gpn$}
+	\begin{itemize}[<+- | alert@+>]
+		\item $   (\gpn,+)$ es un grupo abeliano de oden $p^{N-n+1}$.
+		\item Esta noción de grupo aditivo está relacionada con la topología de bolas en $\Qp$
+		\item Así, podemos pensar en $\gpn$ como el cociente de los grupos aditivos $B_n   (0)/B_N   (0)$
+		\item  La  multiplicación, y portanto, la división no son operaciones cerradas en $\gpn$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Diseño de la clase $\gpn$ - Atributos}
+	
+	\begin{longtable}[c]{| c | c | p{6cm} |}
+		\caption{Atributos de la clase $\gpn$.\label{GmMp_class}}\\
+		
+		\hline
+		\multicolumn{3}{| c |}{$\gpn$}\\
+		\hline
+		\textbf{Atributo} & \textbf{Tipo} & \textbf{Descripción}\\
+		$p$ & integer & Número primo\\
+		$n$ & integer & Número entero negativo tal que ${p^n\leq \pnorm{x}}$\\
+		$N$ & integer & Número entero positivo tal que ${\pnorm{x}\leq p^N}$\\
+		%$m   (privado)$ & integer & Índice positivo donde la suma empezará\\
+		%$M   (privado)$ & integer & Índice positivo donde la suma terminará\\
+		numbers & seq[Number] & Contenedor con números de la clase número   (\textit{Number})\\
+		
+		\hline
+
+	\end{longtable}
+\end{frame}
+
+\begin{frame}{Diseño de la clase $\gpn$ - Métodos}
+	
+
+\begin{longtable}[c]{| c | c | p{5.5cm} |}
+	\caption{Métodos principales de la Clase $\gpn$.}\\
+	
+	\hline
+	\multicolumn{3}{| c |}{$\gpn$}\\
+	
+	
+	\hline
+	
+	\textbf{Método} & \textbf{Retorno} & \textbf{Función}\\
+	%GpnN\_export   ()& void & Crea un archivo con todos los posibles números y sus normas $p$-ádicas\\
+	console\_printing   () & void & Imprime por consola los números  pertenecientes a este conjunto\\
+	
+	p\_sum   (n1, n2) & Number & Retorna la suma de dos números \\
+	p\_sub   (n1, n2) & Number & Retorna la resta de dos números \\
+	p\_mul   (n1, n2) & Number & Retorna el producto de dos números \\
+	p\_div   (n1, n2) & Number & Retorna división de dos números \\
+	p\_inverse   (n) & Number & Retorna el inverso multiplicativo de un número\\
+	representation\_tree   () & void & Crea una imagen que representa  todo el conjunto\\
+	\hline
+\end{longtable}
+\end{frame}
+
+\begin{frame}[fragile]{Ejemplos de uso de $\gpn$ en Python - generate\_numbers }
+	Por notación $-{R}=\_R$. Tomamos la instancia de $\gpn$, donde ${n=-3=\_{3},}$ $N=3$ y $p=7$. Así:  
+	\begin{equation}\label{finite_number}
+	\mathit{G7\_{3}3} = \Big\{x\in \Qp : x = \sum_{k=-3}^{3} a_{k} 7^{k} \text{ y } 7^{-3}\leq\pnorm{x}\leq 7^3\Big\},
+	\end{equation}
+ con $a_k\in \{0,\cdots,6\}$. En \texttt{Python:}
+ \begin{lstlisting}[language = Python, caption = Inicialización de la clase $\mathit{G7\_33}$,basicstyle=\tiny]
+ G7_33 = GpnN(7,-3,3) #initialization
+ G7_33.generate_numbers()
+ \end{lstlisting}
+ La segunda línea genera todos los posibles números de la forma $ \sum_{k=-3}^{3} a_{k} 7^{k}$ y los guarda en una lista de números de tipo Número   (Number).
+\end{frame}
+
+\begin{frame}[fragile]{Ejemplos de uso de $\gpn$ en Python - console\_printing }
+	Si quisiéramos visualizar los números asociados a $\mathit{G7\_{3}3}$, podemos verlos listados usando el método \textit{console\_printing} de la clase $\gpn$.
+	\begin{lstlisting}[language = Python, caption = Visualización de números en $\mathit{G7\_33}$,basicstyle=\tiny]
+	G7_33.console_printing()
+	
+	>>[0,0,0,0,0,0,0]
+	>>[0,0,0,0,0,0,1]
+	.
+	.
+	.      
+	>>[6,6,6,6,6,6,5]
+	>>[6,6,6,6,6,6,6]
+	\end{lstlisting}
+	\begin{rr}
+		El orden de los números en $\gpn$ coincide con el orden inducido en $\R_+$ a través de la función \ref{Monna} definida como \textit{Monna map}.
+	\end{rr}
+\end{frame}
+
+\begin{frame}[fragile]{Ejemplos de uso de $\gpn$ en Python - Suma(p\_sum) }
+Si quisieramos sumar $ x =4324.321_5$ y $y=23.4123_5$, notamos que $x,y$ son de la  forma $x=\sum_{-3}^{3}a_k5^k$ y $y=\sum_{-4}^{1}b_k5^k$; así, el mínimo $\gpn\subset\Q_5$ que contiene a $x,y$ es $G5\_{3}4$. Luego $x+y$ en \texttt{Python:}
+
+\begin{lstlisting}[language = Python, caption = suma de números en $\mathit{G5\_34}$, basicstyle=\tiny]
+G5_34 = GpnN(5,-3,4) #initialization
+
+x_digits = [4,3,2,4,3,2,1,0]
+y_digits = [0,0,2,3,4,1,2,3]
+x = Number(5,-3,4,x_digits)
+y = Number(5,-3,4,y_digits)
+
+x_plus_y = G5_34.p_sum(x,y)
+x_plus_y.show()
+>>[4, 4, 0, 3, 2, 3, 3, 3]
+
+\end{lstlisting}
+Así $ 4324.321_5+23.4123_5=4403.2333_5$.
+\end{frame}
+
+\begin{frame}[fragile]{Ejemplos de uso de $\gpn$ en Python - Resta(p\_sub) }
+Tomemos ${x =4324.321_5}$ y ${y=23.4123_5}$. De nuevo, construimos el mínimo $\gpn$ que contenga a $x,y$ y así  $\mathit{G5\_{3}4}$ será el subconjunto de $\Q_5$ que contiene a $x,y$.
+\begin{lstlisting}[language = Python, caption = resta de números en $\mathit{G5\_34}$,basicstyle=\tiny]
+G5_34 = GpnN(5,-3,4) #initialization
+
+x_digits = [4,3,2,4,3,2,1,0]
+y_digits = [0,0,2,3,4,1,2,3]
+
+x = Number(5,-3,4,x_digits)
+y = Number(5,-3,4,y_digits)
+
+x_minus_y = G5_34.p_sub(x,y)
+x_minus_y.show()
+>>[4, 3, 0, 0, 4, 0, 3, 2]
+
+\end{lstlisting}
+Así $ 4324.321_5-23.4123_5=4300.4032_5$.
+\end{frame}
+
+
+\begin{frame}[fragile]{Ejemplos de uso de $\gpn$ en Python - Producto(p\_mul) }
+	\begin{rr}
+	\label{producto}  
+	\begin{itemize}
+		\item  Supongamos que se multiplica un número de $m$  dígitos con otro que tiene $n$  dígitos.
+		\item El producto tiene a lo máximo $m+n$ dígitos.
+		\item Realizar estos cómputos, representan costos   (computacionalmente) a medida que $m,n$ se hacen grandes   (cosa que no pasa con la suma).
+		\item Nos restringimos a hacer multiplicaciones en el conjunto donde se esté trabajando.
+	\end{itemize}	
+	\end{rr}
+\end{frame}
+
+
+\begin{frame}[fragile]{Ejemplos de uso de $\gpn$ en Python - Producto(p\_mul) }
+	\begin{itemize}
+		\item Tomemos $x=3214.345356_7$ y $y = 53452.143_7$
+		\item El mínimo $\gpn\subset\Q_7$ que contiene a $x,y$ es $\mathit{G7\_{4}6}$
+		\item El producto tendrá $-n+N+1=-   (-4)+6+1=11$ dígitos a lo más, y no $10+8=18$ que es la suma de la cantidad de dígitos de $x,y$ respectivamente.
+	\end{itemize}
+	\begin{lstlisting}[language = Python, caption = producto de números en $\mathit{G7\_46}$,basicstyle=\tiny]
+	G7_46 = GpnN(7,-4,6) #initialization
+	x_digits = [0,3,2,1,4,3,4,5,3,5,6]
+	y_digits = [5,3,4,5,2,1,4,3,0,0,0]
+	
+	x = Number(7,-4,6,x_digits)
+	y = Number(7,-4,6,y_digits)
+	
+	x_by_y = G7_46.p_mul(x,y)
+	x_by_y.show()
+	
+	>>[4, 0, 0, 6, 2, 0, 0, 5, 0, 0, 0]
+	\end{lstlisting}
+	Luego $3214.345356_7\cdot 53452.143_7=\cdots40062.005_7$
+\end{frame}
+
+
+\begin{frame}[fragile]{Ejemplos de uso de $\gpn$ en Python - División(p\_div) }
+La observación \ref{producto}, hecha para el producto aplica para la división. Luego tomando $x,y$ como en el producto:
+
+\begin{lstlisting}[language = Python, caption = división de números en $\mathit{G7\_46}$,basicstyle=\tiny]
+G7_46 = GpnN(7,-4,6) #initialization
+
+x_digits = [0,3,2,1,4,3,4,5,3,5,6]
+y_digits = [5,3,4,5,2,1,4,3,0,0,0]
+
+x = Number(7,-4,6,x_digits)
+y = Number(7,-4,6,y_digits)
+
+x_div_y = G7_46.p_div(x,y)
+x_div_y.show()
+>>[5, 1, 3, 3, 0, 3, 3, 2, 3, 6, 2]
+\end{lstlisting}
+Así $\frac{3214.345356_7}{53452.143_7}=\cdots51330.332362_7$
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Ejemplos de uso de $\gpn$ en Python - División(p\_div) }
+\begin{itemize}
+	\item La división puede llegar a ser un proceso infinito.
+	\item Restringimos los coeficientes para aproximar inversos en $\Qp$, calculando $\frac{1_p}{x}$.
+	\item Por ejemplo, tomemos $x=49873210.54896_{11}$ 
+	\begin{lstlisting}[language = Python, caption = inversión de números en $\mathit{G11\_75}$,basicstyle=\tiny]
+	G11_75 = GpnN(11,-7,5) #initialization
+	
+	x_digits = [4,9,8,7,3,2,1,0,5,4,8,9,6]
+	x = Number(11,-7,5,x_digits)
+	x_inverse = G11_75.p_inverse(x)
+	x_inverse.show()
+	>>[7, 7, 7, 2, 7, 4, 6, 2, 0, 0, 0, 0, 0]
+	\end{lstlisting}
+	Luego $x^{-1}=\frac{1_{11}}{x}=\frac{1_{11}}{49873210.54896_{11}} = \cdots77727462_{11}$.
+\end{itemize}	
+
+\end{frame}
+
 
 \end{document}

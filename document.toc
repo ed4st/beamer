@@ -6,3 +6,4 @@
 \beamer@sectionintoc {5}{Sucesiones y series de números $p$-ádicos}{66}{0}{5}
 \beamer@sectionintoc {6}{Una mirada algebraica de los números $p$-ádicos}{72}{0}{6}
 \beamer@sectionintoc {7}{Sobre Diferenciación e Integración}{85}{0}{7}
+\beamer@sectionintoc {8}{Modelando números $p$-ádicos}{89}{0}{8}

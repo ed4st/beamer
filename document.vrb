@@ -1,0 +1,17 @@
+\frametitle{Ejemplos de uso de $\gpn $ en Python - División(p\_div) }
+\begin{itemize}
+	\item La división puede llegar a ser un proceso infinito.
+	\item Restringimos los coeficientes para aproximar inversos en $\Qp$, calculando $\frac{1_p}{x}$.
+	\item Por ejemplo, tomemos $x=49873210.54896_{11}$
+	\begin{lstlisting}[language = Python, caption = inversión de números en $\mathit{G11\_75}$,basicstyle=\tiny]
+	G11_75 = GpnN(11,-7,5) #initialization
+	
+	x_digits = [4,9,8,7,3,2,1,0,5,4,8,9,6]
+	x = Number(11,-7,5,x_digits)
+	x_inverse = G11_75.p_inverse(x)
+	x_inverse.show()
+	>>[7, 7, 7, 2, 7, 4, 6, 2, 0, 0, 0, 0, 0]
+	\end{lstlisting}
+	Luego $x^{-1}=\frac{1_{11}}{x}=\frac{1_{11}}{49873210.54896_{11}} = \cdots77727462_{11}$.
+\end{itemize}	
+
