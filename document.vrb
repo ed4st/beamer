@@ -1,17 +1,12 @@
-\frametitle{Ejemplos de uso de $\gpn $ en Python - División(p\_div) }
+\frametitle{Árboles - Entendiendo la visualización}
 \begin{itemize}
-	\item La división puede llegar a ser un proceso infinito.
-	\item Restringimos los coeficientes para aproximar inversos en $\Qp$, calculando $\frac{1_p}{x}$.
-	\item Por ejemplo, tomemos $x=49873210.54896_{11}$
-	\begin{lstlisting}[language = Python, caption = inversión de números en $\mathit{G11\_75}$,basicstyle=\tiny]
-	G11_75 = GpnN(11,-7,5) #initialization
-	
-	x_digits = [4,9,8,7,3,2,1,0,5,4,8,9,6]
-	x = Number(11,-7,5,x_digits)
-	x_inverse = G11_75.p_inverse(x)
-	x_inverse.show()
-	>>[7, 7, 7, 2, 7, 4, 6, 2, 0, 0, 0, 0, 0]
-	\end{lstlisting}
-	Luego $x^{-1}=\frac{1_{11}}{x}=\frac{1_{11}}{49873210.54896_{11}} = \cdots77727462_{11}$.
-\end{itemize}	
+		\item Los números presentados satisfacen que $2^{-2}\leq\norm{x}_2\leq 2$.
+		\item $a_k\in\{0,1\}$, con $k\in\{-1,0,1,2\}$.
+		\item Decir que $a_k\in\{\textbf{\textcolor{orange}{0}},\textbf{\textcolor{red}{1}}\}$ será equivalente a decir que $a_k\in\{\textbf{\textcolor{orange}{Naranja}},\textbf{\textcolor{red}{Rojo}}\}$
+		\item Si quisiéramos saber qué número es el que está ubicado en la parte derecha del árbol, de color \textbf{\textcolor{lightBlue}{azul}}, sólo seguimos el camino propuesto por la imagen.
+		\item Desde la raíz: $\textbf{\textcolor{orange}{Naranja}}\to\textbf{\textcolor{orange}{Naranja}}\to\textbf{\textcolor{orange}{Naranja}}\to\textbf{\textcolor{red}{Rojo}}.$
+		\item Es decir que el número es \textbf{\textcolor{orange}{000}},\textbf{\textcolor{red}{1}}$_2$ y tiene norma \textbf{\textcolor{lightBlue}{$2^{-1}$}}.
+		\item El camino desde la raíz denota $a_2\to a_1\to a_0\to a_{-1}$.
+	\end{itemize}
 
+	

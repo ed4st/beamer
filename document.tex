@@ -1194,23 +1194,157 @@ Así $\frac{3214.345356_7}{53452.143_7}=\cdots51330.332362_7$
 
 
 
-\begin{frame}[fragile]{Ejemplos de uso de $\gpn$ en Python - División(p\_div) }
+\begin{frame}[fragile]{Árboles}
 \begin{itemize}
-	\item La división puede llegar a ser un proceso infinito.
-	\item Restringimos los coeficientes para aproximar inversos en $\Qp$, calculando $\frac{1_p}{x}$.
-	\item Por ejemplo, tomemos $x=49873210.54896_{11}$ 
-	\begin{lstlisting}[language = Python, caption = inversión de números en $\mathit{G11\_75}$,basicstyle=\tiny]
-	G11_75 = GpnN(11,-7,5) #initialization
-	
-	x_digits = [4,9,8,7,3,2,1,0,5,4,8,9,6]
-	x = Number(11,-7,5,x_digits)
-	x_inverse = G11_75.p_inverse(x)
-	x_inverse.show()
-	>>[7, 7, 7, 2, 7, 4, 6, 2, 0, 0, 0, 0, 0]
-	\end{lstlisting}
-	Luego $x^{-1}=\frac{1_{11}}{x}=\frac{1_{11}}{49873210.54896_{11}} = \cdots77727462_{11}$.
+	\item Denotamos por $M_n^m=\{x_1, \dots, x_{m^n}\}$ a las hojas del árbol con $n$ niveles y $m$ ramas.
+	\item Podemos dotar a $M_n^m$, definimos la distancia en $M_n^m$ como $d   (x_i,x_j)=C^{N*}$ ($0<C<1$).
+	\item Así, $   (M_m^m,d)$ es un espacio ultramétrico.
+	\begin{exampleblock}{Ejemplo}
+		Si tomamos $M_3^2=\{x_0, x_1,\dots, x_7\}$, tenemos que 
+		\begin{center}
+			\begin{tabular}{||c c c c||} 
+				\hline
+				$x_i$ & $x_j$ & $N*$ & distancia \\ [0.5ex] 
+				\hline\hline
+				$x_1$ & $x_2$ & 2 & $C^2$ \\ 
+				\hline
+				$x_1$ & $x_3$ &1 & $C$ \\
+				\hline
+				$x_1$ & $x_4$ & 0 & 1 \\ 
+				\hline
+			\end{tabular}
+		\end{center}
+	\end{exampleblock}
 \end{itemize}	
 
+\end{frame}
+
+\begin{frame}[fragile]{Árboles}
+\begin{figure}[t]
+	\caption{$M_3^2$}
+	\centering
+	\begin{tikzpicture}[level/.style={sibling distance=40mm/#1}]
+	\node [circle,draw]    (z){}
+	
+	child {node [circle,draw]    (a) {}
+		child {node [circle,draw]    (b) {}
+			child {node {$x_1$}}
+			child {node {$x_2$}}
+		}
+		child {node [circle,draw]    (g) {}
+			child {node {$x_3$}}
+			child {node {$x_4$}}
+		}
+	}
+	child {node [circle,draw]    (j) {}
+		child {node [circle,draw]    (k) {}
+			child {node {$x_5$}}
+			child {node {$x_6$}}
+		}
+		child {node [circle,draw]    (l) {}
+			child {node {$x_7$}}
+			child {node {$x_8$}}
+		}
+	};
+	\end{tikzpicture}%}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}[fragile]{Árboles-Python}
+\begin{itemize}
+	\item ¡$\gpn$ se puede representar a través de un árbol!
+	\item Generalmente se toma $C=\frac{1}{p}$.
+	\item Luego, un árbol finito puede representarse en \texttt{Python}, instanciando la función \texttt{representation\_tree()}:
+	\begin{lstlisting}[language = Python, caption = Representación en árbol de $\mathit{G2\_21}$,basicstyle=\tiny]
+	G2_21 = GpnN   (2,-2,1) #initialization
+	G2_21.generate_numbers()
+	G2_21.representation_tree()
+	\end{lstlisting}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Árboles - Visualización}
+	\begin{figure}
+		\caption{Números de la forma: $x=\sum_{-1}^{2}a_k2^k$}
+		\includegraphics[scale=0.6]{tree_images/G2_21_dark.png}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}[fragile]{Árboles - Entendiendo la visualización}
+	\begin{itemize}
+		\item Los números presentados satisfacen que $2^{-2}\leq\norm{x}_2\leq 2$.
+		\item $a_k\in\{0,1\}$, con $k\in\{-1,0,1,2\}$.
+		\item Decir que $a_k\in\{\textbf{\textcolor{orange}{0}},\textbf{\textcolor{red}{1}}\}$ será equivalente a decir que $a_k\in\{\textbf{\textcolor{orange}{Naranja}},\textbf{\textcolor{red}{Rojo}}\}$
+		\item Si quisiéramos saber qué número es el que está ubicado en la parte derecha del árbol, de color \textbf{\textcolor{lightBlue}{azul}}, sólo seguimos el camino propuesto por la imagen.
+		\item Desde la raíz: $\textbf{\textcolor{orange}{Naranja}}\to\textbf{\textcolor{orange}{Naranja}}\to\textbf{\textcolor{orange}{Naranja}}\to\textbf{\textcolor{red}{Rojo}}.$
+		\item Es decir que el número es \textbf{\textcolor{orange}{000}},\textbf{\textcolor{red}{1}}$_2$ y tiene norma \textbf{\textcolor{lightBlue}{$2^{-1}$}}.
+		\item El camino desde la raíz denota $a_2\to a_1\to a_0\to a_{-1}$.
+	\end{itemize}
+
+	
+\end{frame}
+
+\begin{frame}{Visualización de más $\gpn$'s}
+	\begin{figure}
+		\caption{Ejemplos de $2$-ádicos}
+		\animategraphics[controls,width=0.6\linewidth]{15}{tree_images/}{1}{12}
+	\end{figure}	
+\end{frame}
+
+\begin{frame}{Visualización de más $\gpn$'s}
+	\begin{figure}
+		\caption{Ejemplos de $5$-ádicos}
+		\animategraphics[controls,width=0.6\linewidth]{15}{tree_images/G5}{4}{10}
+	\end{figure}	
+\end{frame}
+
+\section{Laplaciano sobre árboles}
+\begin{frame}{Matriz Laplaciana}
+	\begin{df}
+		Dado un grafo simple G con $n$ vértices, definimos la matriz Laplaciana $L\in \bb{M}_n(\R)$ como:
+		$$ L = D-A,$$
+		donde $D,A$ son las matrices de grados e incidencia del grafo, respectivamente.
+	\end{df}
+	Luego:
+	$$
+	L_{i, j}\coloneqq \left\{\begin{array}{ll}
+	\operatorname{grado}\left(v_{i}\right) & \text { si } i=j, \\
+	-1 & \text { si } i \neq j \text { y } v_{i} \text { es adyacente a } v_{j}, \\
+	0 & \text { e.o.c. }
+	\end{array}\right.$$
+\end{frame}
+
+
+\begin{frame}{Operador Laplaciano discreto}
+\begin{itemize}[<+- | alert@+>]
+	\item Supongamos una función $\vec{\phi}(t)$ que describe la distribución de calor dentro de un grafo en un tiempo dado.
+	\item Así, $\phi_i(t)$ es el calor en el nodo $i$ en el tiempo $t$.
+	\item El calor transferido entre dos nodos $i$ y $j$ es directamente proporcional a la diferencia de calor entre los mismos.
+	\item Esto es, $\frac{d \phi_{i}(t)}{d t} =-k \sum_{j} A_{i j}\left(\phi_{i}(t)-\phi_{j}(t)\right)$.
+	\item Ecuación que se puede llevar a la forma $\frac{d \vec{\phi}(t)}{d t}+k L \vec{\phi}(t)=0.$
+	\item Esta ecuación tiene la forma de la ecuación de calor, salvo que $\nabla^2$ es $L$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Matriz de réplica}
+ Si definimos $l\colon\{1,\dots,p^{N-n+1}\}\to GpnN \Rightarrow l(i)=x_i$,
+ definimos la \tit{matriz de réplica} $\textbf{Q   } $ de tamaño $p^{N-n+1}\times p^{N-n+1}$: $$Q_{ij}=\rho(\pnorm{l(i)-l(j)}).$$ Por ejemplo, con $p=2$ tenemos una matriz tipo \tit{Parisi}:
+ 
+ $$
+ \boldsymbol{Q}=\left(\begin{array}{lllllllll}
+ 0 & q_{1} & q_{2} & q_{2} & q_{3} & q_{3} & q_{3} & q_{3} & \dots \\
+ q_{1} & 0 & q_{2} & q_{2} & q_{3} & q_{3} & q_{3} & q_{3} & \dots \\
+ q_{2} & q_{2} & 0 & q_{1} & q_{3} & q_{3} & q_{3} & q_{3} & \dots \\
+ q_{2} & q_{2} & q_{1} & 0 & q_{3} & q_{3} & q_{3} & q_{3} & \dots \\
+ q_{3} & q_{3} & q_{3} & q_{3} & 0 & q_{1} & q_{2} & q_{2} & \dots \\
+ q_{3} & q_{3} & q_{3} & q_{3} & q_{1} & 0 & q_{2} & q_{2} & \dots \\
+ q_{3} & q_{3} & q_{3} & q_{3} & q_{2} & q_{2} & 0 & q_{1} & \dots \\
+ q_{3} & q_{3} & q_{3} & q_{3} & q_{2} & q_{2} & q_{1} & 0 & \dots\\
+ &  &  &  & \vdots & & &  & \ddots
+ \end{array}\right)
+ $$
 \end{frame}
 
 

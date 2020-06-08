@@ -166,8 +166,31 @@
 \headcommand {\beamer@framepages {111}{111}}
 \headcommand {\slideentry {8}{0}{16}{112/112}{}{0}}
 \headcommand {\beamer@framepages {112}{112}}
-\headcommand {\beamer@partpages {1}{112}}
-\headcommand {\beamer@subsectionpages {89}{112}}
-\headcommand {\beamer@sectionpages {89}{112}}
-\headcommand {\beamer@documentpages {112}}
-\headcommand {\gdef \inserttotalframenumber {63}}
+\headcommand {\slideentry {8}{0}{17}{113/113}{}{0}}
+\headcommand {\beamer@framepages {113}{113}}
+\headcommand {\slideentry {8}{0}{18}{114/114}{}{0}}
+\headcommand {\beamer@framepages {114}{114}}
+\headcommand {\slideentry {8}{0}{19}{115/115}{}{0}}
+\headcommand {\beamer@framepages {115}{115}}
+\headcommand {\slideentry {8}{0}{20}{116/116}{}{0}}
+\headcommand {\beamer@framepages {116}{116}}
+\headcommand {\slideentry {8}{0}{21}{117/117}{}{0}}
+\headcommand {\beamer@framepages {117}{117}}
+\headcommand {\slideentry {8}{0}{22}{118/118}{}{0}}
+\headcommand {\beamer@framepages {118}{118}}
+\headcommand {\beamer@sectionpages {89}{118}}
+\headcommand {\beamer@subsectionpages {89}{118}}
+\headcommand {\sectionentry {9}{Laplaciano sobre árboles}{119}{Laplaciano sobre árboles}{0}}
+\headcommand {\slideentry {9}{0}{1}{119/119}{}{0}}
+\headcommand {\beamer@framepages {119}{119}}
+\headcommand {\slideentry {9}{0}{2}{120/120}{}{0}}
+\headcommand {\beamer@framepages {120}{120}}
+\headcommand {\slideentry {9}{0}{3}{121/126}{}{0}}
+\headcommand {\beamer@framepages {121}{126}}
+\headcommand {\slideentry {9}{0}{4}{127/127}{}{0}}
+\headcommand {\beamer@framepages {127}{127}}
+\headcommand {\beamer@partpages {1}{127}}
+\headcommand {\beamer@subsectionpages {119}{127}}
+\headcommand {\beamer@sectionpages {119}{127}}
+\headcommand {\beamer@documentpages {127}}
+\headcommand {\gdef \inserttotalframenumber {72}}
