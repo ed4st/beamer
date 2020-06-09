@@ -48,6 +48,11 @@ frametitle , titleformat title= smallcaps]{metropolis}           % Use metropoli
 \definecolor{lightRed}{HTML}{E42525}
 \definecolor{lightGreen}{HTML}{9CE425}
 
+\definecolor{green0}{HTML}{B65900}
+\definecolor{green1}{HTML}{D77200}
+\definecolor{green2}{HTML}{ED8E30}
+\definecolor{green3}{HTML}{FABE86}
+
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{darkBlue},   
 	commentstyle=\color{lightGreen},
@@ -122,6 +127,7 @@ frametitle , titleformat title= smallcaps]{metropolis}           % Use metropoli
 \newtheorem{lm}{\orangee{Lema}}
 \newtheorem{crr}{\orangee{Corolario}}
 \newtheorem{rr}{\redd{Observación}}
+\usepackage{graphicx} 
 
 
 %\newtheorem{defn}[]{Definición}
@@ -995,8 +1001,8 @@ En este caso $p=7$, $n=-3$ y  $N=2$. Además satisface que $p^{-3}\leq\pnorm{x}\
 
 \begin{frame}{El conjunto $\gpn$}
 	\begin{itemize}[<+- | alert@+>]
-		\item \red{Problema}: $\Qp$ es infinito, y tiene elementos con posibles infinitos dígitos.
-		\item \textcolor{green}{Alternativa}: Consideramos un subconjunto finito, el cual modelaremos.
+		\item \textcolor{orangeBar}{Problema}: $\Qp$ es infinito, y tiene elementos con posibles infinitos dígitos.
+		\item \textcolor{lightGreen}{Alternativa}: Consideramos un subconjunto finito, el cual modelaremos.
 		\item Lo modelamos bajo el \tit{paradigma orientado a objetos}
 		\item Definimos a $\gpn$ como un subconjunto de $\Qp$ tal que:
 		
@@ -1042,9 +1048,10 @@ En este caso $p=7$, $n=-3$ y  $N=2$. Además satisface que $p^{-3}\leq\pnorm{x}\
 \end{frame}
 
 \begin{frame}{Diseño de la clase $\gpn$ - Métodos}
-	
-
+\scalebox{0.9}{
+\vbox{
 \begin{longtable}[c]{| c | c | p{5.5cm} |}
+
 	\caption{Métodos principales de la Clase $\gpn$.}\\
 	
 	\hline
@@ -1065,6 +1072,8 @@ En este caso $p=7$, $n=-3$ y  $N=2$. Además satisface que $p^{-3}\leq\pnorm{x}\
 	representation\_tree   () & void & Crea una imagen que representa  todo el conjunto\\
 	\hline
 \end{longtable}
+}}
+
 \end{frame}
 
 \begin{frame}[fragile]{Ejemplos de uso de $\gpn$ en Python - generate\_numbers }
@@ -1199,57 +1208,60 @@ Así $\frac{3214.345356_7}{53452.143_7}=\cdots51330.332362_7$
 	\item Denotamos por $M_n^m=\{x_1, \dots, x_{m^n}\}$ a las hojas del árbol con $n$ niveles y $m$ ramas.
 	\item Podemos dotar a $M_n^m$, definimos la distancia en $M_n^m$ como $d   (x_i,x_j)=C^{N*}$ ($0<C<1$).
 	\item Así, $   (M_m^m,d)$ es un espacio ultramétrico.
-	\begin{exampleblock}{Ejemplo}
-		Si tomamos $M_3^2=\{x_0, x_1,\dots, x_7\}$, tenemos que 
-		\begin{center}
-			\begin{tabular}{||c c c c||} 
-				\hline
-				$x_i$ & $x_j$ & $N*$ & distancia \\ [0.5ex] 
-				\hline\hline
-				$x_1$ & $x_2$ & 2 & $C^2$ \\ 
-				\hline
-				$x_1$ & $x_3$ &1 & $C$ \\
-				\hline
-				$x_1$ & $x_4$ & 0 & 1 \\ 
-				\hline
-			\end{tabular}
-		\end{center}
-	\end{exampleblock}
+	
+		\begin{figure}%
+			\centering
+			\subfloat[]{
+				\centering
+				\begin{tabular}{||c c c c||} 
+					\hline
+					$x_i$ & $x_j$ & $N*$ & distancia \\ [0.5ex] 
+					\hline\hline
+					$x_1$ & $x_2$ & 2 & $C^2$ \\ 
+					\hline
+					$x_1$ & $x_3$ &1 & $C$ \\
+					\hline
+					$x_1$ & $x_4$ & 0 & 1 \\ 
+					\hline
+				\end{tabular}
+			}%
+			%\qquad
+			\subfloat[]{
+				\centering
+				\scalebox{0.55}{
+				\vbox{
+				\begin{tikzpicture}[level/.style={sibling distance=40mm/#1}]
+				\node [circle,draw]    (z){}
+				
+				child {node [circle,draw]    (a) {}
+					child {node [circle,draw]    (b) {}
+						child {node {$x_1$}}
+						child {node {$x_2$}}
+					}
+					child {node [circle,draw]    (g) {}
+						child {node {$x_3$}}
+						child {node {$x_4$}}
+					}
+				}
+				child {node [circle,draw]    (j) {}
+					child {node [circle,draw]    (k) {}
+						child {node {$x_5$}}
+						child {node {$x_6$}}
+					}
+					child {node [circle,draw]    (l) {}
+						child {node {$x_7$}}
+						child {node {$x_8$}}
+					}
+				};
+				\end{tikzpicture}
+			}}
+			}%
+			\caption{$M_3^2$}%
+		\end{figure}
 \end{itemize}	
 
 \end{frame}
 
-\begin{frame}[fragile]{Árboles}
-\begin{figure}[t]
-	\caption{$M_3^2$}
-	\centering
-	\begin{tikzpicture}[level/.style={sibling distance=40mm/#1}]
-	\node [circle,draw]    (z){}
-	
-	child {node [circle,draw]    (a) {}
-		child {node [circle,draw]    (b) {}
-			child {node {$x_1$}}
-			child {node {$x_2$}}
-		}
-		child {node [circle,draw]    (g) {}
-			child {node {$x_3$}}
-			child {node {$x_4$}}
-		}
-	}
-	child {node [circle,draw]    (j) {}
-		child {node [circle,draw]    (k) {}
-			child {node {$x_5$}}
-			child {node {$x_6$}}
-		}
-		child {node [circle,draw]    (l) {}
-			child {node {$x_7$}}
-			child {node {$x_8$}}
-		}
-	};
-	\end{tikzpicture}%}
-\end{figure}
-
-\end{frame}
 
 \begin{frame}[fragile]{Árboles-Python}
 \begin{itemize}
@@ -1265,26 +1277,31 @@ Así $\frac{3214.345356_7}{53452.143_7}=\cdots51330.332362_7$
 \end{frame}
 
 \begin{frame}[fragile]{Árboles - Visualización}
-	\begin{figure}
-		\caption{Números de la forma: $x=\sum_{-1}^{2}a_k2^k$}
-		\includegraphics[scale=0.6]{tree_images/G2_21_dark.png}
-	\end{figure}
 
+\begin{figure}
+	\captionsetup[subfigure]{font=footnotesize}
+	\subcaptionbox{Números de la forma $\sum_{-1}^{2}a_k2^k$}[.42\textwidth]{%
+		\includegraphics[scale=0.48]{tree_images/G2_21_dark.png}
+	}%
+	\subcaptionbox{Características}[.6\textwidth]{
+		\scalebox{0.7}{
+		\vbox{
+		\begin{itemize}[<+- | alert@+>]
+			
+			\item Los números presentados satisfacen que $2^{-2}\leq\norm{x}_2\leq 2$.
+			\item $a_k\in\{0,1\}$, con $k\in\{-1,0,1,2\}$.
+			\item Decir que $a_k\in\{\textbf{\textcolor{orange}{0}},\textbf{\textcolor{red}{1}}\}$ será equivalente a decir que $a_k\in\{\textbf{\textcolor{orange}{Naranja}},\textbf{\textcolor{red}{Rojo}}\}$
+			\item Si quisiéramos saber qué número es el que está ubicado en la parte derecha del árbol, de color \textbf{\textcolor{lightBlue}{azul}}, sólo seguimos el camino propuesto por la imagen.
+			\item Desde la raíz: $\textbf{\textcolor{orange}{Naranja}}\to\textbf{\textcolor{orange}{Naranja}}\to\textbf{\textcolor{orange}{Naranja}}\to\textbf{\textcolor{red}{Rojo}}.$
+			\item Es decir que el número es \textbf{\textcolor{orange}{000}},\textbf{\textcolor{red}{1}}$_2$ y tiene norma \textbf{\textcolor{lightBlue}{$2^{-1}$}}.
+			\item El camino desde la raíz denota $a_2\to a_1\to a_0\to a_{-1}$.
+		
+		\end{itemize}
+		}}
+	}
+\end{figure}
 \end{frame}
 
-\begin{frame}[fragile]{Árboles - Entendiendo la visualización}
-	\begin{itemize}
-		\item Los números presentados satisfacen que $2^{-2}\leq\norm{x}_2\leq 2$.
-		\item $a_k\in\{0,1\}$, con $k\in\{-1,0,1,2\}$.
-		\item Decir que $a_k\in\{\textbf{\textcolor{orange}{0}},\textbf{\textcolor{red}{1}}\}$ será equivalente a decir que $a_k\in\{\textbf{\textcolor{orange}{Naranja}},\textbf{\textcolor{red}{Rojo}}\}$
-		\item Si quisiéramos saber qué número es el que está ubicado en la parte derecha del árbol, de color \textbf{\textcolor{lightBlue}{azul}}, sólo seguimos el camino propuesto por la imagen.
-		\item Desde la raíz: $\textbf{\textcolor{orange}{Naranja}}\to\textbf{\textcolor{orange}{Naranja}}\to\textbf{\textcolor{orange}{Naranja}}\to\textbf{\textcolor{red}{Rojo}}.$
-		\item Es decir que el número es \textbf{\textcolor{orange}{000}},\textbf{\textcolor{red}{1}}$_2$ y tiene norma \textbf{\textcolor{lightBlue}{$2^{-1}$}}.
-		\item El camino desde la raíz denota $a_2\to a_1\to a_0\to a_{-1}$.
-	\end{itemize}
-
-	
-\end{frame}
 
 \begin{frame}{Visualización de más $\gpn$'s}
 	\begin{figure}
@@ -1330,21 +1347,128 @@ Así $\frac{3214.345356_7}{53452.143_7}=\cdots51330.332362_7$
 
 \begin{frame}{Matriz de réplica}
  Si definimos $l\colon\{1,\dots,p^{N-n+1}\}\to GpnN \Rightarrow l(i)=x_i$,
- definimos la \tit{matriz de réplica} $\textbf{Q   } $ de tamaño $p^{N-n+1}\times p^{N-n+1}$: $$Q_{ij}=\rho(\pnorm{l(i)-l(j)}).$$ Por ejemplo, con $p=2$ tenemos una matriz tipo \tit{Parisi}:
+ definimos la \tit{matriz de réplica} $\textbf{Q} $ de tamaño $p^{N-n+1}\times p^{N-n+1}$: $$Q_{ij}=\rho(\pnorm{l(i)-l(j)}),$$ 
+ donde $\rho$ es una función que depende de la distancia $p$-ádica entre $l(i)$ y $l(j)$. Por ejemplo, con $p=2$ tenemos una matriz tipo \tit{Parisi}:
+ \begin{center}	
+ 	\scalebox{0.8}{ 
+ 		$
+ 		\boldsymbol{Q}=\left(\begin{array}{lllllllll}
+ 		0 & q_{1} & q_{2} & q_{2} & q_{3} & q_{3} & q_{3} & q_{3} & \dots \\
+ 		q_{1} & 0 & q_{2} & q_{2} & q_{3} & q_{3} & q_{3} & q_{3} & \dots \\
+ 		q_{2} & q_{2} & 0 & q_{1} & q_{3} & q_{3} & q_{3} & q_{3} & \dots \\
+ 		q_{2} & q_{2} & q_{1} & 0 & q_{3} & q_{3} & q_{3} & q_{3} & \dots \\
+ 		q_{3} & q_{3} & q_{3} & q_{3} & 0 & q_{1} & q_{2} & q_{2} & \dots \\
+ 		q_{3} & q_{3} & q_{3} & q_{3} & q_{1} & 0 & q_{2} & q_{2} & \dots \\
+ 		q_{3} & q_{3} & q_{3} & q_{3} & q_{2} & q_{2} & 0 & q_{1} & \dots \\
+ 		q_{3} & q_{3} & q_{3} & q_{3} & q_{2} & q_{2} & q_{1} & 0 & \dots\\
+ 		&  &  &  & \vdots & & &  & \ddots
+ 		\end{array}\right)
+ 		$ 
+ 	}
+ \end{center}
  
- $$
- \boldsymbol{Q}=\left(\begin{array}{lllllllll}
- 0 & q_{1} & q_{2} & q_{2} & q_{3} & q_{3} & q_{3} & q_{3} & \dots \\
- q_{1} & 0 & q_{2} & q_{2} & q_{3} & q_{3} & q_{3} & q_{3} & \dots \\
- q_{2} & q_{2} & 0 & q_{1} & q_{3} & q_{3} & q_{3} & q_{3} & \dots \\
- q_{2} & q_{2} & q_{1} & 0 & q_{3} & q_{3} & q_{3} & q_{3} & \dots \\
- q_{3} & q_{3} & q_{3} & q_{3} & 0 & q_{1} & q_{2} & q_{2} & \dots \\
- q_{3} & q_{3} & q_{3} & q_{3} & q_{1} & 0 & q_{2} & q_{2} & \dots \\
- q_{3} & q_{3} & q_{3} & q_{3} & q_{2} & q_{2} & 0 & q_{1} & \dots \\
- q_{3} & q_{3} & q_{3} & q_{3} & q_{2} & q_{2} & q_{1} & 0 & \dots\\
- &  &  &  & \vdots & & &  & \ddots
- \end{array}\right)
- $$
+
+\end{frame}
+
+\begin{frame}{Matriz de transición}
+	
+	Definida la matriz de réplica, introducimos la \tit{matriz de transición}:
+	\[   
+	W_{ij} =
+	\begin{cases}
+	Q_{ij} & i\neq j,\\
+	-\sum_{\gamma \neq i}^{N-n+1}Q_{i\gamma} &i=j.\\
+	
+	\end{cases}
+	\]
+\begin{figure}
+	\captionsetup[subfigure]{font=footnotesize}
+	\centering
+	\subcaptionbox{Matriz de transición de $\mathit{G2\_11}$}[.5\textwidth]{%
+		\scalebox{0.7}{
+			\centering
+		$
+		\mathcal{W}=\left(\begin{array}{llllllll}
+		\textcolor{green3}{w_{0}} & \textcolor{green2}{w_{1}} & \textcolor{green1}{w_{2}} & \textcolor{green1}{w_{2}} & \textcolor{green0}{w_{3}} & \textcolor{green0}{w_{3}} & \textcolor{green0}{w_{3}} & \textcolor{green0}{w_{3}} \\
+		\textcolor{green2}{w_{1}} & \textcolor{green3}{w_{0}} & \textcolor{green1}{w_{2}} & \textcolor{green1}{w_{2}} & \textcolor{green0}{w_{3}} & \textcolor{green0}{w_{3}} & \textcolor{green0}{w_{3}} & \textcolor{green0}{w_{3}} \\
+		\textcolor{green1}{w_{2}} & \textcolor{green1}{w_{2}} & \textcolor{green3}{w_{0}} & \textcolor{green2}{w_{1}} & \textcolor{green0}{w_{3}} & \textcolor{green0}{w_{3}} & \textcolor{green0}{w_{3}} & \textcolor{green0}{w_{3}} \\
+		\textcolor{green1}{w_{2}} & \textcolor{green1}{w_{2}} & \textcolor{green2}{w_{1}} & \textcolor{green3}{w_{0}} & \textcolor{green0}{w_{3}} & \textcolor{green0}{w_{3}} & \textcolor{green0}{w_{3}} & \textcolor{green0}{w_{3}} \\
+		\textcolor{green0}{w_{3}} & \textcolor{green0}{w_{3}} & \textcolor{green0}{w_{3}} & \textcolor{green0}{w_{3}} & \textcolor{green3}{w_{0}} & \textcolor{green2}{w_{1}} & \textcolor{green1}{w_{2}} & \textcolor{green1}{w_{2}} \\
+		\textcolor{green0}{w_{3}} & \textcolor{green0}{w_{3}} & \textcolor{green0}{w_{3}} & \textcolor{green0}{w_{3}} & \textcolor{green2}{w_{1}} & \textcolor{green3}{w_{0}} & \textcolor{green1}{w_{2}} & \textcolor{green1}{w_{2}} \\
+		\textcolor{green0}{w_{3}} & \textcolor{green0}{w_{3}} & \textcolor{green0}{w_{3}} & \textcolor{green0}{w_{3}} & \textcolor{green1}{w_{2}} & \textcolor{green1}{w_{2}} & \textcolor{green3}{w_{0}} & \textcolor{green2}{w_{1}} \\
+		\textcolor{green0}{w_{3}} & \textcolor{green0}{w_{3}} & \textcolor{green0}{w_{3}} & \textcolor{green0}{w_{3}} & \textcolor{green1}{w_{2}} & \textcolor{green1}{w_{2}} & \textcolor{green2}{w_{1}} & \textcolor{green3}{w_{0}}  \\
+		\end{array}\right)
+		$ 
+	}
+	}%
+	\subcaptionbox{Árbol de representación de $\mathit{G2\_11}$}[.5\textwidth]{
+		\begin{tikzpicture}
+		[thick,scale=0.6, every node/.style={scale=0.6},
+		every node/.style={fill=green0,circle, draw, inner sep=2pt},
+		level 1/.style={sibling distance=40mm,nodes={fill=green1}},
+		level 2/.style={sibling distance=20mm,nodes={fill=green2}},
+		level 3/.style={sibling distance=10mm,nodes={fill=green3}}]
+		\node [circle,draw] (z){$w_3$}
+		
+		child {node [circle,draw] (a) {$w_2$}
+			child {node [circle,draw] (b) {$w_1$}
+				child {node {$1$}}
+				child {node {$2$}}
+			}
+			child {node [circle,draw] (g) {$w_1$}
+				child {node {$3$}}
+				child {node {$4$}}
+			}
+		}
+		child {node [circle,draw] (j) {$w_2$}
+			child {node [circle,draw] (k) {$w_1$}
+				child {node {$5$}}
+				child {node {$6$}}
+			}
+			child {node [circle,draw] (l) {$w_1$}
+				child {node {$7$}}
+				child {node {$8$}}
+			}
+		};
+		\end{tikzpicture}
+	}
+\end{figure}
+$Q_{ij}=\rho(\pnorm{l(i)-l(j)})= \frac{C}{\pnorm{l(i)-l(j)}^\alpha + 1},\text{ $l(i)-l(j)\in GpnN$}.$
+\end{frame}
+
+\begin{frame}{Ejemplos de matrices de transición}
+	\begin{figure}
+		
+		\caption{Matrices de Parisi asociadas a $\mathit{G2\_22}$, $\mathit{G2\_32}$, $\mathit{G2\_33}$, $\mathit{G2\_43}$, respectivamente. Con $\alpha=2$ y $C=3$}
+		\animategraphics[controls,width=0.6\linewidth]{15}{matrix/matrix}{1}{4}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Ecuación de ultradifusión}
+Análogamente a como se estableció la ecuación de calor sobre grafos, definimos la \textit{ecuación maestra} como sigue:
+\begin{equation}
+\label{ME}
+\frac{du_i(t)}{dt} = \sum_{j\neq i}W_{ji}u_j(t) - \sum_{j\neq i}W_{ij}u_i(t), 
+\end{equation}
+
+donde $u_i$ es la probabilidad de transición, es decir, la probabilidad de pasar del estado $i$ al estado $j$ en el tiempo $t$.
+Esta ecuación se puede llevar a:$$\frac{d\vec{u}(t)}{dt} = W\vec{u}(t).$$
+Cuya solución será: $$\vec{u}(t)=\sum_{i=1}^{p^{N-n+1}}c_i(t)v_i,\quad c_i(t)=c_i(0)e^{\lambda_it}. $$
+
+
+\end{frame}
+
+\begin{frame}{Proceso de difusión en $\gpn$}
+	\begin{figure}
+		\caption{Comportamiento de la solución en distintos $t\in[0,10]$ para la condición inicial $u(0)$ en forma de campana de Gauss, en $\mathit{G2\_33}$.}
+		\animategraphics[autoplay,loop, every = 1, width=0.6\linewidth]{25}{difusion_normal/}{0}{1}
+	\end{figure}
+\end{frame}
+\begin{frame}{Proceso de difusión en $\gpn$}
+	\begin{figure}
+		\caption{Comportamiento de la solución en distintos $t\in[0,10]$ para la condición inicial $u(0)$ en forma de campana de Gauss, en $\mathit{G2\_33}$.}
+		\animategraphics[autoplay,loop, every = 1, width=0.6\linewidth]{25}{difusion_normal/}{0}{1}
+	\end{figure}
 \end{frame}
 
 
