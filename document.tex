@@ -11,6 +11,7 @@ frametitle , titleformat title= smallcaps]{metropolis}           % Use metropoli
 \usepackage{animate}
 \usepackage {extarrows}
 \usepackage {tikz}
+
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
 \usepackage{amssymb}
@@ -195,6 +196,18 @@ Facultad de Ciencias\\
 Departamento de Matemáticas}
 \begin{document}
   \maketitle
+  
+\begin{frame}[allowframebreaks]{Motivación}
+	Los números $p$-ádicos fueron recientemente introducidos por \textit{K. Hensel} en las matemáticas modernas con el fin de solucionar varios problemas en la teoría de números. Como consecuencia, el desarrollo del análisis $p$-ádico se ha visto involucrado en otras ramas de la ciencia, como la Biología, en donde los fenómenos naturales son presentados como estructuras jerárquicas\nocite{Av-5}; en la Física, donde juegan un papel importante en la teoría de cuerdas\nocite{Dragovich-2017}; y por supuesto, en las Ciencias de la computación, en donde son usados para hacer \textit{Data Mining} y \textit{Criptografía}\nocite{Dragovich-2017}.
+	
+	En este trabajo explicaremos algunas nociones básicas de análisis en espacios ultramétricos, en particular del cuerpo de números $p$-ádicos. De esta manera mostraremos una representación visual de los mismos, con el fin de desarrollar un paquete amigable que pueda ser implementado por científicos para hacer cómputo $p$-ádico (por ejemplo en la codificación de información) y desarrollar simulaciones de ecuaciones presentes en sistemas complejos.
+	
+	El lenguaje que utilizaremos en este trabajo será \textit{Python}, dado que presenta características deseables como ser moderno, orientado a objetos, ser de uso común por la mayoría de científicos, así como poseer frameworks y poseer estructuras de datos que permiten, a diferencia de otros lenguajes, una manipulación más simple de grafos y redes.
+
+\end{frame}
+\begin{frame}{Contenido}
+	\tableofcontents
+\end{frame}
   \section{Notación}
 
   \begin{frame}{Unidades, decenas y centenas...}
@@ -205,7 +218,7 @@ Departamento de Matemáticas}
     %Que también se puede denotar como $543.89_{10}$.
     
     \begin{center}
-    	%\animategraphics[autoplay,loop, every = 2, width=1.0\linewidth]{30}{Notacion_1/notacion00}{001}{332}
+    	\animategraphics[autoplay, every = 2, width=1.0\linewidth]{30}{Notacion_1/notacion00}{001}{332}
     \end{center}
   \end{frame}
 
@@ -247,56 +260,40 @@ Departamento de Matemáticas}
 	$\abs{\cdot}\colon K \to \R_{\geq 0}$ tal que para todo $x,y\in$ $K$
 	satisface las siguientes propiedades:
 	
-	\begin{itemize}[<+- | alert@+>]
-		\item[$\diamond$] $\abs{x} \geq0$, $\abs{x}
+	\begin{enumerate}[<+- | alert@+>]
+		\item $\abs{x} \geq0$, $\abs{x}
 		=0\Longleftrightarrow x=0,$
 		
-		\item[$\diamond$] $\abs{xy}  =\abs{x} \left\vert 
+		\item $\abs{xy}  =\abs{x} \left\vert 
 		y\right\vert ,$
 		
-		\item[$\diamond$] $\left\vert x+y\right\vert \leq\abs{x} +\left\vert y\right\vert$.
-	\end{itemize}
+		\item $\left\vert x+y\right\vert \leq\abs{x} +\left\vert y\right\vert$.
+		\item Si $\|x+y\| \le \maxx\{\|x\|, \|y\|\}$, para todo $x,y\in K,$ decirmos que la norma es \tit{ultamétrica}, o que satisface la \tit{desigualdad triangular fuerte}.
+	\end{enumerate}
 \end{df}
 	Además, una norma $\abs{\cdot}$ en $K$ define una métrica natural dada por\linebreak ${d (x,y)=\abs{x-y}}$.
 \end{frame}
 %5-----------------------------------------
 \begin{frame}{Equivalencia entre normas}
 \begin{df}
-	Dos normas $\abs{\cdot}_1$, $\abs{\cdot}_2$ sobre un cuerpo $K$ se dicen \tit{equivalentes }si inducen la misma topología sobre $K$, i.e., todo abierto con respecto a una  topología también  lo es con respecto a la otra. Por notación decimos que $\abs{\cdot}_1\sim\abs{\cdot}_2$.
+	Dos normas $\abs{\cdot}_1$, $\abs{\cdot}_2$ sobre un cuerpo $K$ se dicen \tit{equivalentes }si inducen la misma topología sobre $K$.
 \end{df}
 
 \begin{pr}\label{quiv_power}
-	Sea $K$ un cuerpo con dos normas $\abs{\cdot}_1$, $\abs{\cdot}_2$. Entonces \linebreak$\abs{\cdot}_1\sim\abs{\cdot}_2$ si, y sólo si, existe $c\in\bb{R}_{>0}$ tal que $\abs{\cdot}_1=\abs{\cdot}_2^c$.
+	\begin{itemize}[<+- | alert@+>]
+		\item $\abs{\cdot}_1\sim\abs{\cdot}_2$ si, y sólo si, existe $c\in\bb{R}_{>0}$ tal que $\abs{\cdot}_1=\abs{\cdot}_2^c$.
+		\item $\abs{\cdot}_1\sim\abs{\cdot}_2$ si, y sólo si existen constantes $k_1,k_2$ positivas tales que:
+		$$k_1\abs{x}_1<\abs{x}_2< k_2\abs{x}_1,$$
+		para todo $x\in K$.
+		\item Si ${\abs{\cdot}_1\sim\abs{\cdot}_2}$, entonces una sucesión $ (x_n)$ es de Cauchy respecto a $\abs{\cdot}_1$ si, y sólo si es de Cauchy respecto a $\abs{\cdot}_2$.
+	\end{itemize}
+
 \end{pr}
 \end{frame}
 %6----------------------
-\begin{frame}{Equivalencia entre normas}
-\begin{pr}
-	[Equivalencia Lipschitz ]\label{lipeq}
-	Sea $K$ un cuerpo con dos normas $\abs{\cdot}_1$, $\abs{\cdot}_2$. Entonces $\abs{\cdot}_1\sim\abs{\cdot}_2$ si, y sólo si existen constantes $k_1,k_2$ positivas tales que:
-	$$k_1\abs{x}_1<\abs{x}_2< k_2\abs{x}_1,$$
-	para todo $x\in K$.
-\end{pr}
-\begin{pr}
-	\label{equiv_cauchy}
-	Sea $K$ un cuerpo con dos normas $\abs{\cdot}_1$, $\abs{\cdot}_2$ tales que ${\abs{\cdot}_1\sim\abs{\cdot}_2}$, entonces una sucesión $ (x_n)$ es de Cauchy respecto a $\abs{\cdot}_1$ si, y sólo si es de Cauchy respecto a $\abs{\cdot}_2$.
-\end{pr}
-\end{frame}
 
 %7----------------------
-\begin{frame}{Norma no-arquimediana}
-\begin{df}
-	Una norma $\norm{\cdot}$ sobre un cuerpo $K$ se dice \textit{no-arquimediana o ultramétrica}, si la condición $ (3)$  (en la definición \ref{pnorm})  es reemplazada por
-	\begin{equation}\label{condiultra}
-	\|x+y\| \le \maxx\{\|x\|, \|y\|\}, \forall x,y\in K.
-	\end{equation} 
-\end{df}
-\begin{rr}
-	Dado que
-	$$\|x+y\| \le \maxx\{\|x\|, \|y\|\} \leq \|x\| + \|y\|, \forall x,y\in \mathbb{Q},$$ 
-	la condición \ref{condiultra} es también llamada \tit{desigualdad triangular  fuerte}.
-\end{rr}
-\end{frame}
+
 
 %8----------------------
 \begin{frame}{Orden y Norma en $\Q$}
@@ -314,7 +311,7 @@ Departamento de Matemáticas}
 %9----------------------
 \begin{frame}{Orden y Norma en $\Q$}
 	 \begin{center}
-		%\animategraphics[autoplay,loop, every = 1, width=1.0\linewidth]{30}{Norma/norma00}{001}{164}
+		\animategraphics[autoplay, every = 1, width=1.0\linewidth]{30}{Norma/norma00}{001}{164}
 	\end{center}
 	%\begin{exampleblock}{Ejemplo}
 	%	Cálculo de la función $\pnorm{\cdot}$ para distintos $p$'s.
@@ -350,48 +347,33 @@ Departamento de Matemáticas}
 \end{thh}
 \end{frame}
 %11-----------------------------------------------
-\begin{frame}{No equivalencia de normas en $\Q$}
-	\begin{rr}
-			Las normas $\norm{\cdot}_p$ y $\norm{\cdot}_q$ no son quivalentes si $p$ y $q$ son primos distintos. Por ejemplo, sea $p=5$ y $q=7$, la sucesión 
-		$x_n=\big (\frac{5}{7}\big)^n$ se tiene que 
-		$$\norm{x_n}_5=5^{-n}\rightarrow 0 \text{ y } \norm{x_n}_7=7^{n}\rightarrow \infty ,$$
-		cuando $n \rightarrow \infty$.
-		
-		El valor absoluto usual sobre $\Q$ tampoco es equivalente a una norma $p$-ádica. Por ejemplo, considérese la sucesión $x_n= (\frac{1}{p})^n$, entonces
-		$$\abs{x_n}=p^{-n}\to 0 \text{ y } \norm{x_n}_p = p^n \to \infty,$$
-		cuando $n\to\infty$. Lo cual contradice la proposición \ref{equiv_cauchy}.
-	\end{rr}
-\end{frame}
+
 %12-----------------------------------------------
 \begin{frame}{Sucesiones de Cauchy}
 \begin{thh}
 	[Caracterización de sucesiones de Cauchy]\label{car}
-	Una sucesión $ (x_n)_{n\in\N}$ en $\Q$ es de Cauchy, si, y sólo si:
+	Una sucesión $ (x_n)_{n\in\N}$ en $\Qp$ es de Cauchy, si, y sólo si:
 	\begin{equation}\label{car_cau}
 	\lim_{n\to\infty}\pnorm{x_{n+1}-x_n}=0.
 	\end{equation}
 \end{thh}
-\begin{df}
-	Sea $ (\bb{K}, \norm{\cdot})$ un cuerpo métrico. Sea ${\bb{K}^\N}$ el anillo de todas las sucesiones en $\bb{K}$. Definimos $\mathcal C,\mathcal N $ como el subanillo de todas las sucesiones de Cauchy y el subanillo de todas las sucesiones finalmente nulas, respectivamente.
-\end{df}
+\begin{thh}
+	$ (\Q, d (x,y)=\pnorm{x-y})$ y $ (\Q, d (x,y)=|x-y|)$ no son espacios completos.
+\end{thh}
+\begin{thh}
+	$\Qp$ es la completación de $\Q$ con la norma $\pnorm{\cdot}$.
+\end{thh}
 \end{frame}
 %14-----------------------------------------------
-\begin{frame}{Completación de un cuerpo métrico}
-\begin{df}
-	[Completación de un cuerpo métrico]Sea $ (\bb{K}, \norm{\cdot})$ un cuerpo métrico. Sean $\mathcal C,\mathcal N $ los subanillos de todas las sucesiones de Cauchy y de todas las sucesiones finalmente nulas, respectivamente.  Definimos el cociente de anillos $\hat{\bb{K}}\coloneqq \mathcal C/\mathcal N  $ como la completación de $\bb{K}$.
-\end{df}
-\begin{rr}
-	La norma $\norm{\cdot}\colon{\hat{\bb{K}}}\to\R_+,$ sobre la completación de $\bb{K}$ está definida tal que para todo $ (x_n)+\mathcal{N} \in \hat{\bb{K}}$:
-	$$\norm{ (x_n)+\mathcal{N}}=\lim_{n\to\infty}\norm{x_n}.$$
-\end{rr}
-\end{frame}
 
-\begin{frame}{Completaciones de $\Qp$}
+\begin{frame}[fragile]{Completaciones de $\Qp$}
+
 	\begin{figure}
 		\includegraphics[scale=0.35]{img/relojBeamer.jpg}\caption{Completaciones respecto a las distintas normas en $\Q$}
-	\end{figure}
+ 	\end{figure}
 \end{frame}
 %15-----------------------------------------------
+\iffalse 
 \begin{frame}{$\Q$ no es completo :c}
 	El siguiente teorema es importante, pues caracteriza a $\Q$ como un cuerpo no completo.
 	\begin{thh}
@@ -409,6 +391,7 @@ Departamento de Matemáticas}
 
 
 %16-----------------------------------------------
+
 \begin{frame}{$\Q$ no es completo :c}
 	\begin{exampleblock}{Continuación$\dots$}
 		Podemos hallar $a$ tal que sea cuadrado en $\Z$ y sumarle un múltplo de $p$; para así construir la sucesión como sigue:
@@ -423,8 +406,10 @@ Departamento de Matemáticas}
 	luego $x_n\to \sqrt{a}\notin\Q$.
 	\end{exampleblock}
 \end{frame}
+\fi
 %-------------Topology----------------------
-\section{Topología en $\Qp$}
+\subsection{Topología en $\Qp$}
+\section*{Topología en $\Qp$}
 %17-----------------------------------------
 \begin{frame}{El espacio $\Qpn$}
 	Podemos definir en $\Qpn$ una norma como:\[
@@ -434,26 +419,15 @@ Departamento de Matemáticas}
 	 \[
 	 B^n_{\gamma} (a)=\{x\in\Qp:\pnorm{x-a}< p^{\gamma}\},\ \gamma\in \mathbb{Z}.
 	 \]
+	 \[
+	 S^n_{\gamma} (a)=\{x\in\Qpn:\pnorm{x-a}=p^{\gamma}\},\ \gamma\in \mathbb{Z}.
+	 \]
 	 \begin{rr}
 	 	$B_\gamma^n (a)$ es un grupo aditivo.
 	 \end{rr}
 \end{frame}
 %18-----------------------------------------
-\begin{frame}{Algunas propiedades topológicas de $\Qpn$}
-	Análogamente pordemos definir la esfera $n$-dimensional con centro en $a$:
-	\[
-	S^n_{r} (a)=\{x\in\Qpn:\pnorm{x-a}=p^{r}\},\ r\in \mathbb{Z}.
-	\]
-	Además
-	\begin{itemize}[<+- | alert@+>]
-		\item $S_{\gamma}^n (a)=\left\{x:\pnorm{x-a}=p^{\gamma}\right\}=B_{\gamma}^n (a) \backslash B_{\gamma-1}^n (a).$
-		\item${B_{\gamma}^n (a) \subset B_{\gamma^{\prime}}^n (a)}$ siempre que $\gamma<\gamma^{\prime}.$
-		\item $B_{\gamma-1}^n (a)=\left\{x:\pnorm{x-a}<p^{\gamma}\right\}.$ 
-		\item $B_{\gamma}^n (a)=\bigcup_{\gamma^{\prime} \leq \gamma} S_{\gamma^{\prime}}^n (a).$
-		\item $\bigcup_{\gamma} B_{\gamma}^n (a)=\bigcup_{\gamma} S_{\gamma}^n (a)=\mathbb{Q}_{p}^n-\{0\}.$
-		\item $\bigcap_{\gamma} B_{\gamma}^n (a)=\{a\}.$
-	\end{itemize}
-\end{frame}
+
 %18-----------------------------------------
 \begin{frame}{Propiedades bonitas de $\Qp$ :o}
 	\begin{thh}
@@ -470,18 +444,19 @@ Departamento de Matemáticas}
 %19-----------------------------------------
 \begin{frame}{Más propiedades de $\Qp$ }
 \begin{thh}
-	$\Qp$ es un espacio de \tit{Hausdorff}
+	$\Qp$ es un espacio de \tit{Hausdorff} localmente compacto.
 \end{thh}
 \begin{thh}
 	$\{B_\gamma (a)\colon r\in\Z, a\in\Qp\}$ es contable.
 \end{thh}
 \begin{thh}
-	$\Qp$ es un espacio localmente compacto.
+	$\Qp$ es totalmente disconexo.
 \end{thh}
 	
 	
 \end{frame}
 %20-----------------------------------------
+\iffalse
 \begin{frame}{Algunas definiciones de Topología}
 \begin{df}
 		Decimos que un espacio topológico es \tit{conexo} si no puede ser escrito como la unión de dos abiertos disyuntos no vacíos. Por otro lado, decimos que un espacio es \tit{disconexo} si es la unión de dos abiertos disyuntos no vacíos.
@@ -496,18 +471,12 @@ Los subconjuntos conexos maximales de un espacio topológico son llamados \tit{c
 \end{df}
 	
 \end{frame}
-
+\fi
 %21-----------------------------------------
 \begin{frame}{Un corolario simple y bonito}
-	\begin{thh}
-		$\Qp$ es totalmente disconexo.
-	\end{thh}
-	\begin{thh}
-		$\N$ es denso en $\Zp$.
-	\end{thh}
 	\begin{lm}
-		Sean $x, y \in \bb{Q}_p$ tales que $\norm{x}_p \neq \norm{y}_p.$ Entonces:
-		$$\norm{x+y}_p=\maxx\{\norm{x}_p,\norm{y}_p\}$$
+		Sean $x, y \in \bb{Q}_p$ tales que $\norm{x}_p \neq \norm{y}_p$, entonces:
+		$$\norm{x+y}_p=\maxx\{\norm{x}_p,\norm{y}_p\}.$$
 	\end{lm}
 	\begin{crr}
 		Todos los triángulos en $\Qp$ son isósceles.  
@@ -546,6 +515,7 @@ Los subconjuntos conexos maximales de un espacio topológico son llamados \tit{c
 \end{itemize}
 \end{frame}
 %25-----------------------------------------
+\iffalse
 \begin{frame}{Propiedades de $\rho$}
 	\begin{itemize}[<+- | alert@+>]
 		\item {$\rho$ es una función continua, sobreyectiva, pero no inyectiva.}
@@ -554,9 +524,10 @@ Los subconjuntos conexos maximales de un espacio topológico son llamados \tit{c
 		\item $\rho\left (p^{\gamma} x\right)=p^{-\gamma} \rho (x), \text{ para todo }x \in \mathbb{Q}_{p}.$
 	\end{itemize}
 \end{frame}
+\fi
 %------------------------Arithmetic------------------------
-\section{Aritmética $p$-ádica}
-
+\subsection{Aritmética $p$-ádica}
+\section*{Aritmética $p$-ádica}
 \begin{frame}{Expansiones $p$-ádicas de enteros}
 	\begin{itemize}[<+- | alert@+>]
 		\item Podemos expandir por cualquier base $p$ un número $n\in\Z$
@@ -664,6 +635,7 @@ Sean $\alpha= (a_i)$ y $\beta = (b_i)$ dos enteros $p$-ádicos. Definimos la sum
 
 \end{frame}
 
+\iffalse
 \begin{frame}{Representación de números negativos}
 	Si $x=\sum_{i=\gamma}^{\infty}a_ip^i$, entonces $-x=\sum_{i=\gamma}^{\infty}b_ip^i$, donde $b_\gamma = p-a_\gamma$ y\linebreak	 $b_i =  (p-1)-a_i$ con $i>\gamma$.
 	
@@ -676,19 +648,23 @@ Sean $\alpha= (a_i)$ y $\beta = (b_i)$ dos enteros $p$-ádicos. Definimos la sum
 		\end{align*}
 	\end{exampleblock}
 \end{frame}
+\fi
 
 \begin{frame}{Numeros unidades}
 	\begin{df}
-		Un número $p$-ádico es llamado \textit{unidad} si no es múltiplo de una potencia negativa de $p$ y su primer dígito no es $0$.	
+		Un número $p$-ádico es llamado \textit{unidad} si no es múltiplo de una potencia negativa de $p$ y su primer dígito no es $0$; más aún, un número $p$-ádico $x$ se puede escribir como:
+		$${x=u\cdot p^{-N}}\,quad \text{ con $u$ unidad}.$$	
 	\end{df}
 	\begin{exampleblock}{Ejemplo}
-		Los números $\cdots314_5$ y $\cdots24_5$ son unidades, mientras que $\cdots310_5$ y $\cdots1321.24_5$ no lo son.	
+		\begin{itemize}[<+- | alert@+>]
+			\item Los números $\cdots314_5$ y $\cdots24_5$ son unidades.
+			\item  $\cdots310_5$ y $\cdots1321.24_5$ no son unidades.
+			\item Pero $\cdots 1321.24_5 = \cdots 132124_5\cdot 5^{-2}.$
+		\end{itemize}
+
 	\end{exampleblock}
-	Así, un número $p$-ádico no-unidad $x=\sum_{j=-N}^{\infty} a_{j} p^{j}$ es un número que puede escribirse de la forma ${x=u\cdot p^{-N}}$ donde $u$ es un número unidad. Por ejemplo
-	\begin{align*}
-	&\cdots 410_5 = \cdots 41_5\cdot5^1\\
-	&\cdots 1321.24_5 = \cdots 132124_5\cdot 5^{-2}.
-	\end{align*}
+
+
 \end{frame}
 
 \begin{frame}{Multiplicación $p$-ádica}
@@ -720,13 +696,15 @@ Sean $\alpha= (a_i)$ y $\beta = (b_i)$ dos enteros $p$-ádicos. Definimos la sum
 		%Así, con $p=7$, $u\cdot v =\cdots251413_7\times\cdots 123102_7=\cdots 310426_7$.
 		
 		\begin{center}
-			%\animategraphics[autoplay,loop, every = 2, width=1.0\linewidth]{30}{Multiplicacion/multiplicacion00}{001}{179}
+			\animategraphics[autoplay, every = 2, width=1.0\linewidth]{30}{Multiplicacion/multiplicacion00}{001}{179}
 		\end{center}
 	\end{exampleblock}
 \end{frame}
 
 \begin{frame}{División $p$-ádica}
 	Los cálculos de divisiones en los enteros $p$-ádicos no difieren de los métodos tradicionales de división.
+	\scalebox{0.9}{
+	\vbox{
 	\begin{exampleblock}{Ejemplo}
 		%Tomando $p=7$, calculemos $\frac{\cdots421_7}{\cdots153_7}:$
 		
@@ -749,13 +727,16 @@ Sean $\alpha= (a_i)$ y $\beta = (b_i)$ dos enteros $p$-ádicos. Definimos la sum
 		\end{align*}
 		Así, con $p=7$, $\frac{\cdots421_7}{\cdots153_7}=\cdots 615_7$.
 	\end{exampleblock}
+	}}
 \end{frame}
 
 \begin{frame}{División $p$-ádica}
+	\scalebox{0.9}{
+		\vbox{
 \begin{rr}
 	Los anteriores procedimientos de multiplicación y división, hechos sobre $\Zp$ pueden ser extendidos de manera natural a $\Qp$, pues el problema se reduce a operar números unidades.
 \end{rr}
-\newpage
+
 \begin{exampleblock}{Ejemplo}
 	Al momento de multiplicar los números no-unidades, sean 
 	\begin{align*}
@@ -768,8 +749,10 @@ Sean $\alpha= (a_i)$ y $\beta = (b_i)$ dos enteros $p$-ádicos. Definimos la sum
 
 	
 \end{exampleblock}
+}}
 \end{frame}
-\section{Sucesiones y series de  números $p$-ádicos}
+\subsection{Sucesiones y series de  números $p$-ádicos}
+\section*{Sucesiones y series de  números $p$-ádicos}
 
 \begin{frame}{Estabilización de sucesiones y series}
 \begin{thh}
@@ -778,8 +761,8 @@ Sean $\alpha= (a_i)$ y $\beta = (b_i)$ dos enteros $p$-ádicos. Definimos la sum
 	$$\pnorm{x_n}=\pnorm{x}, \text{ para todo } n\geq N.$$
 \end{thh}
 \begin{thh}
-	Una serie $\sum_{j=1}^\infty x_j, \text{   } x_j\in\Qp$ converge en $\Qp$, si, y sólo si,  $\lim_{n\to\infty}x_n=0$. En tal caso:
-	$$\pnorm{\sum_{j=1}^\infty x_j}\leq \maxx_{j}\pnorm{x_j}.$$
+	Una serie $\sum_{j=1}^\infty x_j, \text{   } x_j\in\Qp$ converge en $\Qp$, si, y sólo si,  $\lim_{n\to\infty}x_n=0$. %En tal caso:
+	%$$\pnorm{\sum_{j=1}^\infty x_j}\leq \maxx_{j}\pnorm{x_j}.$$
 \end{thh}
 \end{frame}
 
@@ -803,7 +786,7 @@ Sean $\alpha= (a_i)$ y $\beta = (b_i)$ dos enteros $p$-ádicos. Definimos la sum
 		y en donde $a_k=0$, para $k\leq - N$ y $a_{-N}\neq 0$\label{ord_def_2}. A $-N$ se le denomina el \textit{orden} del número.
 	\end{pr}
 \end{frame}
-
+\iffalse
 \begin{frame}{Parte entera y parte fraccionaria}
 	\begin{itemize}[<+- | alert@+>]
 		
@@ -829,8 +812,10 @@ Sean $\alpha= (a_i)$ y $\beta = (b_i)$ dos enteros $p$-ádicos. Definimos la sum
 	\end{itemize}
 
 \end{frame}
+\fi
 
-\section{Una mirada algebraica de los números $p$-ádicos}
+\subsection{Una mirada algebraica de los números $p$-ádicos}
+\section*{Una mirada algebraica de los números $p$-ádicos}
 
 \begin{frame}{Los enteros $p$-ádicos}
 	\begin{df}
@@ -874,7 +859,7 @@ Sean $\alpha= (a_i)$ y $\beta = (b_i)$ dos enteros $p$-ádicos. Definimos la sum
 		$$p\bb{Z}_p = \{x\in\bb{Z}_p : \pnorm{x}<1\}.$$
 	\end{itemize}
 \end{frame}
-
+\iffalse
 \begin{frame}{Homomorfismos}
 	\begin{itemize}[<+- | alert@+>]
 		\item Podemos definir el homomorfismo de anillos: \begin{align*}
@@ -888,17 +873,16 @@ Sean $\alpha= (a_i)$ y $\beta = (b_i)$ dos enteros $p$-ádicos. Definimos la sum
 		\item Si nos restringimos a la imagen de este homorfismo, esta es conocida como el \tit{límite proyectivo} de los  $\Z/p^n\Z$, y se denota por $$\varprojlim_n \Z/p^n\Z$$ 
 \end{itemize}
 \end{frame}
+\fi
 
-
-\begin{frame}{Definición de $\Zp$ y $\Qp$ vía álgebra}
+\begin{frame}{Construcción de $\Zp$ y $\Qp$ vía álgebra}
 	\begin{itemize}[<+- | alert@+>]
-		\item Se puede ver que $\pi$ restringida al rango, es isomorfismo, y así:
-		$$\Zp\cong\varprojlim_n \Z/p^n\Z.$$
+		\item $\Zp\cong\varprojlim_n \Z/p^n\Z.$
 		\item $\bb{Q}_p=\operatorname{Frac} (\Zp).$
 		\item $\bb{Q}_p=\bb{Z}_p[\frac{1}{p}]$.
 	\end{itemize}
 \end{frame}
-
+\iffalse
 \section{Sobre Diferenciación e Integración}
 
 \begin{frame}{Derivadas y primitivas}
@@ -934,9 +918,9 @@ Sean $\alpha= (a_i)$ y $\beta = (b_i)$ dos enteros $p$-ádicos. Definimos la sum
 		
 	\end{df}
 \end{frame}
+\fi
 
 \section{Modelando números $p$-ádicos}
-
 \begin{frame}{La clase Número}
 	\begin{itemize}[<+- | alert@+>]
 		\item La representación estándar de un número en $\Qp$ está dada por:
@@ -1090,7 +1074,7 @@ En este caso $p=7$, $n=-3$ y  $N=2$. Además satisface que $p^{-3}\leq\pnorm{x}\
 \end{frame}
 
 \begin{frame}[fragile]{Ejemplos de uso de $\gpn$ en Python - console\_printing }
-	Si quisiéramos visualizar los números asociados a $\mathit{G7\_{3}3}$, podemos verlos listados usando el método \textit{console\_printing} de la clase $\gpn$.
+	Si quisiéramos visualizar los números asociados a $\mathit{G7\_{3}3}$, podemos verlos listados usando el método \textit{console\_printing} de la clase $\gpn$:
 	\begin{lstlisting}[language = Python, caption = Visualización de números en $\mathit{G7\_33}$,basicstyle=\tiny]
 	G7_33.console_printing()
 	
@@ -1161,8 +1145,8 @@ Así $ 4324.321_5-23.4123_5=4300.4032_5$.
 
 \begin{frame}[fragile]{Ejemplos de uso de $\gpn$ en Python - Producto(p\_mul) }
 	\begin{itemize}
-		\item Tomemos $x=3214.345356_7$ y $y = 53452.143_7$
-		\item El mínimo $\gpn\subset\Q_7$ que contiene a $x,y$ es $\mathit{G7\_{4}6}$
+		\item Tomemos $x=3214.345356_7$ y $y = 53452.143_7$.
+		\item El mínimo $\gpn\subset\Q_7$ que contiene a $x,y$ es $\mathit{G7\_{4}6}$.
 		\item El producto tendrá $-n+N+1=-   (-4)+6+1=11$ dígitos a lo más, y no $10+8=18$ que es la suma de la cantidad de dígitos de $x,y$ respectivamente.
 	\end{itemize}
 	\begin{lstlisting}[language = Python, caption = producto de números en $\mathit{G7\_46}$,basicstyle=\tiny]
@@ -1439,8 +1423,8 @@ $Q_{ij}=\rho(\pnorm{l(i)-l(j)})= \frac{C}{\pnorm{l(i)-l(j)}^\alpha + 1},\text{ $
 \begin{frame}{Ejemplos de matrices de transición}
 	\begin{figure}
 		
-		\caption{Matrices de Parisi asociadas a $\mathit{G2\_22}$, $\mathit{G2\_32}$, $\mathit{G2\_33}$, $\mathit{G2\_43}$, respectivamente. Con $\alpha=2$ y $C=3$}
-		\animategraphics[controls,width=0.6\linewidth]{15}{matrix/matrix}{1}{4}
+		\caption{Matrices de Parisi asociadas a $\mathit{G2\_11}$, $\mathit{G2\_12}$, $\mathit{G2\_22}$, $\mathit{G2\_32}$, $\mathit{G2\_33}$, $\mathit{G2\_43}$, respectivamente. Con $\alpha=2$ y $C=3$}
+		\animategraphics[controls,width=0.6\linewidth]{15}{matrix/}{1}{6}
 	\end{figure}
 \end{frame}
 
@@ -1461,14 +1445,78 @@ Cuya solución será: $$\vec{u}(t)=\sum_{i=1}^{p^{N-n+1}}c_i(t)v_i,\quad c_i(t)=
 \begin{frame}{Proceso de difusión en $\gpn$}
 	\begin{figure}
 		\caption{Comportamiento de la solución en distintos $t\in[0,10]$ para la condición inicial $u(0)$ en forma de campana de Gauss, en $\mathit{G2\_33}$.}
-		\animategraphics[autoplay,loop, every = 1, width=0.6\linewidth]{25}{difusion_normal/}{0}{1}
+		\animategraphics[autoplay,loop, every = 1, width=0.6\linewidth]{25}{difusion_normal/}{0}{99}
 	\end{figure}
 \end{frame}
 \begin{frame}{Proceso de difusión en $\gpn$}
 	\begin{figure}
-		\caption{Comportamiento de la solución en distintos $t\in[0,10]$ para la condición inicial $u(0)$ en forma de campana de Gauss, en $\mathit{G2\_33}$.}
-		\animategraphics[autoplay,loop, every = 1, width=0.6\linewidth]{25}{difusion_normal/}{0}{1}
+		\caption{Comportamiento de la solución en distintos $t\in[0,10]$ para la condición inicial $u(0)$ con entradas aleatorias en $\mathit{G3\_33}$.}
+		\animategraphics[autoplay,loop, every = 1, width=0.6\linewidth]{25}{random/}{0}{99}
 	\end{figure}
+\end{frame}
+
+\section{Sobre el uso del paquete}
+
+\begin{frame}[fragile]{Configuración de ambiente}
+	\begin{itemize}[<+- | alert@+>]
+		\item Se supone \texttt{Python} instalado (en \texttt{Linux} viene por defecto).
+		\item En \texttt{Windows}, se recomienda la instalación de una distribución (\texttt{Anaconda}, \texttt{Python(x,y)} o \texttt{WinPython}).
+		\item Se recomienda instalar el sistema de gestión de paquetes \texttt{pip}.
+		\item A través de \texttt{pip} podemos instalar las dependencias que usamos:
+		\begin{lstlisting}[caption=Terminal o símbolo del sistema,basicstyle=\tiny]
+		$ pip install numpy scipy pandas matplotlib pygraphviz pydot networkx	
+		\end{lstlisting}
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Instalación de nuestro paquete (padics)}
+	\begin{itemize}[<+- | alert@+>]
+		\item ¡Usted... sí, usted también puede usarlo!
+		\item Se recomienda la instalación del sistema de control de versiones, \texttt{Git} (en \texttt{Linux} viene por defecto).
+		\item Con \texttt{pip} podemos instalar el paquete a través del comando:
+		\begin{lstlisting}[caption=Terminal o símbolo del sistema,basicstyle=\tiny]
+		$ pip install git+https://github.com/ed4st/padics-package	
+		\end{lstlisting}
+		\item Para testear la instalación, cree un script de \texttt{Python}:
+		\begin{lstlisting}[language = Python, caption = test del paquete, basicstyle=\tiny]
+		from padics.Number import Number #our package
+		
+		x = Number(7,-3,2,[3,2,1,3,4])
+		print(x.order(),x.norm())
+		>> -2 49
+		\end{lstlisting}
+		\item ¡Felicitaciones, puede usar lo visto en este trabajo!
+	\end{itemize}
+\end{frame}
+
+\include{bibliografia.bib}
+\begin{frame}{Notas del paquete}
+	\begin{itemize}[<+- | alert@+>]
+		\item Hacer \texttt{unit testing} sobre los algoritmos.
+		\item Mejorar el control de excepciones.
+		\item Mejorar documentación de uso.
+		\item Crear más modulos para poder modificar el código de manera estructural.
+		\item Implementar más algoritmos, como los de expansiones $p$-ádicas, o los asociados al estudio de álgebra (como el \textit{Lema de Hensel}), para hacer criptografía.
+		\item Implementar la versión del \textit{algoritmo de Karatsuba} en números $p$-ádicos.
+		\item Para las personas que no tienen suficiente dominio de \texttt{Linux}, sería muy útil crear una interfaz gráfica del paquete.
+		\item Aplicar la representación a modelos en \tit{Biología}, para el estudio de proteínas y genomas \cite{A-B-O}.
+	\end{itemize}
+\end{frame}
+
+\section*{Gracias :D}
+
+
+
+
+
+
+
+\begin{frame}[allowframebreaks]
+	\frametitle{Literaturverzeichnis} 
+	\nocite{*} 
+	\bibliographystyle{amsalpha} 
+	\bibliography{bibliografia.bib} 
 \end{frame}
 
 

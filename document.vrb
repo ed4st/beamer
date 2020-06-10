@@ -1,24 +1,18 @@
-\frametitle{Árboles - Visualización}
-
-\begin{figure}
-	\captionsetup[subfigure]{font=footnotesize}
-	\subcaptionbox{Números de la forma $\sum_{-1}^{2}a_k2^k$}[.42\textwidth]{%
-		\includegraphics[scale=0.48]{tree_images/G2_21_dark.png}
-	}%
-	\subcaptionbox{Características}[.6\textwidth]{
-		\scalebox{0.7}{
-		\vbox{
-		\begin{itemize}[<+- | alert@+>]
-			
-			\item Los números presentados satisfacen que $2^{-2}\leq\norm{x}_2\leq 2$.
-			\item $a_k\in\{0,1\}$, con $k\in\{-1,0,1,2\}$.
-			\item Decir que $a_k\in\{\textbf{\textcolor{orange}{0}},\textbf{\textcolor{red}{1}}\}$ será equivalente a decir que $a_k\in\{\textbf{\textcolor{orange}{Naranja}},\textbf{\textcolor{red}{Rojo}}\}$
-			\item Si quisiéramos saber qué número es el que está ubicado en la parte derecha del árbol, de color \textbf{\textcolor{lightBlue}{azul}}, sólo seguimos el camino propuesto por la imagen.
-			\item Desde la raíz: $\textbf{\textcolor{orange}{Naranja}}\to\textbf{\textcolor{orange}{Naranja}}\to\textbf{\textcolor{orange}{Naranja}}\to\textbf{\textcolor{red}{Rojo}}.$
-			\item Es decir que el número es \textbf{\textcolor{orange}{000}},\textbf{\textcolor{red}{1}}$_2$ y tiene norma \textbf{\textcolor{lightBlue}{$2^{-1}$}}.
-			\item El camino desde la raíz denota $a_2\to a_1\to a_0\to a_{-1}$.
+\frametitle{Instalación de nuestro paquete (padics)}
+\begin{itemize}[<+- | alert@+>]
+		\item ¡Usted... sí, usted también puede usarlo!
+		\item Se recomienda la instalación del sistema de control de versiones, \texttt{Git} (en \texttt{Linux} viene por defecto).
+		\item Con \texttt{pip} podemos instalar el paquete a través del comando:
+		\begin{lstlisting}[caption=Terminal o símbolo del sistema,basicstyle=\tiny]
+		$ pip install git+https://github.com/ed4st/padics-package	
+		\end{lstlisting}
+		\item Para testear la instalación, cree un script de \texttt{Python}:
+		\begin{lstlisting}[language = Python, caption = test del paquete, basicstyle=\tiny]
+		from padics.Number import Number #our package
 		
-		\end{itemize}
-		}}
-	}
-\end{figure}
+		x = Number(7,-3,2,[3,2,1,3,4])
+		print(x.order(),x.norm())
+		>> -2 49
+		\end{lstlisting}
+		\item ¡Felicitaciones, puede usar lo visto en este trabajo!
+	\end{itemize}
