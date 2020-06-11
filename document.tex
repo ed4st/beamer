@@ -38,7 +38,7 @@ frametitle , titleformat title= smallcaps]{metropolis}           % Use metropoli
 \usepackage{xcolor}
 \usepackage{subcaption}
 \usepackage{epigraph}
-
+\usetikzlibrary{arrows}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -188,23 +188,29 @@ Matemático}
 \date{\today}
 
 
-\author{\bf{Autor: }Edgar Baquero 
-	\\ \bf{Supervisor: }Leonardo Chacón. PhD.}
+\author{\bf{Autor: }Edgar Steven Baquero Acevedo
+	\\ \bf{Supervisor: }Leonardo Fabio Chacón Cortés, Ph. D.}
 
-\institute{Pontificia Universidad Javeriana,
-Facultad de Ciencias\\
-Departamento de Matemáticas}
+%\institute{Pontificia Universidad Javeriana,
+%Facultad de Ciencias\\
+%Departamento de Matemáticas}
+
+\titlegraphic{%
+	\begin{picture}(0,0)
+	\put(200,-200){\makebox(0,0)[rt]{\includegraphics[width=3cm]{img/logo_Ujaveriana}}}
+	\end{picture}}
+
 \begin{document}
   \maketitle
-  
-\begin{frame}[allowframebreaks]{Motivación}
-	Los números $p$-ádicos fueron recientemente introducidos por \textit{K. Hensel} en las matemáticas modernas con el fin de solucionar varios problemas en la teoría de números. Como consecuencia, el desarrollo del análisis $p$-ádico se ha visto involucrado en otras ramas de la ciencia, como la Biología, en donde los fenómenos naturales son presentados como estructuras jerárquicas\nocite{Av-5}; en la Física, donde juegan un papel importante en la teoría de cuerdas\nocite{Dragovich-2017}; y por supuesto, en las Ciencias de la computación, en donde son usados para hacer \textit{Data Mining} y \textit{Criptografía}\nocite{Dragovich-2017}.
-	
-	En este trabajo explicaremos algunas nociones básicas de análisis en espacios ultramétricos, en particular del cuerpo de números $p$-ádicos. De esta manera mostraremos una representación visual de los mismos, con el fin de desarrollar un paquete amigable que pueda ser implementado por científicos para hacer cómputo $p$-ádico (por ejemplo en la codificación de información) y desarrollar simulaciones de ecuaciones presentes en sistemas complejos.
-	
-	El lenguaje que utilizaremos en este trabajo será \textit{Python}, dado que presenta características deseables como ser moderno, orientado a objetos, ser de uso común por la mayoría de científicos, así como poseer frameworks y poseer estructuras de datos que permiten, a diferencia de otros lenguajes, una manipulación más simple de grafos y redes.
+
+\begin{frame}{Motivación}
+	\begin{figure}
+		\includegraphics[width=4cm]{img/kurt_hensel.jpg}
+		\caption{\textit{Kurt Hensel}}
+	\end{figure}
 
 \end{frame}
+
 \begin{frame}{Contenido}
 	\tableofcontents
 \end{frame}
@@ -268,7 +274,7 @@ Departamento de Matemáticas}
 		y\right\vert ,$
 		
 		\item $\left\vert x+y\right\vert \leq\abs{x} +\left\vert y\right\vert$.
-		\item Si $\|x+y\| \le \maxx\{\|x\|, \|y\|\}$, para todo $x,y\in K,$ decirmos que la norma es \tit{ultamétrica}, o que satisface la \tit{desigualdad triangular fuerte}.
+		\item Si $\abs{x+y} \le \maxx\{\abs{x}, \abs{y}\}$, para todo $x,y\in K,$ decimos que la norma es \tit{ultamétrica}, o que satisface la \tit{desigualdad triangular fuerte}.
 	\end{enumerate}
 \end{df}
 	Además, una norma $\abs{\cdot}$ en $K$ define una métrica natural dada por\linebreak ${d (x,y)=\abs{x-y}}$.
@@ -280,13 +286,14 @@ Departamento de Matemáticas}
 \end{df}
 
 \begin{pr}\label{quiv_power}
-	\begin{itemize}[<+- | alert@+>]
-		\item $\abs{\cdot}_1\sim\abs{\cdot}_2$ si, y sólo si, existe $c\in\bb{R}_{>0}$ tal que $\abs{\cdot}_1=\abs{\cdot}_2^c$.
-		\item $\abs{\cdot}_1\sim\abs{\cdot}_2$ si, y sólo si existen constantes $k_1,k_2$ positivas tales que:
-		$$k_1\abs{x}_1<\abs{x}_2< k_2\abs{x}_1,$$
-		para todo $x\in K$.
-		\item Si ${\abs{\cdot}_1\sim\abs{\cdot}_2}$, entonces una sucesión $ (x_n)$ es de Cauchy respecto a $\abs{\cdot}_1$ si, y sólo si es de Cauchy respecto a $\abs{\cdot}_2$.
-	\end{itemize}
+	Las siguientes condiciones son equivalentes:
+	\begin{enumerate}
+		\item $\abs{\cdot}_1\sim\abs{\cdot}_2$.
+		\item Existen constantes $k_1,k_2$ positivas tales que:
+		$$k_1\abs{x}_1\leq\abs{x}_2\leq k_2\abs{x}_1,\text{ para todo $x\in K$.}$$ 
+		\item Existe $c\in\bb{R}_{>0}$ tal que $\abs{\cdot}_1=\abs{\cdot}_2^c$.	
+		\item Una sucesión $ (x_n)$ es de Cauchy respecto a $\abs{\cdot}_1$ si, y sólo si, es de Cauchy respecto a $\abs{\cdot}_2$.
+	\end{enumerate}
 
 \end{pr}
 \end{frame}
@@ -350,6 +357,13 @@ Departamento de Matemáticas}
 
 %12-----------------------------------------------
 \begin{frame}{Sucesiones de Cauchy}
+
+\begin{thh}
+	$ (\Q, d (x,y)=\pnorm{x-y})$ y $ (\Q, d (x,y)=|x-y|)$ no son espacios completos.
+\end{thh}
+\begin{thh}
+	$\Qp$ es la completación de $\Q$ con la norma $\pnorm{\cdot}$.
+\end{thh}
 \begin{thh}
 	[Caracterización de sucesiones de Cauchy]\label{car}
 	Una sucesión $ (x_n)_{n\in\N}$ en $\Qp$ es de Cauchy, si, y sólo si:
@@ -357,20 +371,64 @@ Departamento de Matemáticas}
 	\lim_{n\to\infty}\pnorm{x_{n+1}-x_n}=0.
 	\end{equation}
 \end{thh}
-\begin{thh}
-	$ (\Q, d (x,y)=\pnorm{x-y})$ y $ (\Q, d (x,y)=|x-y|)$ no son espacios completos.
-\end{thh}
-\begin{thh}
-	$\Qp$ es la completación de $\Q$ con la norma $\pnorm{\cdot}$.
-\end{thh}
 \end{frame}
 %14-----------------------------------------------
 
 \begin{frame}[fragile]{Completaciones de $\Qp$}
-
-	\begin{figure}
-		\includegraphics[scale=0.35]{img/relojBeamer.jpg}\caption{Completaciones respecto a las distintas normas en $\Q$}
- 	\end{figure}
+	\begin{figure}[h]
+		\centering
+		
+		\begin{tikzpicture}
+		% \draw[black!20] (-5,-5) grid (5,5);
+		\node at (0,0) {$\mathbb{Q}$};
+		
+		\draw[dashed] (0,3) arc (90:225:3);
+		
+		\draw[-latex] (0,0.707107) -- (0,3);
+		\draw   (0,3)   circle (0pt)  node[anchor=south]{$\mathbb{R}$};
+		\node at (0.5,1.8) {\tiny{$\norm{\cdot}_{\infty}$}};
+		
+		\draw[-latex] (0.707107,0) -- (3,0);
+		\draw   (3,0)   circle (0pt)  node[anchor=west]{$\mathbb{Q}_3$};
+		\node at (1.9,-0.3) {\tiny{$\norm{\cdot}_{3}$}};
+		
+		
+		\draw[-latex] (0,-0.707107) -- (0,-3);
+		\draw   (0,-3)   circle (0pt)  node[anchor=north]{$\mathbb{Q}_7$};
+		\node at (-0.4,-1.8) {\tiny{$\norm{\cdot}_{7}$}};
+		
+		\draw[-latex] (0.5,0.5) -- (2.12132034355964,2.12132034355964);
+		\draw  (2.42132034355964,2.72132034355964)    circle (0pt)  node[anchor=north]{$\mathbb{Q}_2$};
+		\node at (1.5,1) {\tiny{$\norm{\cdot}_{2}$}};
+		
+		\draw[-latex] (-0.5,-0.5) -- (-2.12132034355964,-2.12132034355964);
+		\draw   (-2.42132034355964,-1.92132034355964)   circle (0pt)  node[anchor=north]{$\mathbb{Q}_{11}$};    
+		\node at (-1.8,-1.2) {\tiny{$\norm{\cdot}_{11}$}};
+		
+		\draw[-latex] (0.5,-0.5) -- (2.12132034355964,-2.12132034355964);
+		\draw   (2.42132034355964,-1.92132034355964)   circle (0pt)  node[anchor=north]{$\mathbb{Q}_5$};
+		\node at (1,-1.5) {\tiny{$\norm{\cdot}_{5}$}};
+		
+		
+		\draw[-latex] (-0.5,0.5) -- (-2.12132034355964,2.12132034355964);
+		\draw   (-2.52132034355964,2.92132034355964)   circle (0pt)  node[anchor=north]{$\mathbb{Q}_p$};
+		\node at (-1,1.6) {\tiny{$\norm{\cdot}_{p}$}};
+		
+		
+		
+		%   \draw[-{Latex}] (-2.82842712475419,2.82842712475419) -- (-3.53553390593275,3.53553390593275);
+		%   \draw   (-3.93553390593275,4.33553390593275)   circle (0pt)  node[anchor=north]{$\mathbb{Q}_p(\sqrt{d})$};    
+		
+		\end{tikzpicture}
+		
+		\caption{Completaciones respecto a las distintas normas en $\Q$}
+		
+	\end{figure}
+	
+	
+	%\begin{figure}
+		%\includegraphics[scale=0.35]{img/relojBeamer.jpg}\caption{Completaciones respecto a las distintas normas en $\Q$}
+ 	%\end{figure}
 \end{frame}
 %15-----------------------------------------------
 \iffalse 
@@ -653,7 +711,7 @@ Sean $\alpha= (a_i)$ y $\beta = (b_i)$ dos enteros $p$-ádicos. Definimos la sum
 \begin{frame}{Numeros unidades}
 	\begin{df}
 		Un número $p$-ádico es llamado \textit{unidad} si no es múltiplo de una potencia negativa de $p$ y su primer dígito no es $0$; más aún, un número $p$-ádico $x$ se puede escribir como:
-		$${x=u\cdot p^{-N}}\,quad \text{ con $u$ unidad}.$$	
+		$${x=u\cdot p^{-N}},\text{ con $u$ unidad}.$$	
 	\end{df}
 	\begin{exampleblock}{Ejemplo}
 		\begin{itemize}[<+- | alert@+>]
@@ -980,7 +1038,7 @@ x.norm()
 x.len()
 >>6
 \end{lstlisting}
-En este caso $p=7$, $n=-3$ y  $N=2$. Además satisface que $p^{-3}\leq\pnorm{x}\leq p^2$.
+En este caso $p=7$, $n=-3$ y  $N=2$. Además satisface que $7^{-3}\leq\pnorm{x}\leq 7^2$.
 \end{frame}
 
 \begin{frame}{El conjunto $\gpn$}
@@ -1006,7 +1064,7 @@ En este caso $p=7$, $n=-3$ y  $N=2$. Además satisface que $p^{-3}\leq\pnorm{x}\
 		\item $   (\gpn,+)$ es un grupo abeliano de oden $p^{N-n+1}$.
 		\item Esta noción de grupo aditivo está relacionada con la topología de bolas en $\Qp$
 		\item Así, podemos pensar en $\gpn$ como el cociente de los grupos aditivos $B_n   (0)/B_N   (0)$
-		\item  La  multiplicación, y portanto, la división no son operaciones cerradas en $\gpn$
+		\item  La  multiplicación y la división no son operaciones cerradas en $\gpn$
 	\end{itemize}
 \end{frame}
 
@@ -1205,7 +1263,7 @@ Así $\frac{3214.345356_7}{53452.143_7}=\cdots51330.332362_7$
 					\hline
 					$x_1$ & $x_3$ &1 & $C$ \\
 					\hline
-					$x_1$ & $x_4$ & 0 & 1 \\ 
+					$x_1$ & $x_5$ & 0 & 1 \\ 
 					\hline
 				\end{tabular}
 			}%
@@ -1437,7 +1495,7 @@ Análogamente a como se estableció la ecuación de calor sobre grafos, definimo
 
 donde $u_i$ es la probabilidad de transición, es decir, la probabilidad de pasar del estado $i$ al estado $j$ en el tiempo $t$.
 Esta ecuación se puede llevar a:$$\frac{d\vec{u}(t)}{dt} = W\vec{u}(t).$$
-Cuya solución será: $$\vec{u}(t)=\sum_{i=1}^{p^{N-n+1}}c_i(t)v_i,\quad c_i(t)=c_i(0)e^{\lambda_it}. $$
+Cuya solución será: $$\vec{u}(t)=\sum_{i=1}^{p^{N-n+1}}c_i(t)v_i,\quad c_i(t)=c_i(0)e^{-\lambda_it}. $$
 
 
 \end{frame}
@@ -1450,7 +1508,7 @@ Cuya solución será: $$\vec{u}(t)=\sum_{i=1}^{p^{N-n+1}}c_i(t)v_i,\quad c_i(t)=
 \end{frame}
 \begin{frame}{Proceso de difusión en $\gpn$}
 	\begin{figure}
-		\caption{Comportamiento de la solución en distintos $t\in[0,10]$ para la condición inicial $u(0)$ con entradas aleatorias en $\mathit{G3\_33}$.}
+		\caption{Comportamiento de la solución en distintos $t\in[0,100]$ para la condición inicial $u(0)$ con entradas aleatorias en $\mathit{G3\_33}$.}
 		\animategraphics[autoplay,loop, every = 1, width=0.6\linewidth]{25}{random/}{0}{99}
 	\end{figure}
 \end{frame}
@@ -1513,7 +1571,7 @@ Cuya solución será: $$\vec{u}(t)=\sum_{i=1}^{p^{N-n+1}}c_i(t)v_i,\quad c_i(t)=
 
 
 \begin{frame}[allowframebreaks]
-	\frametitle{Literaturverzeichnis} 
+	\frametitle{Referencias} 
 	\nocite{*} 
 	\bibliographystyle{amsalpha} 
 	\bibliography{bibliografia.bib} 

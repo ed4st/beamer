@@ -1,10 +1,10 @@
 \babel@toc {spanish}{}
-\beamer@sectionintoc {1}{Notación}{5}{0}{1}
-\beamer@sectionintoc {2}{El campo de los números $p$-ádicos}{14}{0}{2}
-\beamer@subsectionintoc {2}{1}{Topología en $\mathbb {Q}_p$}{27}{0}{2}
-\beamer@subsectionintoc {3}{1}{Aritmética $p$-ádica}{36}{0}{2}
-\beamer@subsectionintoc {4}{1}{Sucesiones y series de números $p$-ádicos}{53}{0}{2}
-\beamer@subsectionintoc {5}{1}{Una mirada algebraica de los números $p$-ádicos}{57}{0}{2}
-\beamer@sectionintoc {7}{Modelando números $p$-ádicos}{67}{0}{3}
-\beamer@sectionintoc {8}{Laplaciano sobre árboles}{101}{0}{4}
-\beamer@sectionintoc {9}{Sobre el uso del paquete}{115}{0}{5}
+\beamer@sectionintoc {1}{Notación}{4}{0}{1}
+\beamer@sectionintoc {2}{El campo de los números $p$-ádicos}{13}{0}{2}
+\beamer@subsectionintoc {2}{1}{Topología en $\mathbb {Q}_p$}{24}{0}{2}
+\beamer@subsectionintoc {3}{1}{Aritmética $p$-ádica}{33}{0}{2}
+\beamer@subsectionintoc {4}{1}{Sucesiones y series de números $p$-ádicos}{50}{0}{2}
+\beamer@subsectionintoc {5}{1}{Una mirada algebraica de los números $p$-ádicos}{54}{0}{2}
+\beamer@sectionintoc {7}{Modelando números $p$-ádicos}{64}{0}{3}
+\beamer@sectionintoc {8}{Laplaciano sobre árboles}{98}{0}{4}
+\beamer@sectionintoc {9}{Sobre el uso del paquete}{112}{0}{5}
