@@ -1,10 +1,10 @@
-\frametitle{Instalación de nuestro paquete (padics)}
+\frametitle{Instalación de nuestro paquete (\texttt {py-adics})}
 \begin{itemize}[<+- | alert@+>]
 		\item ¡Usted... sí, usted también puede usarlo!
 		\item Se recomienda la instalación del sistema de control de versiones, \texttt{Git} (en \texttt{Linux} viene por defecto).
 		\item Con \texttt{pip} podemos instalar el paquete a través del comando:
 		\begin{lstlisting}[caption=Terminal o símbolo del sistema,basicstyle=\tiny]
-		$ pip install git+https://github.com/ed4st/padics-package	
+		$ pip install git+https://github.com/ed4st/py-adics-package	
 		\end{lstlisting}
 		\item Para testear la instalación, cree un script de \texttt{Python}:
 		\begin{lstlisting}[language = Python, caption = test del paquete, basicstyle=\tiny]

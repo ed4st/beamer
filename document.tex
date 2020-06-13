@@ -120,6 +120,32 @@ frametitle , titleformat title= smallcaps]{metropolis}           % Use metropoli
 \newcommand{\redd}[1]{\textcolor{rkColor}{#1}}
 
 
+%---------------emojis--------------------
+\newcommand{\smiley}{\tikz[baseline=-0.75ex,black]{
+		\draw circle (2mm);
+		\node[fill,circle,inner sep=0.5pt] (left eye) at (135:0.8mm) {};
+		\node[fill,circle,inner sep=0.5pt] (right eye) at (45:0.8mm) {};
+		\draw (-145:0.9mm) arc (-120:-60:1.5mm);
+	}
+}
+
+\newcommand{\frownie}{\tikz[baseline=-0.75ex,black]{
+		\draw circle (2mm);
+		\node[fill,circle,inner sep=0.5pt] (left eye) at (135:0.8mm) {};
+		\node[fill,circle,inner sep=0.5pt] (right eye) at (45:0.8mm) {};
+		\draw (-145:0.9mm) arc (120:60:1.5mm);
+	}
+}
+
+\newcommand{\neutranie}{\tikz[baseline=-0.75ex,black]{
+		\draw circle (2mm);
+		\node[fill,circle,inner sep=0.5pt] (left eye) at (135:0.8mm) {};
+		\node[fill,circle,inner sep=0.5pt] (right eye) at (45:0.8mm) {};
+		\draw (-135:0.9mm) -- (-45:0.9mm);
+	}
+}
+
+
 
 
 \newtheorem{df}{\marine{Definición}}
@@ -147,6 +173,7 @@ frametitle , titleformat title= smallcaps]{metropolis}           % Use metropoli
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\R}{\mathbb{R}}
+
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\ssi}{\longleftrightarrow}
@@ -195,6 +222,12 @@ Matemático}
 %Facultad de Ciencias\\
 %Departamento de Matemáticas}
 
+
+
+\usepackage{MnSymbol,wasysym}
+
+
+
 \titlegraphic{%
 	\begin{picture}(0,0)
 	\put(200,-200){\makebox(0,0)[rt]{\includegraphics[width=3cm]{img/logo_Ujaveriana}}}
@@ -204,16 +237,21 @@ Matemático}
   \maketitle
 
 \begin{frame}{Motivación}
+	
 	\begin{figure}
+		
 		\includegraphics[width=4cm]{img/kurt_hensel.jpg}
 		\caption{\textit{Kurt Hensel}}
 	\end{figure}
 
 \end{frame}
 
+
+
 \begin{frame}{Contenido}
 	\tableofcontents
 \end{frame}
+
   \section{Notación}
 
   \begin{frame}{Unidades, decenas y centenas...}
@@ -253,7 +291,7 @@ Matemático}
 		{a_{l} \ldots a_{2} a_{1} a_{0},a_{-1}a_{-2}\cdots a_{-\gamma}}_p.
 		\end{equation}
 		\item ¿Deberíamos llamar a las expansiones, expansiones pesimales?
-		\item Ni idea. Usaremos los términos: expansión (representación) $p$-ádica ó \tit{Código de Hensel}.
+		\item Usaremos los términos: expansión (representación) $p$-ádica ó \tit{Código de Hensel}.
 		\item Siendo así, ahora sí empecemos.
 	\end{itemize}
 
@@ -359,7 +397,7 @@ Matemático}
 \begin{frame}{Sucesiones de Cauchy}
 
 \begin{thh}
-	$ (\Q, d (x,y)=\pnorm{x-y})$ y $ (\Q, d (x,y)=|x-y|)$ no son espacios completos.
+	$ (\Q, d (x,y)=\pnorm{x-y})$ y $ (\Q, d (x,y)=|x-y|)$ no son espacios completos \frownie{}.
 \end{thh}
 \begin{thh}
 	$\Qp$ es la completación de $\Q$ con la norma $\pnorm{\cdot}$.
@@ -380,6 +418,7 @@ Matemático}
 		
 		\begin{tikzpicture}
 		% \draw[black!20] (-5,-5) grid (5,5);
+		%\draw[orange]
 		\node at (0,0) {$\mathbb{Q}$};
 		
 		\draw[dashed] (0,3) arc (90:225:3);
@@ -432,7 +471,7 @@ Matemático}
 \end{frame}
 %15-----------------------------------------------
 \iffalse 
-\begin{frame}{$\Q$ no es completo :c}
+\begin{frame}{$\Q$ no es completo \frownie{}}
 	El siguiente teorema es importante, pues caracteriza a $\Q$ como un cuerpo no completo.
 	\begin{thh}
 		$ (\Q, d (x,y)=\pnorm{x-y})$ y $ (\Q, d (x,y)=|x-y|)$ no son espacios completos.
@@ -487,7 +526,7 @@ Matemático}
 %18-----------------------------------------
 
 %18-----------------------------------------
-\begin{frame}{Propiedades bonitas de $\Qp$ :o}
+\begin{frame}{Propiedades bonitas de $\Qp$ \smiley{}}
 	\begin{thh}
 	\begin{itemize}[<+- | alert@+>]
 		\item \label{clopen1} Si $b\in B_{r} (a)$, entonces $B_{r} (a)=B_{r} (b)$. En otras palabras: ¡Todo  punto de una bola abierta es centro de la misma!
@@ -548,7 +587,7 @@ Los subconjuntos conexos maximales de un espacio topológico son llamados \tit{c
 	\begin{tikzpicture}
 	
 	%   \draw [black!20]  (0,0) grid  (3,4);
-	\draw[black]  (0,0)-- (3,0)--  (1.5,4)--cycle;
+	\draw[orange]  (0,0)-- (3,0)--  (1.5,4)--cycle;
 	
 	
 	\draw  (0,0) circle  (0pt) node[anchor=north] {$y$};
@@ -563,15 +602,7 @@ Los subconjuntos conexos maximales de un espacio topológico son llamados \tit{c
 \end{figure}
 \end{frame}
 %24-----------------------------------------
-\begin{frame}{Relación de $\Qp$ con $\R$}
-\begin{itemize}
-	\item Existe una correspondencia con los \textit{Conjuntos de Cantor}.
-	\item También podemos relacionarlos mediante una función $\rho\colon\Qp\to\R_{+}$ conocida como \textit{Monna map}, definida por
-	\begin{equation}\label{Monna}
-	\rho: \sum_{j=\gamma}^{\infty} x_{j} p^{j} \mapsto \sum_{j=\gamma}^{\infty} x_{j} p^{-j-1}, \quad x_{j}=0,1, \ldots, p-1, \quad \gamma \in \mathbb{Z},
-	\end{equation}
-\end{itemize}
-\end{frame}
+
 %25-----------------------------------------
 \iffalse
 \begin{frame}{Propiedades de $\rho$}
@@ -812,7 +843,7 @@ Sean $\alpha= (a_i)$ y $\beta = (b_i)$ dos enteros $p$-ádicos. Definimos la sum
 \subsection{Sucesiones y series de  números $p$-ádicos}
 \section*{Sucesiones y series de  números $p$-ádicos}
 
-\begin{frame}{Estabilización de sucesiones y series}
+\begin{frame}{El sueño del estudiante de cálculo}
 \begin{thh}
 	Si $$\lim_{n\to\infty}x_n=x, \text{ con } x_n,x\in\Qp\text{ y } \pnorm{x}\neq0 ,$$
 	entonces la sucesión $ (\pnorm{x_n})_{n\in\N}$ se estabiliza, es decir, existe $N\in\N$ tal que:
@@ -843,6 +874,16 @@ Sean $\alpha= (a_i)$ y $\beta = (b_i)$ dos enteros $p$-ádicos. Definimos la sum
 		\end{equation}
 		y en donde $a_k=0$, para $k\leq - N$ y $a_{-N}\neq 0$\label{ord_def_2}. A $-N$ se le denomina el \textit{orden} del número.
 	\end{pr}
+\end{frame}
+
+\begin{frame}{Relación de $\Qp$ con $\R$}
+	\begin{itemize}
+		\item Existe una correspondencia con los \textit{Conjuntos de Cantor}.
+		\item También podemos relacionarlos mediante una función $\rho\colon\Qp\to\R_{+}$ conocida como \textit{Monna map}, definida por
+		\begin{equation}\label{Monna}
+		\rho: \sum_{j=\gamma}^{\infty} a_{j} p^{j} \mapsto \sum_{j=\gamma}^{\infty} a_{j} p^{-j-1}, \quad a_{j}=0,1, \ldots, p-1, \quad \gamma \in \mathbb{Z}.
+		\end{equation}
+	\end{itemize}
 \end{frame}
 \iffalse
 \begin{frame}{Parte entera y parte fraccionaria}
@@ -1249,7 +1290,7 @@ Así $\frac{3214.345356_7}{53452.143_7}=\cdots51330.332362_7$
 \begin{itemize}
 	\item Denotamos por $M_n^m=\{x_1, \dots, x_{m^n}\}$ a las hojas del árbol con $n$ niveles y $m$ ramas.
 	\item Podemos dotar a $M_n^m$, definimos la distancia en $M_n^m$ como $d   (x_i,x_j)=C^{N*}$ ($0<C<1$).
-	\item Así, $   (M_m^m,d)$ es un espacio ultramétrico.
+	\item Así, $   (M_n^m,d)$ es un espacio ultramétrico.
 	
 		\begin{figure}%
 			\centering
@@ -1528,13 +1569,13 @@ Cuya solución será: $$\vec{u}(t)=\sum_{i=1}^{p^{N-n+1}}c_i(t)v_i,\quad c_i(t)=
 	\end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]{Instalación de nuestro paquete (padics)}
+\begin{frame}[fragile]{Instalación de nuestro paquete (\texttt{py-adics})}
 	\begin{itemize}[<+- | alert@+>]
 		\item ¡Usted... sí, usted también puede usarlo!
 		\item Se recomienda la instalación del sistema de control de versiones, \texttt{Git} (en \texttt{Linux} viene por defecto).
 		\item Con \texttt{pip} podemos instalar el paquete a través del comando:
 		\begin{lstlisting}[caption=Terminal o símbolo del sistema,basicstyle=\tiny]
-		$ pip install git+https://github.com/ed4st/padics-package	
+		$ pip install git+https://github.com/ed4st/py-adics-package	
 		\end{lstlisting}
 		\item Para testear la instalación, cree un script de \texttt{Python}:
 		\begin{lstlisting}[language = Python, caption = test del paquete, basicstyle=\tiny]
@@ -1549,7 +1590,7 @@ Cuya solución será: $$\vec{u}(t)=\sum_{i=1}^{p^{N-n+1}}c_i(t)v_i,\quad c_i(t)=
 \end{frame}
 
 \include{bibliografia.bib}
-\begin{frame}{Notas del paquete}
+\begin{frame}{Notas del paquete - Trabajo a futuro}
 	\begin{itemize}[<+- | alert@+>]
 		\item Hacer \texttt{unit testing} sobre los algoritmos.
 		\item Mejorar el control de excepciones.
@@ -1558,23 +1599,31 @@ Cuya solución será: $$\vec{u}(t)=\sum_{i=1}^{p^{N-n+1}}c_i(t)v_i,\quad c_i(t)=
 		\item Implementar más algoritmos, como los de expansiones $p$-ádicas, o los asociados al estudio de álgebra (como el \textit{Lema de Hensel}), para hacer criptografía.
 		\item Implementar la versión del \textit{algoritmo de Karatsuba} en números $p$-ádicos.
 		\item Para las personas que no tienen suficiente dominio de \texttt{Linux}, sería muy útil crear una interfaz gráfica del paquete.
-		\item Aplicar la representación a modelos en \tit{Biología}, para el estudio de proteínas y genomas \cite{A-B-O}.
+		\item Aplicar la representación a modelos en \tit{Biología}, para el estudio de proteínas y genomas.
 	\end{itemize}
 \end{frame}
 
-\section*{Gracias :D}
-
-
-
-
-
+\section*{Gracias \blacksmiley{}}
 
 
 \begin{frame}[allowframebreaks]
 	\frametitle{Referencias} 
-	\nocite{*} 
-	\bibliographystyle{amsalpha} 
-	\bibliography{bibliografia.bib} 
+	\begin{thebibliography}{100} % 100 is a random guess of the total number of
+		%references
+		\bibitem{Boney96} Shelkovich V. M. Albeverio S., Khrennikov A. Yu., ``Theory of p-adic distributions: linear and nonlinear models." \emph{Cambridge University Press}, 2010.
+		\bibitem{Boney96} Neal Koblitz.p-adic Numbers, p-adic Analysis, and Zeta-Functions. Springer-Verlag New York, 1984.
+		\bibitem{Boney96} G. Parisi; N. Sourlas. P-adic numbers and replica symmetry breaking. The European Physical Journal B / Condensed Matter and Complex Systems, 14:535–542, 2000.
+		\bibitem{Boney96}  V. S. Vladimirov, I. V. Volovich, and E. I. Zelenov.p−adic analysis and mathematical physics. Advanced Mathematics: Computations and Applications, pages 128–141, 1994.
+		\bibitem{Boney96} V. S. Anashin. Uniformly distributed sequences in computer algebra or how to construct program generators of random numbers. Journal of Mathematical Sciences, 89:1355–1390, 1998.
+		\bibitem{Boney96} A. V. Avetisov, A. H. Bikulov, and V. A. Osipov.p−adic description of characteristic relaxation in complex systems.J. Phys. A: Math. Gen.,36:4239–4246, 2003.
+		\bibitem{Boney96} Bikulov A.H. Kozyrev S. V. Osipov V. A. Avetisov, V. A. On the ultrametricity of the fluctuation dynamic mobility of protein molecules. (Russian) Tr. Mat. Inst. Steklova, 265:75–81, 2009.
+		\bibitem{Boney96} V. A. Avetisov, A. H. Bikulov, S. V. Kozyrev, and V. A. Osipov. p-adic models of ultrametric diffusion constrained by hierarchical energy landscapes. Journal of Physics A: Mathematical and General, 35(2):177,2002.
+		
+		\bibitem{Boney96} Svetlana Katok.p-adic analysis compared with real. Student Mathematical Library 037. American Mathematical Society, 2007.
+		
+		\bibitem{Boney96} Anatoly Kochubei. Pseudo-differential equations and stochastics overnon-Archimedean fields. Number 244. New York, 2001.
+		\bibitem{Boney96} V. S. Vladimirov, I. V. Volovich, and E. I. Zelenov. p−adic analysis and mathematical physics. Advanced Mathematics: Computations and Applications, pages 128–141, 1994.
+	\end{thebibliography}
 \end{frame}
 
 

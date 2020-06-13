@@ -2,8 +2,8 @@
 \beamer@sectionintoc {1}{Notación}{4}{0}{1}
 \beamer@sectionintoc {2}{El campo de los números $p$-ádicos}{13}{0}{2}
 \beamer@subsectionintoc {2}{1}{Topología en $\mathbb {Q}_p$}{24}{0}{2}
-\beamer@subsectionintoc {3}{1}{Aritmética $p$-ádica}{33}{0}{2}
-\beamer@subsectionintoc {4}{1}{Sucesiones y series de números $p$-ádicos}{50}{0}{2}
+\beamer@subsectionintoc {3}{1}{Aritmética $p$-ádica}{32}{0}{2}
+\beamer@subsectionintoc {4}{1}{Sucesiones y series de números $p$-ádicos}{49}{0}{2}
 \beamer@subsectionintoc {5}{1}{Una mirada algebraica de los números $p$-ádicos}{54}{0}{2}
 \beamer@sectionintoc {7}{Modelando números $p$-ádicos}{64}{0}{3}
 \beamer@sectionintoc {8}{Laplaciano sobre árboles}{98}{0}{4}
